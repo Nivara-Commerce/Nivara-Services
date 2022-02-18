@@ -1,6 +1,7 @@
 {
   "current": {
     "add_to_cart_animation": "swing",
+    "cart_countdown": "15 minutes",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
