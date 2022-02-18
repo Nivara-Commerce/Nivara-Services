@@ -329,33 +329,14 @@
       "default": 36
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "cart_countdown",
-      "options": [
-        {
-          "value": "None",
-          "label": "None"
-        },
-        {
-          "value": "fadeIn",
-          "label": "fadeIn"
-        },
-        {
-          "value": "fadeOut",
-          "label": "fadeOut"
-        },
-        {
-          "value": "slideleft",
-          "label": "SlideLeft"
-        },
-        {
-          "value": "slideright",
-          "label": "SlideRight"
-        }
-      ],
-      "default": "None",
-      "label": "Add to Cart Animation",
-      "info": "Add animation to the add to cart button"
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Cart Countdown",
+      "default": 36
     }
   ]
 }
