@@ -212,8 +212,8 @@
           }
         ],
         "default": "0 minutes",
-        "label": "Add to Cart Animation",
-        "info": "Add animation to the add to cart button"
+        "label": "Cart Countdown Timer",
+        "info": "Add countdown timer on cart page"
       }
     ]
   },
