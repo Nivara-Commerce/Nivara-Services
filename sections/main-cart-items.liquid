@@ -20,6 +20,9 @@
 {%- endstyle -%}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+{% if section.settings.cart_countdown >= '0' %}
+more then 0
+{% endif %}
 
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
@@ -293,6 +296,7 @@
     <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">{{ 'accessibility.loading' | t }}</p>
   </form>
 </cart-items>
+
 
 {% schema %}
 {
