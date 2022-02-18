@@ -191,43 +191,15 @@
         "id": "cart_countdown",
         "options": [
           {
-            "value": "none",
-            "label": "None"
+            "value": "0 min",
+            "label": "0 min"
           },
           {
-            "value": "bounce",
-            "label": "Bounce"
-          },
-          {
-            "value": "shake",
-            "label": "Shake"
-          },
-          {
-            "value": "pulse",
-            "label": "Pulse"
-          },
-          {
-            "value": "jello-shake",
-            "label": "Jello Shake"
-          },
-          {
-            "value": "wobble-wobble",
-            "label": "Wobble Wobble"
-          },
-          {
-            "value": "vibrate",
-            "label": "Vibrate"
-          },
-          {
-            "value": "swing",
-            "label": "Swing"
-          },
-          {
-            "value": "tada",
-            "label": "Tada"
+            "value": "10 min",
+            "label": "10 min"
           }
         ],
-        "default": "none",
+        "default": "0 min",
         "label": "Add to Cart Animation",
         "info": "Add animation to the add to cart button"
       }
