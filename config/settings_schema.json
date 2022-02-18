@@ -137,15 +137,33 @@
     "name": "Add to Cart Animation",
     "settings": [
       {
-        "type": "header",
-        "content": "t:settings_schema.typography.settings.header__1.content"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_header_fontf",
-        "default": "assistant_n4",
-        "label": "t:settings_schema.typography.settings.type_header_font.label",
-        "info": "t:settings_schema.typography.settings.type_header_font.info"
+        "type": "select",
+        "id": "add_to_cart_animation",
+        "options": [
+          {
+            "value": "None",
+            "label": "None"
+          },
+          {
+            "value": "fadeIn",
+            "label": "fadeIn"
+          },
+          {
+            "value": "fadeOut",
+            "label": "fadeOut"
+          },
+          {
+            "value": "slideleft",
+            "label": "SlideLeft"
+          },
+          {
+            "value": "slideright",
+            "label": "SlideRight"
+          }
+        ],
+        "default": "None",
+        "label": "Add to Cart Animation",
+        "info": "Add animation to the add to cart button"
       }
     ]
   },
