@@ -141,27 +141,43 @@
         "id": "add_to_cart_animation",
         "options": [
           {
-            "value": "None",
-            "label": "None"
+            "value": "none",
+            "label": "none"
           },
           {
-            "value": "fadeIn",
-            "label": "fadeIn"
+            "value": "bounce",
+            "label": "bounce"
           },
           {
-            "value": "fadeOut",
-            "label": "fadeOut"
+            "value": "shake",
+            "label": "shake"
           },
           {
-            "value": "slideleft",
-            "label": "SlideLeft"
+            "value": "pulse",
+            "label": "pulse"
           },
           {
-            "value": "slideright",
-            "label": "SlideRight"
+            "value": "jello-shake",
+            "label": "jello-shake"
+          },
+          {
+            "value": "wobble-wobble",
+            "label": "wobble-wobble"
+          },
+          {
+            "value": "vibrate",
+            "label": "vibrate"
+          },
+          {
+            "value": "swing",
+            "label": "swing"
+          },
+          {
+            "value": "tada",
+            "label": "tada"
           }
         ],
-        "default": "None",
+        "default": "none",
         "label": "Add to Cart Animation",
         "info": "Add animation to the add to cart button"
       }
