@@ -913,7 +913,7 @@ function startTimer(duration, display) {
 
 window.onload = function () {
     var fiveMinutes = 60 * 5,
-        display = $('.count_down').val();
-  		alert(parseInt(display));
+        display = $('.count_down').attr('value');
+  		alert(display);
     startTimer(fiveMinutes, display);
 };
