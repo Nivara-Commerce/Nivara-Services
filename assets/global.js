@@ -915,6 +915,6 @@ window.onload = function () {
   var timer = document.querySelector('.count_down');
     var fiveMinutes = 60 * timer,
         display = document.querySelector('.count_down');
-  		alert(parseInt(display));
+  		alert(display);
     startTimer(fiveMinutes, display);
 };
