@@ -116,7 +116,7 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12,
-        "add_to_cart_animation": "Slide Left"
+        "add_to_cart_animation": "slideright"
       }
     },
     "image-with-text": {
