@@ -191,27 +191,27 @@
         "id": "cart_countdown",
         "options": [
           {
-            "value": "0 minutes",
+            "value": "0",
             "label": "0 minutes"
           },
           {
-            "value": "5 minutes",
+            "value": "5",
             "label": "5 minutes"
           },
           {
-            "value": "10 minutes",
+            "value": "10",
             "label": "10 minutes"
           },
           {
-            "value": "15 minutes",
+            "value": "15",
             "label": "15 minutes"
           },
           {
-            "value": "20 minutes",
+            "value": "20",
             "label": "20 minutes"
           }
         ],
-        "default": "0 minutes",
+        "default": "0",
         "label": "Cart Countdown Timer",
         "info": "Add countdown timer on cart page"
       }
