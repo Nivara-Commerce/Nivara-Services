@@ -21,9 +21,9 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {% if settings.cart_countdown == '0 minutes' %}
-shshs
+<div></div>
 {%else%}
-yuyuy
+<div class="count_down"></div>
 {%endif%}
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
