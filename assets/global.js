@@ -911,10 +911,9 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-$(document).ready(function(){
-
+window.onload = function () {
     var fiveMinutes = 60 * 5,
-        display = $('.count_down').attr('value');
-  		alert(display);
+        display = document.querySelector('count_down');
+  		alert(parseInt(display));
     startTimer(fiveMinutes, display);
-});
+};
