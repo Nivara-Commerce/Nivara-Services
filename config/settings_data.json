@@ -1,6 +1,6 @@
 {
   "current": {
-    "add_to_cart_animation": "swing",
+    "add_to_cart_animation": "tada",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
