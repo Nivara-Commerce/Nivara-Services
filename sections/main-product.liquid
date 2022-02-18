@@ -405,8 +405,7 @@
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   
-		<div class="product-form__buttons {% if settings.add_to_cart_animation == 'fadeIn'%}fadeIn-animation {%elsif settings.add_to_cart_animation == 'fadeOut'%}fadeOut-animation {%elsif settings.add_to_cart_animation == 'slideleft'%}slideleft-animation {%elsif settings.add_to_cart_animation == 'slideright'%}slideright-animation {%else%}no-animation{% endif %}">                    
-  
+<div class="product-form__buttons {% if settings.add_to_cart_animation == 'bounce'%}btn-animation-bounce {%elsif settings.add_to_cart_animation == 'shake'%}btn-animation-shake {%elsif settings.add_to_cart_animation == 'pulse'%}btn-animation-pulse {%elsif settings.add_to_cart_animation == 'jello-shake'%}btn-animation-jello-shake {%elsif settings.add_to_cart_animation == 'wobble-wobble'%}btn-animation-wobble-wobble {%elsif settings.add_to_cart_animation == 'vibrate'%}btn-animation-vibrate {%elsif settings.add_to_cart_animation == 'swing'%}btn-animation-swing {%elsif settings.add_to_cart_animation == 'tada'%}btn-animation-tada {%else%}no-animation{% endif %}">    
   				<button
                       type="submit"
                       name="add"
