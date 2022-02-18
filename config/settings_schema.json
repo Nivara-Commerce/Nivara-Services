@@ -191,15 +191,27 @@
         "id": "cart_countdown",
         "options": [
           {
-            "value": "0 min",
-            "label": "0 min"
+            "value": "0 minutes",
+            "label": "0 minutes"
           },
           {
-            "value": "10 min",
-            "label": "10 min"
+            "value": "5 minutes",
+            "label": "5 minutes"
+          },
+          {
+            "value": "10 minutes",
+            "label": "10 minutes"
+          },
+          {
+            "value": "15 minutes",
+            "label": "15 minutes"
+          },
+          {
+            "value": "20 minutes",
+            "label": "20 minutes"
           }
         ],
-        "default": "0 min",
+        "default": "0 minutes",
         "label": "Add to Cart Animation",
         "info": "Add animation to the add to cart button"
       }
