@@ -1,6 +1,6 @@
 {
   "current": {
-    "add_to_cart_animation": "jello-shake",
+    "add_to_cart_animation": "wobble-wobble",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
