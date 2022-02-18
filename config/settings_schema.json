@@ -184,7 +184,7 @@
     ]
   },
   {
-    "name": "Cart Countdown",
+    "name": "Cart Countdown Timer",
     "settings": [
       {
         "type": "select",
