@@ -20,7 +20,7 @@
 {%- endstyle -%}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{% if section.settings.cart_countdown >= '2' %}
+{% if section.settings.cart_countdown != blank %}
 {{section.settings.cart_countdown}}
 {% endif %}
 
