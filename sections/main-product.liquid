@@ -405,7 +405,7 @@
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   
-                  <div class="product-form__buttons {% if section.settings.add_to_cart_animation == 'None' %}no-animation {%elsif section.settings.add_to_cart_animation == 'fadeIn'%}fadeIn-animation{% endif %}">
+                  <div class="product-form__buttons {% if section.settings.add_to_cart_animation == 'None' %}no-animation {%elsif section.settings.add_to_cart_animation == 'fadeIn'%}fadeIn-animation {%elsif section.settings.add_to_cart_animation == 'fadeOut'%}fadeOut-animation {%elsif section.settings.add_to_cart_animation == 'slideleft'%}slideleft-animation {%elsif section.settings.add_to_cart_animation == 'slideright'%}slideright-animation{% endif %}">
                     <button
                       type="submit"
                       name="add"
@@ -1132,11 +1132,11 @@
           "label": "fadeOut"
         },
         {
-          "value": "Slide Left",
+          "value": "slideleft",
           "label": "Slide Left"
         },
         {
-          "value": "Slide Right",
+          "value": "SlideRight",
           "label": "Slide Right"
         }
       ],
