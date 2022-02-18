@@ -1,6 +1,6 @@
 {
   "current": {
-    "add_to_cart_animation": "vibrate",
+    "add_to_cart_animation": "swing",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
