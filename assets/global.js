@@ -916,8 +916,7 @@ $(document).ready(function(){
 });
 window.onload = function () {
   
-  alert(test);
-    var Minutes = 60 * ,
+    var Minutes = 60 * 5,
         display = document.querySelector('.count_down');
   alert(Minutes);
     startTimer(Minutes, display);
