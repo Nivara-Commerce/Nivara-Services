@@ -922,7 +922,7 @@ window.onload = function () {
   
   
     var aaa = $('.count_down').text();
-  alert(aaa);
+  	alert(aaa);
 }
   
 
