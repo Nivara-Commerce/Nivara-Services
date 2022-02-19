@@ -23,7 +23,15 @@
 {% if settings.cart_countdown == '0 minutes' %}
 <div></div>
 {%else%}
-<div class="count_down" time="{{ settings.cart_countdown }}">{{ settings.cart_countdown }}</div>
+<!-- <div class="count_down" time="{{ settings.cart_countdown }}">{{ settings.cart_countdown }}</div> -->
+<div id="cart_reserved_box" class="di-flex">
+<div class="fireEmoji">🔥</div>
+<div class="cart-reserved-text-box">
+<span id="cart_reserved_message">An item in your cart is in high demand.</span>
+<span class="cartReservedTimerText">Your cart is reserved for <span id="cart_reserved_timer" class="count_down">{{ settings.cart_countdown }}</span> minutes!
+</span>
+</div>
+</div>
 {%endif%}
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
