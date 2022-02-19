@@ -920,5 +920,13 @@ window.onload = function () {
     startTimer(Minutes, display);
 };
   
+  
+    var aaa = $('.count_down').text();
+  alert(aaa);
 }
+  
+
+  
+  
+  
   });
