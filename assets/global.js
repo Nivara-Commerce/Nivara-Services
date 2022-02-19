@@ -894,7 +894,9 @@ customElements.define('variant-radios', VariantRadios);
 
 // cart countdown timer
 
-function startTimer(duration, display) {
+$(document).ready(function(){
+if($('body').hasClass('template-cart')){
+  function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
@@ -915,13 +917,8 @@ window.onload = function () {
   var timer = $('.count_down').attr('time');
     var Minutes = 60 * timer,
         display = document.querySelector('.count_down');
-  alert(Minutes);
     startTimer(Minutes, display);
 };
-$(document).ready(function(){
-
-if($('body').hasClass('template-cart')){
-  alert();
   
 }
   });
