@@ -912,7 +912,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var Minutes = 60 * 15,
+    var Minutes = 60 * $('.count_down').attr('value'),
         display = document.querySelector('.count_down');
   alert(Minutes);
     startTimer(Minutes, display);
