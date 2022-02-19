@@ -911,7 +911,7 @@ function startTimer(duration, display) {
     }, 1000);
 }
 $(document).ready(function(){
-	var test = $('.count_down').attr('time');
+	var test = $('.count_down').text();
   	alert(test);
 });
 window.onload = function () {
