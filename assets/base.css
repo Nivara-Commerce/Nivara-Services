@@ -3060,3 +3060,20 @@ details-disclosure > details {
 		transform: rotateZ(10deg);
 	}
 }
+
+/* cart countdown css   */
+  
+  #cart_reserved_box {
+    color: #404040;
+    background-color: #ffe9e0;
+}
+
+#cart_reserved_box {
+    clear: both;
+    width: 100%;
+    padding: 15px 0;
+    margin: 5px 0;
+}
+.di-flex {
+    display: flex !important;
+}
