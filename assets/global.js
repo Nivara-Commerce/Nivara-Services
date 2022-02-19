@@ -913,7 +913,7 @@ function startTimer(duration, display) {
 
 window.onload = function () {
     var Minutes = 60 * 15,
-        alert(Minutes);
         display = document.querySelector('.count_down');
+  alert(Minutes);
     startTimer(Minutes, display);
 };
