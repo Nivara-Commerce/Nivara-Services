@@ -910,9 +910,11 @@ function startTimer(duration, display) {
         }
     }, 1000);
 }
-
+$(document).ready(function(){
+	var test = $('.count_down').attr('value');
+});
 window.onload = function () {
-  var test = $('.count_down').val();
+  
   alert(test);
     var Minutes = 60 * ,
         display = document.querySelector('.count_down');
