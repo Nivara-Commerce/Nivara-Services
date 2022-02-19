@@ -918,3 +918,10 @@ window.onload = function () {
   alert(Minutes);
     startTimer(Minutes, display);
 };
+$(document).ready(function(){
+
+if($('body').hasClass('template-cart')){
+  alert();
+  
+}
+  });
