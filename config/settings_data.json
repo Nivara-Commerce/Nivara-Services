@@ -1,7 +1,7 @@
 {
   "current": {
     "add_to_cart_animation": "swing",
-    "cart_countdown": "15",
+    "cart_countdown": "20",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
