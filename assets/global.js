@@ -912,7 +912,7 @@ function startTimer(duration, display) {
 }
 $(document).ready(function(){
 	var test = $('.count_down').attr('time');
-  alert(test);
+  	alert(test);
 });
 window.onload = function () {
   
