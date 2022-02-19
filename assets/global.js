@@ -910,7 +910,7 @@ if($('body').hasClass('template-cart')){
         if (--timer < 0) {
             timer = duration;
         }
-    }, 1000);
+    }, 500);
 }
 
 window.onload = function () {
