@@ -23,7 +23,7 @@
 {% if settings.cart_countdown == '0 minutes' %}
 <div></div>
 {%else%}
-<div class="count_down" value="{{ settings.cart_countdown }}">{{ settings.cart_countdown }}</div>
+<div class="count_down" time="{{ settings.cart_countdown }}">{{ settings.cart_countdown }}</div>
 {%endif%}
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
