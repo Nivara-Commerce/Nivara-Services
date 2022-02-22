@@ -930,7 +930,7 @@ window.onload = function () {
   
   function remove_product(){
   
-    $('.cart-popup .cartpopup-body ').on('click', '.quantity-button.qminus', function(){
+    $('.cart-item ').on('click', '.quantity-button.qminus', function(){
     if ($(this).next().val() > 1) {
         var quantityItem = $(this).next().val(+$(this).next().val() - 1);
     }
