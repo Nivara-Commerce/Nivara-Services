@@ -914,8 +914,8 @@ if($('body').hasClass('template-cart')){
 }
 
 window.onload = function () {
-  //var timer = $('.count_down').attr('time');
-    var Minutes = 60 * 1,
+  var timer = $('.count_down').attr('time');
+    var Minutes = 60 * timer,
         display = document.querySelector('.count_down');
     startTimer(Minutes, display);
 };
