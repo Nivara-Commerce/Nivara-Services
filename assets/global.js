@@ -911,7 +911,7 @@ console.log(timer);
             timer = duration;
         }
         if (timer == 0) {
-            
+            remove_product();
         }
     }, 500);
 }
@@ -928,7 +928,9 @@ window.onload = function () {
 //   	alert(aaa);
 }
   
-
+  function remove_product(){
+   alert(); 
+  }
   
   
   
