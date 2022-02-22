@@ -932,8 +932,12 @@ window.onload = function () {
 var count = $('.cart-item').length;
     
   for(i = 1;i <= count; i++){
-    $('#Remove-'+i).trigger('click');
-    console.log('#Remove-'+i);
+    setTimeout(function() {
+$('#Remove-'+i).trigger('click');
+      console.log('#Remove-'+i);
+}, 500);
+    
+    
   }
     
 //     $('.cart-item ').on('click', '.quantity-button.qminus', function(){
