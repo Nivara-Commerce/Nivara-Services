@@ -929,42 +929,43 @@ window.onload = function () {
 }
   
   function remove_product(){
-  
-    $('.cart-item ').on('click', '.quantity-button.qminus', function(){
-    if ($(this).next().val() > 1) {
-        var quantityItem = $(this).next().val(+$(this).next().val() - 1);
-    }
-    var vId = $(this).attr("data-variant");
-    var quantityVal = $(this).next().val();
-    $.ajax({
-        type: 'POST',
-        url: '/cart/change.js',
-        dataType: 'json',
-        data: {
-            quantity: quantityVal,
-            id: vId
-        },
-        success: function (data){
-            $.ajax({
-                type: 'GET',
-                dataType: 'jsonp',
-                url: '/cart.json',
-                success: function(cart){
-                    var item_count = cart['item_count'];
-                    var total_price = cart['total_price']/100;
+var test = $('Remove-1').length
+  alert(test);
+//     $('.cart-item ').on('click', '.quantity-button.qminus', function(){
+//     if ($(this).next().val() > 1) {
+//         var quantityItem = $(this).next().val(+$(this).next().val() - 1);
+//     }
+//     var vId = $(this).attr("data-variant");
+//     var quantityVal = $(this).next().val();
+//     $.ajax({
+//         type: 'POST',
+//         url: '/cart/change.js',
+//         dataType: 'json',
+//         data: {
+//             quantity: quantityVal,
+//             id: vId
+//         },
+//         success: function (data){
+//             $.ajax({
+//                 type: 'GET',
+//                 dataType: 'jsonp',
+//                 url: '/cart.json',
+//                 success: function(cart){
+//                     var item_count = cart['item_count'];
+//                     var total_price = cart['total_price']/100;
 
-                    if ( item_count > 0 ) {
-                        $('.cart-item-count span').text(item_count);
+//                     if ( item_count > 0 ) {
+//                         $('.cart-item-count span').text(item_count);
 
-                        // mini cart data
-                        $('.cart-popup').attr('id','cartPopup');
-                        $('.cartpopup-total .price').text( '£' + total_price.toFixed(2) );
-                    }
-                }
-            });
-        }
-    });
-});
+//                         // mini cart data
+//                         $('.cart-popup').attr('id','cartPopup');
+//                         $('.cartpopup-total .price').text( '£' + total_price.toFixed(2) );
+//                     }
+//                 }
+//             });
+//         }
+//     });
+// });
     
     
   }
