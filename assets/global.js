@@ -910,8 +910,8 @@ console.log(timer);
         if (--timer < 0) {
             timer = duration;
         }
-              if (timer == 0) {
-            alert();
+        if (timer == 0) {
+            
         }
     }, 500);
 }
