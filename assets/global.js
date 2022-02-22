@@ -932,7 +932,7 @@ window.onload = function () {
 var count = $('.cart-item').length;
     
   for(i = 0;i < count; i++){
-    console.log('cooo');
+    $('#Remove-'+i).trigger('click');
   }
     
 //     $('.cart-item ').on('click', '.quantity-button.qminus', function(){
