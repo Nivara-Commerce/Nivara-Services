@@ -929,7 +929,7 @@ window.onload = function () {
 }
   
   function remove_product(){
-var test = $('#Remove-1').length
+var count = $('.cart-item').length
   alert(test);
 //     $('.cart-item ').on('click', '.quantity-button.qminus', function(){
 //     if ($(this).next().val() > 1) {
