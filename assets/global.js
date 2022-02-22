@@ -909,7 +909,9 @@ if($('body').hasClass('template-cart')){
 console.log(timer);
         if (--timer < 0) {
             timer = duration;
-          return false;
+        }
+              if (timer == 0) {
+            alert();
         }
     }, 500);
 }
