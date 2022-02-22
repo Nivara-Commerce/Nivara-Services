@@ -910,14 +910,12 @@ console.log(timer);
         if (--timer < 0) {
             timer = duration;
         }
-      
-      
     }, 500);
 }
 
 window.onload = function () {
-  var timer = $('.count_down').attr('time');
-    var Minutes = 60 * timer,
+  //var timer = $('.count_down').attr('time');
+    var Minutes = 60 * 1,
         display = document.querySelector('.count_down');
     startTimer(Minutes, display);
 };
