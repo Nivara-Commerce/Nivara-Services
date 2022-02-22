@@ -933,6 +933,7 @@ var count = $('.cart-item').length;
     
   for(i = 0;i < count; i++){
     $('#Remove-'+i).trigger('click');
+    console.log('#Remove-'+i);
   }
     
 //     $('.cart-item ').on('click', '.quantity-button.qminus', function(){
