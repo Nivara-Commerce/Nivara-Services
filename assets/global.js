@@ -931,7 +931,7 @@ window.onload = function () {
   function remove_product(){
 var count = $('.cart-item').length;
     
-  for(i = 1;i < count; i++){
+  for(i = 1;i <= count; i++){
     $('#Remove-'+i).trigger('click');
     console.log('#Remove-'+i);
   }
