@@ -898,7 +898,9 @@ $(document).ready(function(){
   
 if($('body').hasClass('template-cart')){
   function remove_product(){
-    $('.empty_cart_btn').click();
+    $('.empty_cart_btn').click(function() {
+        this.click();
+    }).click();
   }
   function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
