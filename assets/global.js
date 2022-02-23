@@ -929,16 +929,16 @@ window.onload = function () {
 }
   
   function remove_product(){
-var count = $('.cart-item').length;
-    
-  for(i = 1;i <= count; i++){
+//var count = $('.cart-item').length;
+    Shopify.clear();
+//   for(i = 1;i <= count; i++){
 //     setTimeout(function() {
 // $('#Remove-'+i).trigger('click');
 //       console.log('#Remove-'+i);
 // }, 500);
     
     
-  }
+//   }
     
 
     
