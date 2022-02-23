@@ -3086,3 +3086,10 @@ details-disclosure > details {
     text-align: left;
     display: block;
 }
+  span#cart_reserved_message {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    display: block;
+}
