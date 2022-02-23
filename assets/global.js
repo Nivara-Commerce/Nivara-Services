@@ -919,7 +919,7 @@ console.log(timer);
         if (timer == 0) {
             remove_product();
         }
-    }, 100);
+    }, 500);
 }
 
 window.onload = function () {
