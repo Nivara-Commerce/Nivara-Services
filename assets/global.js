@@ -912,7 +912,6 @@ if($('body').hasClass('template-cart')){
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
-console.log(timer);
         if (--timer < 0) {
             timer = duration;
         }
