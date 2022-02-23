@@ -893,15 +893,15 @@ class VariantRadios extends VariantSelects {
 customElements.define('variant-radios', VariantRadios);
 
 // cart countdown timer
-
 $(document).ready(function(){
-  
 if($('body').hasClass('template-cart')){
+  
   function remove_product(){
     $('.empty_cart_btn').click(function() {
         this.click();
     }).click();
   }
+  
   function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -923,13 +923,11 @@ console.log(timer);
 }
 
 window.onload = function () {
-  //var timer = $('.count_down').attr('time');
-    var Minutes = 60 * 1,
+  var timer = $('.count_down').attr('time');
+    var Minutes = 60 * timer,
         display = document.querySelector('.count_down');
     startTimer(Minutes, display);
 };
 
 }
-  
-  
   });
