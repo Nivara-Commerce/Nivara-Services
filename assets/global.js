@@ -928,12 +928,6 @@ window.onload = function () {
         display = document.querySelector('.count_down');
     startTimer(Minutes, display);
 };
-var countline = $('.cart-item').length;
-  if(countline){
-   $('#cart_reserved_box').show(); 
-  }
-  else{
-    $('#cart_reserved_box').hide(); 
-  }
+
 }
   });

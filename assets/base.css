@@ -3099,3 +3099,6 @@ details-disclosure > details {
     font-size: 25px;
     vertical-align: top;
 }
+.is-empty #cart_reserved_box {
+    display: none !important;
+}
