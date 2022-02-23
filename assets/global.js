@@ -940,7 +940,12 @@ window.onload = function () {
     
 //   }
     
-var my_button=$('input.addToCart');
+
+    
+    
+  }
+   function clearcart() {
+    var my_button=$('input.addToCart');
     my_button.on('click',function(){
       $.ajax({
         type: "POST",
@@ -956,10 +961,7 @@ var my_button=$('input.addToCart');
       });
       return false;
     });
-    
-    
   }
-  
   
   
   });
