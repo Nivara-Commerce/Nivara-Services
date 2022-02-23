@@ -18,7 +18,7 @@
     }
   }
 {%- endstyle -%}
-<input type="submit" name="add" value="Try Now" class="addToCart" onclick="clearcart();" "javascript:window.location='/cart' return false"/>
+<input type="submit" name="add" value="Try Now" class="addToCart" onclick="clearcart();"/>
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {% if settings.cart_countdown == '0 minutes' %}
