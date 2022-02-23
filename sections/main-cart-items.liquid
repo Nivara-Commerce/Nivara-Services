@@ -20,16 +20,13 @@
 {%- endstyle -%}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{% if settings.cart_countdown == '0 minutes' %}
-<div></div>
-{%else%}
-{%endif%}
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
 
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
+  
   <div id="cart_reserved_box" class="di-flex">
     <div class="fireEmoji">🔥</div>
     <div class="cart-reserved-text-box">
