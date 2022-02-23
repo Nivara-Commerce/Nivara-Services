@@ -929,19 +929,7 @@ window.onload = function () {
 }
   
   function remove_product(){
-var count = $('.cart-item').length;
-    
-  for(i = 1;i < count; i++){
-   // setTimeout(function() {
-//$('#Remove-'+i).trigger('click');
-      console.log('#Remove-'+i);
-//}, 500);
-    
-  }
-    
-
-    
-    
+	$('.empty_cart_btn').trigger('click');
   }
   
   
