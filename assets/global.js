@@ -932,10 +932,10 @@ window.onload = function () {
 var count = $('.cart-item').length;
     
   for(i = 1;i < count; i++){
-    setTimeout(function() {
+   // setTimeout(function() {
 //$('#Remove-'+i).trigger('click');
       console.log('#Remove-'+i);
-}, 500);
+//}, 500);
     
   }
     
