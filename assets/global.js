@@ -928,7 +928,7 @@ window.onload = function () {
         display = document.querySelector('.count_down');
     startTimer(Minutes, display);
 };
-var countline = $('.cart-item').length();
+var countline = $('.cart-item').length;
   alert(countline);
 }
   });
