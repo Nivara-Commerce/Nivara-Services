@@ -929,6 +929,7 @@ window.onload = function () {
 }
   
   function remove_product(){
+    alert();
 	$('.empty_cart_btn').trigger('click');
   }
   
