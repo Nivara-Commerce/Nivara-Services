@@ -3093,3 +3093,9 @@ details-disclosure > details {
     text-align: left;
     display: block;
 }
+  .fireEmoji {
+    float: left;
+    margin: 6px 5px 0;
+    font-size: 25px;
+    vertical-align: top;
+}
