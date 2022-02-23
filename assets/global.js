@@ -929,6 +929,11 @@ window.onload = function () {
     startTimer(Minutes, display);
 };
 var countline = $('.cart-item').length;
-  alert(countline);
+  if(countline){
+   $('#cart_reserved_box').show(); 
+  }
+  else{
+    $('#cart_reserved_box').hide(); 
+  }
 }
   });
