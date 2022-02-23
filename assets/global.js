@@ -930,7 +930,7 @@ window.onload = function () {
   
   function remove_product(){
 //var count = $('.cart-item').length;
-    Shopify.clear();
+
 //   for(i = 1;i <= count; i++){
 //     setTimeout(function() {
 // $('#Remove-'+i).trigger('click');
@@ -940,7 +940,22 @@ window.onload = function () {
     
 //   }
     
-
+var my_button=$('input.addToCart');
+    my_button.on('click',function(){
+      $.ajax({
+        type: "POST",
+        url: '/cart/clear.js',
+        data: '',
+        dataType: 'json',
+        success: function() { 
+            Shopify.clear();
+        },
+        error: function(XMLHttpRequest, textStatus) {
+          /* error code */
+        }
+      });
+      return false;
+    });
     
     
   }
