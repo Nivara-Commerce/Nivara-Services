@@ -895,7 +895,11 @@ customElements.define('variant-radios', VariantRadios);
 // cart countdown timer
 
 $(document).ready(function(){
+  
 if($('body').hasClass('template-cart')){
+  function remove_product(){
+	$('.empty_cart_btn').trigger('click');
+  }
   function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -922,17 +926,8 @@ window.onload = function () {
         display = document.querySelector('.count_down');
     startTimer(Minutes, display);
 };
-  
-  
-//     var aaa = $('.count_down').text();
-//   	alert(aaa);
+
 }
-  
-  function remove_product(){
-    alert();
-	$('.empty_cart_btn').trigger('click');
-  }
-  
   
   
   });
