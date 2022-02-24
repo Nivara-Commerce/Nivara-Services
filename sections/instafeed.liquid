@@ -17,7 +17,7 @@
     get: 'user',
     target: "instafeed-container",    
     limit: {{ section.settings.images_limit }},   
-    accessToken: 'IGQVJXNVF6bGUxZAHVIT0VBa0NBUHB6ZAERQdjRsaV9VNkNzbGpFX09rX0k4Wm9wT3NxLVJROGd1X3VES0FNRGpGaWwyTV9QNm5DOVktaWZAwVFNPSnJYOWxnN1BDTjIxNFZAmRk1pV1IyUmxfTldGTTQtagZDZD'
+    accessToken: {{ section.settings.access_token }}
   });
   userFeed.run();
 </script>
@@ -47,7 +47,13 @@
       "step": 1,
       "default": 4,      
       "label": "Number of Images in a row"
-    }],
+    },
+    {
+       "type": "text",
+          "id": "access_token",
+          "default": "Add your access token",
+          "label": "Instagram Access Token"
+        }],
     "presets": [
       {
         "name": "Instagram Block",
