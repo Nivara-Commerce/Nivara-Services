@@ -16,7 +16,7 @@
     get: 'user',
     target: "instafeed-container",
     
-    limit: {{ section.settings.custom_text_title }},
+    limit: {{ section.settings.images_limit }},
     accessToken: 'IGQVJXNVF6bGUxZAHVIT0VBa0NBUHB6ZAERQdjRsaV9VNkNzbGpFX09rX0k4Wm9wT3NxLVJROGd1X3VES0FNRGpGaWwyTV9QNm5DOVktaWZAwVFNPSnJYOWxnN1BDTjIxNFZAmRk1pV1IyUmxfTldGTTQtagZDZD'
   });
   userFeed.run();
@@ -26,11 +26,13 @@
   {
     "name": "Instagram Block",
     "settings": [{
-        "id": "custom_text_title",
-        "type": "text",
-        "label": "Text box heading",
-        "default": "Title"
-      }],
+      "type": "range",
+      "id": "images_limit",
+      "min": 0,
+      "max": 20,
+      "label": "Limit image display",
+      "default": 8
+    }],
     "presets": [
       {
         "name": "Instagram Block",
