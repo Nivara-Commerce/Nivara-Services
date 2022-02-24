@@ -194,6 +194,7 @@
     "1645683793ad1791b1": {
       "type": "instafeed",
       "settings": {
+        "heading": "Instagram Feed",
         "images_limit": 13,
         "image_row": 4
       }
