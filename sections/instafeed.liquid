@@ -14,10 +14,8 @@
 <script type="text/javascript">
   var userFeed = new Instafeed({
     get: 'user',
-    target: "instafeed-container",
-    
-    limit: {{ section.settings.images_limit }},
-    template:'<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>',
+    target: "instafeed-container",    
+    limit: {{ section.settings.images_limit }},   
     accessToken: 'IGQVJXNVF6bGUxZAHVIT0VBa0NBUHB6ZAERQdjRsaV9VNkNzbGpFX09rX0k4Wm9wT3NxLVJROGd1X3VES0FNRGpGaWwyTV9QNm5DOVktaWZAwVFNPSnJYOWxnN1BDTjIxNFZAmRk1pV1IyUmxfTldGTTQtagZDZD'
   });
   userFeed.run();
