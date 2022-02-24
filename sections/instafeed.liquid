@@ -17,7 +17,7 @@
     get: 'user',
     target: "instafeed-container",    
     limit: {{ section.settings.images_limit }},   
-    accessToken: {{ section.settings.access_token| prepend: "'" | append: "'" }}
+    accessToken: {{ section.settings.access_token | append: "'" }}
   });
   userFeed.run();
 </script>
