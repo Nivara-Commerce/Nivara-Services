@@ -195,7 +195,7 @@
       "type": "instafeed",
       "settings": {
         "images_limit": 13,
-        "image_width": 35
+        "image_row": 5
       }
     }
   },
