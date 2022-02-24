@@ -5,7 +5,8 @@
 
 <style type="text/css">
 		a img{ 
-			width: 33.33%;
+			width: {{ section.settings.image_width }};
+            float: left;
 		}
 </style>
 
@@ -31,6 +32,16 @@
       "max": 20,
       "label": "Limit image display",
       "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 25,
+      "unit": "%",
+      "label": "Image Width"
     }],
     "presets": [
       {
