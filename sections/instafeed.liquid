@@ -17,6 +17,7 @@
     target: "instafeed-container",
     
     limit: {{ section.settings.images_limit }},
+    template:'<div class="img-box"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a></div>',
     accessToken: 'IGQVJXNVF6bGUxZAHVIT0VBa0NBUHB6ZAERQdjRsaV9VNkNzbGpFX09rX0k4Wm9wT3NxLVJROGd1X3VES0FNRGpGaWwyTV9QNm5DOVktaWZAwVFNPSnJYOWxnN1BDTjIxNFZAmRk1pV1IyUmxfTldGTTQtagZDZD'
   });
   userFeed.run();
