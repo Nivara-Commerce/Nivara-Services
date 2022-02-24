@@ -1,5 +1,5 @@
 <section class="instafeed-container">
-  <h1 style="text-align: center">Show Instagram Feed on your Website</h1>
+  <h1 style="text-align: center">{{ section.settings.title }}</h1>
   <div id="instafeed-container"></div>
 </section>
  {%- assign image_row = 100 | divided_by:section.settings.image_row  -%}
@@ -26,6 +26,11 @@
   {
     "name": "Instagram Block",
     "settings": [{
+          "type": "text",
+          "id": "heading",
+          "default": "Instagram Feed",
+          "label": "Title"
+        },{
       "type": "range",
       "id": "images_limit",
       "min": 0,
