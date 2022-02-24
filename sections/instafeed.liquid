@@ -2,10 +2,10 @@
   <h1 style="text-align: center">Show Instagram Feed on your Website</h1>
   <div id="instafeed-container"></div>
 </section>
-
+ {%- assign image_row = 100 | divided_by:section.settings.image_row  -%}
 <style type="text/css">
 		a img{ 
-			width: {{ section.settings.image_row | divided_by: 100 | append: '%' }};
+			width: {{ image_row | append: '%' }};
             float: left;
 		}
 </style>
