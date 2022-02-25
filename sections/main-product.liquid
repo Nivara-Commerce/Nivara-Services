@@ -525,19 +525,19 @@
     </modal-dialog>
   {%- endfor -%}
 </section>
-<div id="stickey-cart">     
-<div class="custom-model-main">
-    <div class="custom-model-inner">        
-    <div class="close-btn">×</div>
+  <div id="stickey-cart">     
+    <div class="custom-model-main">
+      <div class="custom-model-inner">        
+        <div class="close-btn">×</div>
         <div class="custom-model-wrap">
-            <div class="pop-up-content-wrap">
-               Content Here
-            </div>
+          <div class="pop-up-content-wrap">
+            {{product.id}}
+          </div>
         </div>  
-    </div>  
-    <div class="bg-overlay"></div>
-</div> 
-</div>
+      </div>  
+      <div class="bg-overlay"></div>
+    </div> 
+  </div>
 {% javascript %}
   class ProductModal extends ModalDialog {
     constructor() {
