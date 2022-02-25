@@ -511,7 +511,7 @@
       </div>
     </div>
   </product-modal>
-<h1 id="scroll-to">I am The H1</h1>
+
   {% assign popups = section.blocks | where: "type", "popup" %}
   {%- for block in popups -%}
     <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal" {{ block.shopify_attributes }}>
@@ -525,7 +525,7 @@
     </modal-dialog>
   {%- endfor -%}
 </section>
-
+<h1 id="scroll-to">I am The H1</h1>
 {% javascript %}
   class ProductModal extends ModalDialog {
     constructor() {
