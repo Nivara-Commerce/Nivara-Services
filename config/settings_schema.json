@@ -138,6 +138,12 @@
     "settings": [
       {
         "type": "checkbox",
+        "id": "enable_sticky_addtocart",
+        "default": false,
+        "label": "Enable Sticky Add to Cart"
+      },
+      {
+        "type": "checkbox",
         "id": "show_star_ratings",
         "default": false,
         "label": "Enable Star Ratings"
