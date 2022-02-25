@@ -3128,6 +3128,11 @@ details-disclosure > details {
   opacity: 1;
   overflow: hidden;
 }
+  .pop-up-content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .custom-model-inner {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
