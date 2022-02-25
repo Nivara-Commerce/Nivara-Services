@@ -3137,6 +3137,12 @@ details-disclosure > details {
     gap: 20px;
     display: flex;
 }
+  .p-title {
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0;
+}
 .custom-model-inner {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
