@@ -940,9 +940,7 @@ $(document).ready(function(){
         wS = $(this).scrollTop();
     console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-      //alert('you have scrolled to the h1!');
         $(".custom-model-main").addClass('model-open');
-
     }
     else{
       $(".custom-model-main").removeClass('model-open');
