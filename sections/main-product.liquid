@@ -534,7 +534,7 @@
             <div class="left-sec">
             <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
             <div class="p-title">{{product.title}}</div>
-           
+             
 <!--             <div class="p-quantity">  <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
@@ -560,7 +560,7 @@
               </quantity-input>
             </div>
             </div> -->
-            <div class="p-countdown"></div>
+          
             </div>
             <div class="right-sec">
              <div class="p-rating"></div>
@@ -590,6 +590,7 @@
                 {%- endif -%}
               </div>
             </div>
+              <div class="p-countdown"></div>
             </div>
           </div>
         </div>  
