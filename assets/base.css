@@ -3143,6 +3143,9 @@ details-disclosure > details {
     font-weight: 600;
     letter-spacing: 0;
 }
+  .p-image img {
+    border-radius: 10px;
+}
 .custom-model-inner {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
@@ -3167,8 +3170,6 @@ details-disclosure > details {
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
   text-align: left;
