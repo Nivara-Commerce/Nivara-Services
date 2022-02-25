@@ -3133,6 +3133,10 @@ details-disclosure > details {
     justify-content: space-between;
     align-items: center;
 }
+  .image_count {
+    gap: 20px;
+    display: flex;
+}
 .custom-model-inner {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
