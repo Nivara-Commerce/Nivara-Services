@@ -453,7 +453,7 @@
                 </template>
               </pickup-availability>
             </div>
-<h1 id="scroll-to">I am The H1</h1>
+
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
           {%- when 'rating' -%}
             {%- if product.metafields.reviews.rating.value != blank -%}
@@ -511,7 +511,7 @@
       </div>
     </div>
   </product-modal>
-
+<h1 id="scroll-to">I am The H1</h1>
   {% assign popups = section.blocks | where: "type", "popup" %}
   {%- for block in popups -%}
     <modal-dialog id="PopupModal-{{ block.id }}" class="product-popup-modal" {{ block.shopify_attributes }}>
