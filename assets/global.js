@@ -946,4 +946,7 @@ $(document).ready(function(){
       $(".custom-model-main").removeClass('model-open');
     }
   });
+  $(".close-btn, .bg-overlay").click(function(){
+  $(".custom-model-main").removeClass('model-open');
+});
 });
