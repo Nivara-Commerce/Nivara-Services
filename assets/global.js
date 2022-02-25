@@ -934,8 +934,8 @@ window.onload = function () {
 // sticky add to cart
 $(document).ready(function(){
   $(window).scroll(function() {
-    var hT = $('#scroll-to').offset().top,
-        hH = $('#scroll-to').outerHeight(),
+    var hT = $('#stickey-cart').offset().top,
+        hH = $('#stickey-cart').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
     console.log((hT-wH) , wS);
