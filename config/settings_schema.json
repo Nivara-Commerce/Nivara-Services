@@ -147,21 +147,21 @@
         "id": "sticky_addtocart_animation",
         "default": false,
         "label": "Enable Add to Cart Animation",
-        "info": "t:settings_schema.search_input.settings.predictive_search_show_vendor.info"
+        "info": "visible on the product page"
       },
       {
         "type": "checkbox",
         "id": "show_quantity",
         "default": false,
         "label": "Show Inventory quantity",
-        "info": "t:settings_schema.search_input.settings.predictive_search_show_price.info"
+        "info": "visible on the product page"
       },
       {
         "type": "checkbox",
         "id": "show_sales_countdown",
         "default": false,
         "label": "Show Sales Countdown",
-        "info": "t:settings_schema.search_input.settings.predictive_search_show_price.info"
+        "info": "visible on the product page"
       }
     ]
   },
