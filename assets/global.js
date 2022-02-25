@@ -944,5 +944,8 @@ $(document).ready(function(){
         $(".custom-model-main").addClass('model-open');
 
     }
+    else{
+      $(".custom-model-main").removeClass('model-open');
+    }
   });
 });
