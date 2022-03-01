@@ -1,5 +1,4 @@
 class CartNotification extends HTMLElement {
-  alert();
   constructor() {
     super();
 
