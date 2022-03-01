@@ -976,9 +976,10 @@ $(document).ready(function(){
     cache: false,
     dataType: 'json',
     success: function(res){
-           setTimeout(function(){
-       $('#cart-notification').addClass('active');
-               $('<div id="cart-notification-product" class="cart-notification-product"><div class="cart-notification-product__image global-media-settings"><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/products/snack-food-ingredients_Lead_7d1dbb8e-908c-4e2b-98ce-afce9f1b052d_140x.png?v=1645533399" alt="" width="70" height="47" loading="lazy"></div><div><h3 class="cart-notification-product__name h4">Copy of Nivara</h3><dl></dl></div></div>').insertAfter('.cart-notification__header');
+      console.log(res);
+      setTimeout(function(){
+        $('#cart-notification').addClass('active');
+        $('<div id="cart-notification-product" class="cart-notification-product"><div class="cart-notification-product__image global-media-settings"><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/products/snack-food-ingredients_Lead_7d1dbb8e-908c-4e2b-98ce-afce9f1b052d_140x.png?v=1645533399" alt="" width="70" height="47" loading="lazy"></div><div><h3 class="cart-notification-product__name h4">Copy of Nivara</h3><dl></dl></div></div>').insertAfter('.cart-notification__header');
 
       }, 1000);
     }
