@@ -971,13 +971,7 @@ $(document).ready(function(){
       
       setTimeout(function(){
        $('#cart-notification').addClass('active');
-        var cartCount = {{ cart.item_count }};
-
-  
-{% if cart.item_count != 0 %}  
-$('#cart-number').replaceWith("<a href="/cart" id="cart-number">View cart (" + cartCount + ")</a>");
-{% endif %}
-
+        
       }, 1000);
      
     }
