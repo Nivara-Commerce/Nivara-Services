@@ -968,6 +968,10 @@ $(document).ready(function(){
     data: addData,
     success: function(res){
       console.log(res);
+      setTimeout(function(){
+       $('#cart-notification').addClass('active');
+      }, 1000);
+     
     }
   });
  });
