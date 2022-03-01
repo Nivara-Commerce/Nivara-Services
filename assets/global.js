@@ -953,6 +953,7 @@ $(document).ready(function(){
 // sticky add to cart js
  $(document).on('click','.cartjs',function(e){
   e.preventDefault();
+   $('#cart-notification-product').remove();
    var variant_id_custom = $(this).attr('variant-id');
     var qtty = $(this).attr('quantity');
 //     alert(qtty);
