@@ -940,14 +940,14 @@ $(document).ready(function(){
         wS = $(this).scrollTop();
     console.log((hT-wH) , wS);
     if (wS > (hT+hH-wH)){
-        $(".custom-model-main").addClass('model-open');
+        $(".custom-model-main").addClass('model-opens');
     }
     else{
-      $(".custom-model-main").removeClass('model-open');
+      $(".custom-model-main").removeClass('model-opens');
     }
   });
   $(".close-btn, .bg-overlay").click(function(){
-  $(".custom-model-main").removeClass('model-open');
+  $(".custom-model-main").removeClass('model-opens');
 });
 });
 // sticky add to cart js
