@@ -525,6 +525,7 @@
     </modal-dialog>
   {%- endfor -%}
 </section>
+  {% if settings.enable_sticky_addtocart != empty %}
   <div id="stickey-cart">     
     <div class="custom-model-main">
       <div class="custom-model-inner">        
@@ -575,6 +576,7 @@
       <div class="bg-overlay"></div>
     </div> 
   </div>
+  {% endif %}
 {% javascript %}
   class ProductModal extends ModalDialog {
     constructor() {
