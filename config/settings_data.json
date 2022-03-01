@@ -3,9 +3,10 @@
     "enable_sticky_addtocart": true,
     "show_star_ratings": true,
     "sticky_addtocart_animation": true,
-    "show_quantity": true,
+    "show_sales_countdown": true,
     "add_to_cart_animation": "swing",
     "cart_countdown": "5",
+    "show_quantity": true,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
