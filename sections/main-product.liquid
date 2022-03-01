@@ -536,10 +536,11 @@
                <div class="image_count">
             <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
             <div class="p-title">{{product.title}}</div>
+                   {% if settings.show_star_ratings != blank %}<div class="p-rating">***</div>{% endif %}
               </div>
             </div>
             <div class="right-sec">
-               {% if settings.show_star_ratings != blank %}<div class="p-rating">***</div>{% endif %}
+             
               
                 
             <div class="p-addtocart">
@@ -570,9 +571,10 @@
                 {{ form | payment_button }}
                 {%- endif -%}
               </div>
+                            {% if settings.show_sales_countdown != blank %}<div class="p-countdown">coundown</div>{% endif %}
             </div>
                 
-              {% if settings.show_sales_countdown != blank %}<div class="p-countdown">coundown</div>{% endif %}
+
               
             </div>
           </div>
