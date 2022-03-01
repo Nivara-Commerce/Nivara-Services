@@ -543,8 +543,7 @@
               
                 
             <div class="p-addtocart">
-                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+              
               <div class="product-form__buttons">    
                 <button
                         type="submit"
@@ -569,7 +568,6 @@
                 {{ form | payment_button }}
                 {%- endif -%}
               </div>
-               {%- endform -%}
             </div>
                 
               {% if settings.show_sales_countdown != blank %}<div class="p-countdown">coundown</div>{% endif %}
