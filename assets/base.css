@@ -3123,8 +3123,8 @@ details-disclosure > details {
   overflow-y: auto;
 }
 
-.model-open {
-  z-index: 99999;
+.model-opens {
+  z-index: 9;
   opacity: 1;
   overflow: hidden;
 }
@@ -3176,14 +3176,14 @@ details-disclosure > details {
   max-height: calc(100vh - 70px);
 	overflow-y: auto;
 }
-.model-open .custom-model-inner {
+.model-opens .custom-model-inner {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
   position: relative;
   z-index: 999;
 }
-.model-open .bg-overlay {
+.model-opens .bg-overlay {
   background: rgba(0, 0, 0, 0.6);
   z-index: 99;
 }
