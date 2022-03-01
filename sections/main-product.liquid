@@ -541,6 +541,7 @@
             <div class="right-sec">
                {% if settings.show_star_ratings != blank %}<div class="p-rating"></div>{% endif %}
               <div class="cart_count">
+                 {% if settings.sticky_addtocart_animation != blank %}
             <div class="p-addtocart">
               <div class="product-form__buttons">    
                 <button
@@ -567,6 +568,7 @@
                 {%- endif -%}
               </div>
             </div>
+                {% endif %}
               <div class="p-countdown"></div>
               </div>
             </div>
