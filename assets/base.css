@@ -3124,7 +3124,6 @@ details-disclosure > details {
 }
 
 .model-opens {
-  z-index: 9;
   opacity: 1;
   overflow: hidden;
 }
@@ -3196,7 +3195,6 @@ details-disclosure > details {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 0;
   -webkit-transition: background 0.15s linear;
   -o-transition: background 0.15s linear;
   transition: background 0.15s linear;
