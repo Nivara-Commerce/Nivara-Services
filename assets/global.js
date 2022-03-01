@@ -969,10 +969,21 @@ $(document).ready(function(){
     success: function(res){
       console.log(res);
       
-      setTimeout(function(){
+       $.ajax({
+    type: 'GET',
+    url: '/cart.js',
+    async: false,
+    cache: false,
+    dataType: 'json',
+    success: function(res){
+           setTimeout(function(){
        $('#cart-notification').addClass('active');
+         $('#cart-notification').load('#cart-notification');    
         
       }, 1000);
+    }
+       });
+      
      
     }
   });
