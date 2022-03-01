@@ -541,13 +541,13 @@
             <div class="right-sec">
                {% if settings.show_star_ratings != blank %}<div class="p-rating">***</div>{% endif %}
               <div class="cart_count">
-                 {% if settings.sticky_addtocart_animation != blank %}
+                
             <div class="p-addtocart">
               <div class="product-form__buttons">    
                 <button
                         type="submit"
                         name="add"
-                        class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary {% else %}button--primary {% endif %}btn {% if settings.add_to_cart_animation == 'bounce'%}btn-animation-bounce {%elsif settings.add_to_cart_animation == 'shake'%}btn-animation-shake {%elsif settings.add_to_cart_animation == 'pulse'%}btn-animation-pulse {%elsif settings.add_to_cart_animation == 'jello-shake'%}btn-animation-jello-shake {%elsif settings.add_to_cart_animation == 'wobble-wobble'%}btn-animation-wobble-wobble {%elsif settings.add_to_cart_animation == 'vibrate'%}btn-animation-vibrate {%elsif settings.add_to_cart_animation == 'swing'%}btn-animation-swing {%elsif settings.add_to_cart_animation == 'tada'%}btn-animation-tada {%else%}no-animation{% endif %}"
+                        class="product-form__submit button button--full-width  {% if settings.sticky_addtocart_animation != blank %} {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary {% else %}button--primary {% endif %}btn {% if settings.add_to_cart_animation == 'bounce'%}btn-animation-bounce {%elsif settings.add_to_cart_animation == 'shake'%}btn-animation-shake {%elsif settings.add_to_cart_animation == 'pulse'%}btn-animation-pulse {%elsif settings.add_to_cart_animation == 'jello-shake'%}btn-animation-jello-shake {%elsif settings.add_to_cart_animation == 'wobble-wobble'%}btn-animation-wobble-wobble {%elsif settings.add_to_cart_animation == 'vibrate'%}btn-animation-vibrate {%elsif settings.add_to_cart_animation == 'swing'%}btn-animation-swing {%elsif settings.add_to_cart_animation == 'tada'%}btn-animation-tada {%else%}no-animation{% endif %} {% endif %}"
                         {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                         >
                   <span>
@@ -568,7 +568,7 @@
                 {%- endif -%}
               </div>
             </div>
-                {% endif %}
+                
               {% if settings.show_sales_countdown != blank %}<div class="p-countdown">coundown</div>{% endif %}
               </div>
             </div>
