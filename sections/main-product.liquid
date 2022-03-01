@@ -535,8 +535,10 @@
             <div class="left-sec">
                <div class="image_count">
             <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
-            <div class="p-title">{{product.title}}</div>
+         <div class="shivu">
+                 <div class="p-title">{{product.title}}</div>
                    {% if settings.show_star_ratings != blank %}<div class="p-rating">***</div>{% endif %}
+              </div>
               </div>
             </div>
             <div class="right-sec">
