@@ -157,13 +157,6 @@
       },
       {
         "type": "checkbox",
-        "id": "show_quantity",
-        "default": false,
-        "label": "Show Inventory quantity",
-        "info": "visible on the product page"
-      },
-      {
-        "type": "checkbox",
         "id": "show_sales_countdown",
         "default": false,
         "label": "Show Sales Countdown",
