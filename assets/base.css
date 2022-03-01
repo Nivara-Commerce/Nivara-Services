@@ -3131,7 +3131,7 @@ details-disclosure > details {
     justify-content: space-between;
     align-items: center;
 }
-  .image_count {
+.image_count, .right-sec .p-addtocart {
     gap: 20px;
     display: flex;
 }
