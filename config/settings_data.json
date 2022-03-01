@@ -3,6 +3,7 @@
     "enable_sticky_addtocart": true,
     "show_star_ratings": true,
     "sticky_addtocart_animation": true,
+    "show_quantity": true,
     "add_to_cart_animation": "swing",
     "cart_countdown": "5",
     "sections": {
