@@ -977,9 +977,8 @@ $(document).ready(function(){
     dataType: 'json',
     success: function(res){
            setTimeout(function(){
-       $('#cart-notification').addClass('active');
-         $('#cart-notification').load('#cart-notification');    
-        
+       $('#cart-notification').html(res);
+     
       }, 1000);
     }
        });
