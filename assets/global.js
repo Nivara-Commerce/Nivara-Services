@@ -971,7 +971,7 @@ $(document).ready(function(){
       
       setTimeout(function(){
        $('#cart-notification').addClass('active');
-		
+
       }, 1000);
      
     }
