@@ -950,3 +950,24 @@ $(document).ready(function(){
   $(".custom-model-main").removeClass('model-open');
 });
 });
+// sticky add to cart js
+ $(document).on('click','.cartjs',function(e){
+  e.preventDefault();
+   var variant_id_custom = $(this).attr('variant-id');
+    var qtty = $(this).attr('quantity');
+//     alert(qtty);
+      var addData = {
+        id:variant_id_custom,
+        quantity:qtty,
+  };
+//     alert(variant_id_custom);
+  $.ajax({
+    type: 'POST',
+    url: '/cart/add.js',
+    dataType: 'json',
+    data: addData,
+    success: function(res){
+      console.log(res);
+    }
+  });
+ });
