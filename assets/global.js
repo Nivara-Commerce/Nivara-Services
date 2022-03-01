@@ -968,17 +968,16 @@ $(document).ready(function(){
     data: addData,
     success: function(res){
       console.log(res);
-      
-       $.ajax({
+    $.ajax({
     type: 'GET',
     url: '/cart.js',
     async: false,
     cache: false,
     dataType: 'json',
     success: function(res){
-           setTimeout(function(){
-       $('#cart-notification').html(res);
-     
+      setTimeout(function(){
+        
+
       }, 1000);
     }
        });
