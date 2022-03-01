@@ -971,7 +971,11 @@ $(document).ready(function(){
       
       setTimeout(function(){
        $('#cart-notification').addClass('active');
-        CartNotification();
+          getSectionInnerHTML(html, selector = '.shopify-section') {
+    return new DOMParser()
+      .parseFromString(html, 'text/html')
+      .querySelector(selector).innerHTML;
+  }
       }, 1000);
      
     }
