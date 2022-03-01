@@ -968,6 +968,7 @@ $(document).ready(function(){
     data: addData,
     success: function(res){
       console.log(res);
+      $('#cart-notification').load('#cart-notification');
       setTimeout(function(){
        $('#cart-notification').addClass('active');
       }, 1000);
