@@ -968,10 +968,10 @@ $(document).ready(function(){
     data: addData,
     success: function(res){
       console.log(res);
-      $('#cart-notification').html('#cart-notification');
+      
       setTimeout(function(){
        $('#cart-notification').addClass('active');
-        
+        CartNotification();
       }, 1000);
      
     }
