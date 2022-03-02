@@ -154,13 +154,6 @@
         "default": false,
         "label": "Enable Add to Cart Animation",
         "info": "visible on the product page"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_sales_countdown",
-        "default": false,
-        "label": "Show Sales Countdown",
-        "info": "visible on the product page"
       }
     ]
   },
