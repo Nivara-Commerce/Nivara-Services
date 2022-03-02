@@ -533,50 +533,50 @@
         <div class="custom-model-wrap">
           <div class="pop-up-content-wrap">
             <div class="left-sec">
-               <div class="image_count">
-            <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
-         <div class="">
-                 <div class="p-title">{{product.title}}</div>
-                   {% if settings.show_star_ratings != blank %}<div class="p-rating"><div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div></div>{% endif %}
-              </div>
+              <div class="image_count">
+                <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
+                <div class="">
+                  <div class="p-title">{{product.title}}</div>
+                  {% if settings.show_star_ratings != blank %}<div class="p-rating"><div class="wc_product_review_badge" data-handle="{{ product.handle }}" data-product_id="{{ product.id }}"></div></div>{% endif %}
+                </div>
               </div>
             </div>
             <div class="right-sec">
-             
-              
-                
-            <div class="p-addtocart">
-              <div class="product-form__buttons">   
-                <button
-                        type="submit"
-                        name="add"
-                        variant-id="{{ product.selected_or_first_available_variant.id }}"
-                        quantity="1"
-                        class="product-form__submit button button--full-width cartjs {% if settings.sticky_addtocart_animation != blank %}{% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary {% else %}button--primary {% endif %}btn {% if settings.add_to_cart_animation == 'bounce'%}btn-animation-bounce {%elsif settings.add_to_cart_animation == 'shake'%}btn-animation-shake {%elsif settings.add_to_cart_animation == 'pulse'%}btn-animation-pulse {%elsif settings.add_to_cart_animation == 'jello-shake'%}btn-animation-jello-shake {%elsif settings.add_to_cart_animation == 'wobble-wobble'%}btn-animation-wobble-wobble {%elsif settings.add_to_cart_animation == 'vibrate'%}btn-animation-vibrate {%elsif settings.add_to_cart_animation == 'swing'%}btn-animation-swing {%elsif settings.add_to_cart_animation == 'tada'%}btn-animation-tada {%else%}no-animation{% endif %} {% endif %}"
-                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                        >
-                  <span>
-                    {%- if product.selected_or_first_available_variant.available -%}
-                    {{ 'products.product.add_to_cart' | t }}
-                    {%- else -%}
-                    {{ 'products.product.sold_out' | t }}
-                    {%- endif -%}
-                  </span>
-                  <div class="loading-overlay__spinner hidden">
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                    </svg>
-                  </div>
-                </button>
-                {%- if block.settings.show_dynamic_checkout -%}
-                {{ form | payment_button }}
-                {%- endif -%}
-              </div>
-                           
-            </div>
-                
 
-              
+
+
+              <div class="p-addtocart">
+                <div class="product-form__buttons">   
+                  <button
+                          type="submit"
+                          name="add"
+                          variant-id="{{ product.selected_or_first_available_variant.id }}"
+                          quantity="1"
+                          class="product-form__submit button button--full-width cartjs {% if settings.sticky_addtocart_animation != blank %}{% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary {% else %}button--primary {% endif %}btn {% if settings.add_to_cart_animation == 'bounce'%}btn-animation-bounce {%elsif settings.add_to_cart_animation == 'shake'%}btn-animation-shake {%elsif settings.add_to_cart_animation == 'pulse'%}btn-animation-pulse {%elsif settings.add_to_cart_animation == 'jello-shake'%}btn-animation-jello-shake {%elsif settings.add_to_cart_animation == 'wobble-wobble'%}btn-animation-wobble-wobble {%elsif settings.add_to_cart_animation == 'vibrate'%}btn-animation-vibrate {%elsif settings.add_to_cart_animation == 'swing'%}btn-animation-swing {%elsif settings.add_to_cart_animation == 'tada'%}btn-animation-tada {%else%}no-animation{% endif %} {% endif %}"
+                          {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                          >
+                    <span>
+                      {%- if product.selected_or_first_available_variant.available -%}
+                      {{ 'products.product.add_to_cart' | t }}
+                      {%- else -%}
+                      {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <div class="loading-overlay__spinner hidden">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                  {%- if block.settings.show_dynamic_checkout -%}
+                  {{ form | payment_button }}
+                  {%- endif -%}
+                </div>
+
+              </div>
+
+
+
             </div>
           </div>
         </div>  
