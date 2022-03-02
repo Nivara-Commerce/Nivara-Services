@@ -191,7 +191,14 @@
 }
 
 /* base */
-
+.custom-model-inner {
+    z-index: 999;
+    box-shadow: 0 2px 10px rgb(34 34 34 / 15%);
+    background: #fff;
+    position: relative;
+    display: inline-block;
+}
+  
 .no-js:not(html) {
   display: none !important;
 }
