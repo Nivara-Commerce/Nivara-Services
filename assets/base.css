@@ -197,6 +197,7 @@
     background: #fff;
     position: relative;
     display: inline-block;
+    z-index: 9999;
 }
   
 .no-js:not(html) {
