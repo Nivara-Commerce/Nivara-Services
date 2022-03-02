@@ -537,7 +537,7 @@
             <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
          <div class="">
                  <div class="p-title">{{product.title}}</div>
-                   {% if settings.show_star_ratings != blank %}<div class="p-rating">***</div>{% endif %}
+                   {% if settings.show_star_ratings != blank %}<div class="p-rating">{{product.reviews_count}} {{ product.reviews_count | pluralize: 'review', 'reviews' }}</div>{% endif %}
               </div>
               </div>
             </div>
