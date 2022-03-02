@@ -1,7 +1,7 @@
 {
   "current": {
     "enable_sticky_addtocart": true,
-    "show_star_ratings": false,
+    "show_star_ratings": true,
     "sticky_addtocart_animation": true,
     "show_sales_countdown": false,
     "add_to_cart_animation": "swing",
