@@ -147,7 +147,7 @@
         "id": "show_star_ratings",
         "default": false,
         "label": "Enable Star Ratings",
-        "info": "we have configured with this Rivyo Product Reviews & QA app"
+        "info": "We have configured with this Rivyo Product Reviews & QA app"
       },
       {
         "type": "checkbox",
