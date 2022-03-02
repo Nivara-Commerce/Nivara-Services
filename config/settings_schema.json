@@ -147,7 +147,7 @@
         "id": "show_star_ratings",
         "default": false,
         "label": "Enable Star Ratings",
-        "info": "we have configured with this review app"
+        "info": "we have configured with this Product Reviews app"
       },
       {
         "type": "checkbox",
