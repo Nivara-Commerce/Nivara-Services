@@ -202,6 +202,9 @@
   .custom-model-main.model-opens {
     z-index: 9999;
 }  
+  div#cart-notification {
+    z-index: 9999;
+}
 .no-js:not(html) {
   display: none !important;
 }
