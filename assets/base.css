@@ -208,6 +208,10 @@
   .section-template--15708913860866__image-with-text-padding {
     z-index: -1;
 }
+  section#shopify-section-template--15708913860866__multicolumn {
+    z-index: -1;
+    position: relative;
+}
   
 .no-js:not(html) {
   display: none !important;
