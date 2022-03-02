@@ -525,6 +525,16 @@
     </modal-dialog>
   {%- endfor -%}
 </section>
+  <div class="review-sec">
+  <div class="wrapper">
+    <div class="section-header text-center">
+      <h2 class="h1 section-header__title">Customer Review</h2>
+    </div>
+    <div class="lt-block-reviews">
+      <ryviu-widget handle="{{product.handle}}" product_id="{{product.id}}" title_product="{{product.title}}" image_product="{{ product.featured_image.src | img_url: '180x' }}"></ryviu-widget>
+    </div>
+  </div>
+</div>
   {% if settings.enable_sticky_addtocart != blank %}
   <div id="stickey-cart">     
     <div class="custom-model-main">
@@ -537,7 +547,7 @@
             <div class="p-image"><img src="{{ product.featured_image | product_img_url: 'small' }}" alt="{{ product.title | escape }}"></div>
          <div class="">
                  <div class="p-title">{{product.title}}</div>
-                   {% if settings.show_star_ratings != blank %}<div class="p-rating"><ryviu-widget handle="{{product.handle}}" product_id="{{product.id}}" title_product="{{product.title}}" image_product="{{ product.featured_image.src | img_url: '180x' }}"></ryviu-widget></div>{% endif %}
+                   {% if settings.show_star_ratings != blank %}<div class="p-rating">{{product.reviews_count}} {{ product.reviews_count | pluralize: 'review', 'reviews' }}</div>{% endif %}
               </div>
               </div>
             </div>
