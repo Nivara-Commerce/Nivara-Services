@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "3.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/en/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/en\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.colors.name",
@@ -130,6 +130,115 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      }
+    ]
+  },
+  {
+    "name": "Sticky Add to Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_sticky_addtocart",
+        "default": false,
+        "label": "Enable Sticky Add to Cart"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_star_ratings",
+        "default": false,
+        "label": "Enable Star Ratings",
+        "info": "We have configured with this Rivyo Product Reviews & QA app"
+      },
+      {
+        "type": "checkbox",
+        "id": "sticky_addtocart_animation",
+        "default": false,
+        "label": "Enable Add to Cart Animation",
+        "info": "visible on the product page"
+      }
+    ]
+  },
+  {
+    "name": "Add to Cart Animation",
+    "settings": [
+      {
+        "type": "select",
+        "id": "add_to_cart_animation",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "bounce",
+            "label": "Bounce"
+          },
+          {
+            "value": "shake",
+            "label": "Shake"
+          },
+          {
+            "value": "pulse",
+            "label": "Pulse"
+          },
+          {
+            "value": "jello-shake",
+            "label": "Jello Shake"
+          },
+          {
+            "value": "wobble-wobble",
+            "label": "Wobble Wobble"
+          },
+          {
+            "value": "vibrate",
+            "label": "Vibrate"
+          },
+          {
+            "value": "swing",
+            "label": "Swing"
+          },
+          {
+            "value": "tada",
+            "label": "Tada"
+          }
+        ],
+        "default": "none",
+        "label": "Add to Cart Animation",
+        "info": "Add animation to the add to cart button"
+      }
+    ]
+  },
+  {
+    "name": "Cart Countdown Timer",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_countdown",
+        "options": [
+          {
+            "value": "0",
+            "label": "0 minutes"
+          },
+          {
+            "value": "5",
+            "label": "5 minutes"
+          },
+          {
+            "value": "10",
+            "label": "10 minutes"
+          },
+          {
+            "value": "15",
+            "label": "15 minutes"
+          },
+          {
+            "value": "20",
+            "label": "20 minutes"
+          }
+        ],
+        "default": "0",
+        "label": "Cart Countdown Timer",
+        "info": "Add countdown timer on cart page"
       }
     ]
   },
