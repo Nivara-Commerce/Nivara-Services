@@ -1,0 +1,63 @@
+<section class="instafeed-container">
+  <h1 style="text-align: center">{{ section.settings.heading }}</h1>
+  <div id="instafeed-container"></div>
+</section>
+ {%- assign image_row = 100 | divided_by:section.settings.image_row  -%}
+<style type="text/css">
+		a img{ 
+			width: {{ image_row | append: '%' }};
+            float: left;
+		}
+</style>
+
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+
+<script type="text/javascript">
+  var userFeed = new Instafeed({
+    get: 'user',
+    target: "instafeed-container",    
+    limit: {{ section.settings.images_limit }},   
+    accessToken: {{ section.settings.access_token| prepend: "'" | append: "'" }}
+  });
+  userFeed.run();
+</script>
+
+{% schema %}
+  {
+    "name": "Instagram Block",
+    "settings": [{
+          "type": "text",
+          "id": "heading",
+          "default": "Your Title",
+          "label": "Title"
+        },{
+      "type": "range",
+      "id": "images_limit",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": "Limit image display",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_row",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4,      
+      "label": "Number of Images in a row"
+    },
+    {
+       "type": "text",
+          "id": "access_token",          
+          "label": "Instagram Access Token"
+        }],
+    "presets": [
+      {
+        "name": "Instagram Block",
+        "category": "insta feed"
+      }
+    ]
+  }
+{% endschema %}
