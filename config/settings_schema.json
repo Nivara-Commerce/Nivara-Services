@@ -161,6 +161,12 @@
         "id": "texts",
         "label": "Suffix",
         "info": "Abay Fron Free Shipping"
+      },
+      {
+        "type": "text",
+        "id": "texts_1",
+        "label": "Goal Reached",
+        "info": "You are eligible for Free Shipping"
       }
     ]
   },
