@@ -155,6 +155,12 @@
         "default": false,
         "label": "Enable Add to Cart Animation",
         "info": "visible on the product page"
+      },
+      {
+        "type": "text",
+        "id": "texts",
+        "label": "Suffix",
+        "info": "Abay Fron Free Shipping"
       }
     ]
   },
