@@ -27,7 +27,7 @@
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
   {% if settings.goal_reached != empty %}
-  {% if settings.goal_reached == cart.total_price %}
+  {% if settings.goal_reached <= cart.total_price %}
   <div>asdasdasdasd</div>
   {% endif %}
   {% endif %}
