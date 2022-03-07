@@ -933,7 +933,7 @@ window.onload = function () {
 // cart goal
 $(document).ready(function(){
 var cart_total = $('.totals .totals__subtotal-value').text();
-  alert(parseInt(cart_total));
+  alert(cart_total);
 });
 
 
