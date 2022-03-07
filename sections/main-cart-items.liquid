@@ -18,41 +18,7 @@
     }
   }
 {%- endstyle -%}
-{% javascript %}
-  class CartNote extends HTMLElement {
-    constructor() {
-      super();
 
-      this.addEventListener('change', debounce((event) => {
-        const body = JSON.stringify({ note: event.target.value });
-        fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }});
-      }, 300))
-    }
-  }
-
-  customElements.define('cart-note', CartNote);
-{% endjavascript %}
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    function isIE() {
-      const ua = window.navigator.userAgent;
-      const msie = ua.indexOf('MSIE ');
-      const trident = ua.indexOf('Trident/');
-
-      return (msie > 0 || trident > 0);
-    }
-
-    if (!isIE()) return;
-    const cartSubmitInput = document.createElement('input');
-    cartSubmitInput.setAttribute('name', 'checkout');
-    cartSubmitInput.setAttribute('type', 'hidden');
-    document.querySelector('#cart').appendChild(cartSubmitInput);
-    document.querySelector('#checkout').addEventListener('click', function(event) {
-      document.querySelector('#cart').submit();
-    });
-  });
-</script>
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
 
@@ -60,15 +26,11 @@
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
-  <div>
-              <div class="js-contents" {{ block.shopify_attributes }}>
-                <div class="totals">
-                  <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
-                </div>
-              </div>
-    
-  </div>
+  {% if settings.goal_reached != empty %}
+  {% if settings.goal_reached == cart.total_price %}
+  <div>asdasdasdasd</div>
+  {% endif %}
+  {% endif %}
   <div id="cart_reserved_box" class="di-flex">
     <div class="fireEmoji">🔥</div>
     <div class="cart-reserved-text-box">
