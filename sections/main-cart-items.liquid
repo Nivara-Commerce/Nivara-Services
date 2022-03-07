@@ -27,8 +27,9 @@
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
   {% assign var1 = cart.total_price | plus: 0 %}
+  {% assign var2 = settings.goal_reached | plus: 0 %}
 
-  {% if settings.goal_reached <= var1 %}
+  {% if var2 <= var1 %}
   <div>asdasdasdasd</div>
   {% endif %}
   <div id="cart_reserved_box" class="di-flex">
