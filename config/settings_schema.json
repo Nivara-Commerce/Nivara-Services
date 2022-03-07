@@ -175,6 +175,11 @@
       {
         "type": "text",
         "id": "goal_reached",
+        "label": "Goal reached"
+      },
+      {
+        "type": "text",
+        "id": "text_suffix",
         "label": "Suffix"
       },
       {
