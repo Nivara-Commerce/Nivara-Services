@@ -930,6 +930,13 @@ window.onload = function () {
 
 }
   });
+// cart goal
+$(document).ready(function(){
+  $('.quantity__input').change(function(){
+    alert():
+  });
+});
+
 
 // sticky add to cart
 $(document).ready(function(){
