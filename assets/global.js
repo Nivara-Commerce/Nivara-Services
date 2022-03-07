@@ -932,9 +932,8 @@ window.onload = function () {
   });
 // cart goal
 $(document).ready(function(){
-  $('.quantity__input').change(function(){
-    alert();
-  });
+var cart_total = $('.totals .totals__subtotal-value').text();
+  alert(parseInt(cart_total));
 });
 
 
