@@ -167,7 +167,7 @@
         "label": "Prefix"
       },
       {
-        "type": "text",
+        "type": "number",
         "id": "goal_amount",
         "label": "Goal Amount",
         "info": "Set your goal amount"
