@@ -937,6 +937,12 @@ var cart_total = $('.totals .totals__subtotal-value').text();
   console.log(cart_total);
   var goal_reach = $('#goalreached').val();
   console.log(goal_reach);
+  if(cart_total >= goal_reach ){
+    console.log('greater'); 
+  }
+  else{
+    console.log('not greater');
+  }
 });
 
 
