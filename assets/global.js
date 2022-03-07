@@ -1056,7 +1056,7 @@ $(document).ready(function(){
 
 //Change this to take in the new total
 function checkprice(total) {
-                var baseprice = "150;
+                var baseprice = "150";
                 //Does this next line work???
                 //var carttotal = "{{ cart.total_price }}"; Wont need this anymore
                 //If so you can set the span's innerText to the new total
