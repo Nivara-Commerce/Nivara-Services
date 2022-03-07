@@ -933,7 +933,7 @@ window.onload = function () {
 // cart goal
 $(document).ready(function(){
 var cart_total = $('.totals .totals__subtotal-value').text();
-  alert(int(regexp_replace(string(cart_total),'\\$',''));
+  alert(cart_total.replace(/[^\d\.]/g, ''););
 });
 
 
