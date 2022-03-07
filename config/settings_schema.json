@@ -169,14 +169,13 @@
       {
         "type": "text",
         "id": "goal_amount",
-        "label": "ftytr",
-        "info": "ytuytu"
+        "label": "Goal Amount",
+        "info": "Set your goal amount"
       },
       {
         "type": "text",
         "id": "goal_reached",
-        "label": "cv",
-        "info": "sdf"
+        "label": "Suffix"
       },
       {
         "type": "select",
