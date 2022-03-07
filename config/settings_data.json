@@ -6,6 +6,7 @@
     "prefix_text": "You'are",
     "goal_amount": "150",
     "goal_reached": "Your are eligible for FREE shipping",
+    "text_suffix": "away from FREE shipping",
     "add_to_cart_animation": "swing",
     "cart_countdown": "5",
     "show_sales_countdown": true,
