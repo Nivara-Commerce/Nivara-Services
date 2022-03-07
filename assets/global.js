@@ -932,6 +932,7 @@ window.onload = function () {
   });
 // cart goal
 $(document).ready(function(){
+  $('.totals .totals__subtotal-value').change(function(){
 var cart_total = $('.totals .totals__subtotal-value').text();
   cart_total = cart_total.replace(/[^\d\.]/g, '');
   console.log(cart_total);
@@ -943,6 +944,7 @@ var cart_total = $('.totals .totals__subtotal-value').text();
   else{
     console.log('not greater');
   }
+    });
 });
 
 
