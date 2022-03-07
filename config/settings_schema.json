@@ -164,8 +164,7 @@
       {
         "type": "text",
         "id": "prefix_text",
-        "label": "cc",
-        "info": "gdfg"
+        "label": "Prefix"
       },
       {
         "type": "text",
