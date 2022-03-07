@@ -935,7 +935,7 @@ $(document).ready(function(){
 var cart_total = $('.totals .totals__subtotal-value').text();
   cart_total = cart_total.replace(/[^\d\.]/g, '');
   console.log(cart_total);
-  $('.totals .totals__subtotal-value').append({{settings.goal_amount}});
+  $('.totals .totals__subtotal-value').append('{{settings.goal_amount}}');
 });
 
 
