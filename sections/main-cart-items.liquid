@@ -28,10 +28,10 @@
   </div>
   <div>
     {% if settings.prefix_text != empty %}
-    <span>You'are</span>
+    <span>{{ settings.prefix_text }}</span>
     {% endif %}
     {% if settings.text_suffix != empty %}
-    <span>You'are eligible for FREE shipping</span>
+    <span>{{ settings.text_suffix }}</span>
     {% endif %}
     
   </div>
