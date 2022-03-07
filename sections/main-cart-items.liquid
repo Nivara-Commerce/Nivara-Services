@@ -31,7 +31,13 @@
   <div id="freeship" style="font-weight:bold; padding: 10px;">Your cart total is <span style="color:#f64c3f" id="spnQualifyTotal">{{ cart.total_price | money }}</span>. You qualify for free shipping!</div>
 
 <div id="nofreeship" style="font-weight:bold; padding: 10px;">Your cart total is <span style="color:#f64c3f" id="spnMoreTotal">{{ cart.total_price | money }}</span>.<br>Spend {{ 2500 | minus: cart.total_price | money }} more to qualify for free shipping!</div>
-
+{%- if cart.total_price > 2500 -%}
+    Your cart total is {{ cart.total_price | money }}.             
+    You qualify for free shipping!
+{%- else -%}
+    Your cart total is {{ cart.total_price | money }}.
+    Spend {{ 2500 | minus: cart.total_price | money }} more to qualify for free shipping!
+{%- endif -%}
 <input type="hidden" id="goalreached" value="{{ goal_target }}"/>
   <div id="cart_reserved_box" class="di-flex">
     <div class="fireEmoji">🔥</div>
