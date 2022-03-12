@@ -1055,3 +1055,6 @@ $(document).ready(function(){
  });
 
 //Change this to take in the new total
+$('div#main-cart-items').change(function(){
+  console.log('adsadasdsadsad');
+});
