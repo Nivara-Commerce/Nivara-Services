@@ -27,10 +27,6 @@
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
 
-                <div class="totals">
-                  <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
-                </div>
 
 <input type="hidden" id="goalreached" value="{{ goal_target }}"/>
   <div id="cart_reserved_box" class="di-flex">
