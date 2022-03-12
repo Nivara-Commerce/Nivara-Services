@@ -26,8 +26,14 @@
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
+  <script>
+Input.cart.line_items.each do |line_item|
+  next if line_item.variant.product.gift_card? || line_item.quantity <= 1
+  line_item.change_line_price(line_item.line_price * 0.90, message: "10% 2 or more")
+end
 
-
+Output.cart = Input.cart
+  </script>
 
 <input type="hidden" id="goalreached" value="{{ goal_target }}"/>
   <div id="cart_reserved_box" class="di-flex">
