@@ -990,12 +990,3 @@ $(document).ready(function(){
     }
   });
  });
-
-$("input#purchase").click(function() { 
-  $.ajax({ type: "POST", url: "/cart/add", 
-          data: $("#addToCartForm").serialize(), success: function(data) {
-            $.getJSON("/cart.js", function(cart) {
-              $("#navigate span").text('Total ' + Shopify.formatMoney(cart.total_price)); $.jGrowl( cart.items[0].title + ' has been added to your cart.'); 
-            });
-
-} }); return false; });
