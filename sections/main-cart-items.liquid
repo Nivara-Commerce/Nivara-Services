@@ -26,7 +26,7 @@
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
-  {% assign cart_total = cart.total_price | plus: 0 %}
+  {% assign cart_total = cart.goal_amount | plus: 0 %}
   {% assign goal_target = settings.goal_amount | plus: 0 %}
   {{cart_total}}-----{{goal_target}}
 <!--   <div id="freeship" style="font-weight:bold; padding: 10px;">Your cart total is <span style="color:#f64c3f" id="spnQualifyTotal">{{ cart.total_price | money }}</span>. You qualify for free shipping!</div>
