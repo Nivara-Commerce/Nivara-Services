@@ -991,3 +991,22 @@ $(document).ready(function(){
   });
  });
 
+WHOLESALE_TAG = 'WHOLESALE_'
+
+discount_amount = 0
+if Input.cart.customer
+  Input.cart.customer.tags.each do |tag|
+    if tag.start_with?(WHOLESALE_TAG)
+      discount_amount = tag.split(WHOLESALE_TAG)[1].to_i
+      break
+    end
+  end
+
+  if (discount_amount > 0)
+    Input.cart.line_items.each do |line_item|
+      line_item.change_line_price(line_item.line_price * ((100 - discount_amount) / 100), message: "Wholesale discount (#{discount_amount}%)")
+    end
+  end
+end
+
+Output.cart = Input.cart
