@@ -1145,12 +1145,12 @@
     ]
   },
   {
-    "name": "t:settings_schema.theme_addons.name",
+    "name": "Theme Addons",
     "settings": [
       {
         "type": "checkbox",
         "id": "infinite_scroll_enabled",
-        "label": "t:settings_schema.theme_addons.settings.infinite_scroll_enabled.label",
+        "label": "Show Infinite Scroll",
         "default": false
       }
     ]
