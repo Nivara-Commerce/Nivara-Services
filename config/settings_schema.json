@@ -1151,6 +1151,7 @@
         "type": "checkbox",
         "id": "infinite_scroll_enabled",
         "label": "Show Infinite Scroll",
+        "info": "hello",
         "default": false
       }
     ]
