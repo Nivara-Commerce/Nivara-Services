@@ -1000,8 +1000,15 @@ $('.js-contents').on('DOMSubtreeModified', function(){
   setTimeout(function(){
     var get_cart = $('.totals .totals__subtotal-value').text();  
 	var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
-	$('#setgoal').attr('value',cart_total);
-  
+	var goal_set = $('#setgoal').attr('value',cart_total);
+  	var goal_reach = $('#goalreached').attr('value');
+    
+    if(goal_set >= goal_reach){
+      
+     console.log('counpon'); 
+    }else{
+     console.log('no coupon');
+    }
   }, 1000);
 
     });
