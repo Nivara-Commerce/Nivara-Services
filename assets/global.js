@@ -999,18 +999,17 @@ $(document).ready(function(){
 $('.js-contents').on('DOMSubtreeModified', function(){
   setTimeout(function(){
     var get_cart = $('.totals .totals__subtotal-value').text();  
-	var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
-	$('#setgoal').attr('value',cart_total);
+    var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
+    $('#setgoal').attr('value',cart_total);
     var goal_set = $('#setgoal').attr('value');
-  	var goal_reach = $('#goalreached').attr('value');
+    var goal_reach = $('#goalreached').attr('value');
     console.log(goal_set);
     console.log(goal_reach);
     if(goal_set >= goal_reach){
-      
-     console.log('counpon'); 
+      console.log('counpon'); 
     }else{
-     console.log('no coupon');
+      console.log('no coupon');
     }
   }, 1000);
 
-    });
+});
