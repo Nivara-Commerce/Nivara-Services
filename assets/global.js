@@ -1000,7 +1000,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
   setTimeout(function(){
     var test = $('.totals .totals__subtotal-value').text();  
 	var number = Number(test.replace(/[^0-9\.-]+/g,""));
-	$('#goalreached').value = number;
+	$('#goalreached').val = number;
  	console.log(number);
   
   }, 1000);
