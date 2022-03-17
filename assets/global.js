@@ -990,3 +990,10 @@ $(document).ready(function(){
     }
   });
  });
+
+
+// cart goal js
+
+$('.js-contents').on('DOMSubtreeModified', function(){
+      console.log('changed');
+    });
