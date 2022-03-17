@@ -1007,6 +1007,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     console.log(goal_reach);
     if(goal_set >= goal_reach){
       console.log('counpon'); 
+      $('#cart').attr('value','holi');
     }else{
       console.log('no coupon');
     }
