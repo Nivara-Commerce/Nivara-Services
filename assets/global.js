@@ -1012,7 +1012,6 @@ $('.js-contents').on('DOMSubtreeModified', function(){
       $('.goal_sec').html('Congratulation! you get 10% discount on this order');
     }else{
       console.log('no coupon');
-      
       $('.goal_sec').html('Spend '+subtract+'more to get 10% discount');
     }
   }, 1000);
