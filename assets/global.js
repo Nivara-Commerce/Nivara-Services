@@ -933,6 +933,7 @@ window.onload = function () {
 
 // sticky add to cart
 $(document).ready(function(){
+  if($('body').hasClass('template-product')){
   $(window).scroll(function() {
     var hT = $('#stickey-cart').offset().top,
         hH = $('#stickey-cart').outerHeight(),
@@ -949,6 +950,7 @@ $(document).ready(function(){
   $(".close-btn, .bg-overlay").click(function(){
   $(".custom-model-main").removeClass('model-opens');
 });
+  }
 });
 // sticky add to cart js
  $(document).on('click','.cartjs',function(e){
