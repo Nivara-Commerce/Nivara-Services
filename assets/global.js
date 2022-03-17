@@ -1009,11 +1009,11 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     if(goal_set >= goal_reach){
       console.log('counpon'); 
       $('#cart').attr('value','holi');
-      $('.goal_sec').html("you're eligibal for 10% discount on checkout page");
+      $('.goal_sec').html('Congratulation! you get 10% discount on this order');
     }else{
       console.log('no coupon');
       
-      $('.goal_sec').html("you need to add "+subtract+" more product to get the discount");
+      $('.goal_sec').html('Spend '+subtract+'more to get 10% discount');
     }
   }, 1000);
 
