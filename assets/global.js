@@ -1013,7 +1013,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     }else{
       console.log('no coupon');
       
-      $('.goal_sec').html("you need to add"+subtract+" more product to get the discount");
+      $('.goal_sec').html("you need to add "+subtract+" more product to get the discount");
     }
   }, 1000);
 
