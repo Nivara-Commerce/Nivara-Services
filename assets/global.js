@@ -997,9 +997,9 @@ $(document).ready(function(){
 $('.js-contents').on('DOMSubtreeModified', function(){
   setTimeout(function(){
     var test = $('.totals .totals__subtotal-value').text();  
-    var priceNum = parseFloat(test.replace(/£/g, ""));
+var number = Number(test.replace(/[^0-9\.-]+/g,""));
 
- 	console.log(priceNum);
+ 	console.log(number);
   
   }, 1000);
 
