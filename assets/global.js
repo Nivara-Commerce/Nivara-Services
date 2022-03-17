@@ -998,10 +998,9 @@ $(document).ready(function(){
 
 $('.js-contents').on('DOMSubtreeModified', function(){
   setTimeout(function(){
-    var test = $('.totals .totals__subtotal-value').text();  
-	var number = Number(test.replace(/[^0-9\.-]+/g,""));
-	$('#goalreached').attr('value',number);
- 	console.log(number);
+    var get_cart = $('.totals .totals__subtotal-value').text();  
+	var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
+	$('#setgoal').attr('value',cart_total);
   
   }, 1000);
 
