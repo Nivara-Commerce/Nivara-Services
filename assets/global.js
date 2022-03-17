@@ -1017,6 +1017,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     }
   }, 1000);
 });
+
 $(document).ready(function(){
   setTimeout(function(){
     var get_cart = $('.totals .totals__subtotal-value').text();  
