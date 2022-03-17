@@ -1008,7 +1008,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     var subtract = goal_reach - goal_set;
     if(goal_set >= goal_reach){
       console.log('counpon'); 
-      $('#cart').attr('value','holi');
+      $('#discount_code').attr('value','holi');
       $('.goal_sec').html('Congratulation! you get 10% discount on this order');
     }else{
       console.log('no coupon');
