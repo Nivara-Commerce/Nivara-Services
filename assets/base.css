@@ -3248,3 +3248,12 @@ details-disclosure > details {
 @media screen and (max-width:799px){
   .custom-model-inner{margin-top: 45px;}
 }
+
+/*  cart goal css  */
+  .goal_sec {
+    background-color: #FD9669;
+    padding: 10px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 10px;
+}
