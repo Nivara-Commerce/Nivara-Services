@@ -52,7 +52,7 @@
   </div>
 
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
-    <input class="js-form-discount" type="hidden" name="discount" value="RESELLERDISCOUNTCODE" >
+    <input class="js-form-discount" id="discount_code" type="hidden" name="discount" value="" >
 
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
