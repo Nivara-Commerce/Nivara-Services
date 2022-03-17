@@ -1012,7 +1012,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
       $('.goal_sec').html('Congratulation! you get 10% discount on this order');
     }else{
       console.log('no coupon');
-      $('.goal_sec').html('Spend '+subtract+' Rs more to get 10% discount');
+      $('.goal_sec').html('Spend '+subtract+'Rs more to get 10% discount');
       $('#discount_code').attr('value','');
     }
   }, 1000);
