@@ -995,5 +995,6 @@ $(document).ready(function(){
 // cart goal js
 
 $('.js-contents').on('DOMSubtreeModified', function(){
-      console.log('changed');
+  var test = $('.totals .totals__subtotal-value').text();  
+ 	console.log(test);
     });
