@@ -1016,5 +1016,26 @@ $('.js-contents').on('DOMSubtreeModified', function(){
       $('#discount_code').attr('value','');
     }
   }, 1000);
+});
+$(document).ready(function(){
+  setTimeout(function(){
+    var get_cart = $('.totals .totals__subtotal-value').text();  
+    var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
+    $('#setgoal').attr('value',cart_total);
+    var goal_set = $('#setgoal').attr('value');
+    var goal_reach = $('#goalreached').attr('value');
+    console.log(goal_set);
+    console.log(goal_reach);
+    var subtract = goal_reach - goal_set;
+    if(goal_set >= goal_reach){
+      console.log('counpon'); 
+      $('#discount_code').attr('value','holi');
+      $('.goal_sec').html('Congratulation! you get 10% discount on this order');
+    }else{
+      console.log('no coupon');
+      $('.goal_sec').html('Spend '+subtract+'Rs more to get 10% discount');
+      $('#discount_code').attr('value','');
+    }
+  }, 1000);
 
 });
