@@ -894,9 +894,7 @@ customElements.define('variant-radios', VariantRadios);
 
 
 
-    $(window).load(function() {
-	
-})
+  
  
      document.onreadystatechange = function() {
             if (document.readyState !== "complete") {
