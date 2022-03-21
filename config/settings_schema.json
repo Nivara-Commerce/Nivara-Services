@@ -183,14 +183,9 @@
         "label": "Suffix"
       },
       {
-        "type": "select",
-        "id": "goal_icon",
-        "options": [
-          {
-            "value": "icon",
-            "label": "icon"
-          }
-        ]
+        "type": "text",
+        "id": "coupon",
+        "label": "Coupon Code"
       }
     ]
   },
