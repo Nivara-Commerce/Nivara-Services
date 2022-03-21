@@ -1037,6 +1037,6 @@ $(document).ready(function(){
       $('.goal_sec').html('Spend '+subtract+'Rs more to get 10% discount');
       $('#discount_code').attr('value','');
     }
-  }, 1000);
+  }, 500);
 
 });
