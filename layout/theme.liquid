@@ -214,6 +214,12 @@
     }
     </script>
   </head>
+  
+  <div id="overlayer"></div>
+<span class="loader">
+  <span class="loader-inner"></span>
+</span>
+<img src="http://bendtech.com/wp-content/uploads/Logo.png" alt="" width="30%"/>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -264,4 +270,10 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
+  <script>
+    $(window).load(function() {
+	$(".loader").delay(2000).fadeOut("slow");
+  $("#overlayer").delay(2000).fadeOut("slow");
+})
+  </script>
 </html>
