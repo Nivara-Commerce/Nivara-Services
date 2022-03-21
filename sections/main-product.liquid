@@ -380,7 +380,7 @@
                         value="{{ variant.id }}"
                       >
                         {{ variant.title }}
-                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}sdfsdfsf{% endif %}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
                         - {{ variant.price | money | strip_html }}
                       </option>
                     {%- endfor -%}
@@ -416,7 +416,7 @@
                         {%- if product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
                         {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
+                        {{ 'products.product.sold_out' | t }}asdsad
                         {%- endif -%}
                       </span>
                       <div class="loading-overlay__spinner hidden">
