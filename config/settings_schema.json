@@ -159,6 +159,37 @@
     ]
   },
   {
+    "name": "Cart goal settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "prefix_text",
+        "label": "Prefix"
+      },
+      {
+        "type": "number",
+        "id": "goal_amount",
+        "label": "Goal Amount",
+        "info": "Set your goal amount"
+      },
+      {
+        "type": "text",
+        "id": "goal_reached",
+        "label": "Goal reached"
+      },
+      {
+        "type": "text",
+        "id": "text_suffix",
+        "label": "Suffix"
+      },
+      {
+        "type": "text",
+        "id": "coupon",
+        "label": "Coupon Code"
+      }
+    ]
+  },
+  {
     "name": "Add to Cart Animation",
     "settings": [
       {

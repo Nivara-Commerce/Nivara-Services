@@ -26,6 +26,14 @@
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
   </div>
+  <div class="goal_sec">
+  
+  </div>
+<input type="hidden" id="goalreached" value="{{settings.goal_amount}}"/>
+<input type="hidden" id="setgoal" value=""/>
+  {% if settings.coupon != empty %}
+<input type="hidden" id="cartcoupon" value="{{settings.coupon}}"/>
+  {%endif%}
   <div id="cart_reserved_box" class="di-flex">
     <div class="fireEmoji">🔥</div>
     <div class="cart-reserved-text-box">
@@ -49,6 +57,8 @@
   </div>
 
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
+    <input class="js-form-discount" id="discount_code" type="hidden" name="discount" value="" >
+
     <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
       <div class="js-contents">
         {%- if cart != empty -%}
