@@ -201,6 +201,11 @@
     {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
+    
+    
+    {%- if collection.handle =='test' -%}
+      <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0627/7044/6594/files/service.png?v=1647865488">
+    {%- endif -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
