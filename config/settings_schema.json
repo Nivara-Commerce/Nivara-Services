@@ -195,7 +195,7 @@
       {
         "type": "richtext",
         "id": "backinstock_msg",
-        "label": "back in stock"
+        "label": "Back in stock"
       },
       {
         "type": "text",
