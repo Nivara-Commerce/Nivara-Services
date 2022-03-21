@@ -1190,12 +1190,13 @@
       {
         "type": "text",
         "id": "delivery_suffix",
-        "default": "Test",
+        "default": "Buy now to receive in",
         "label": "Suffix"
       },
       {
         "type": "text",
         "id": "delivery_seperator",
+        "default": " - ",
         "label": "Seperator"
       }
     ]
