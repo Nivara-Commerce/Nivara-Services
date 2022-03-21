@@ -417,7 +417,6 @@
                         {{ 'products.product.add_to_cart' | t }}
                         {%- else -%}
                         {{ 'products.product.sold_out' | t }}
-						
                         {%- endif -%}
                       </span>
                       <div class="loading-overlay__spinner hidden">
@@ -430,7 +429,6 @@
                     {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-                  
                 {%- endform -%}
               </product-form>
 {% unless product.available %}
