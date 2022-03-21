@@ -1014,7 +1014,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     }else{
       console.log('no coupon');
       $('.goal_sec').html('Spend '+subtract+'Rs more to get 10% discount');
-      $('#discount_code').attr('value','');
+      $('#discount_code').attr('value',' ');
     }
   }, 1000);
 });
