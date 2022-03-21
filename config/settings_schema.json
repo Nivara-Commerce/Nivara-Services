@@ -1161,12 +1161,7 @@
     "settings": [
       {
         "type": "header",
-        "content": {
-          "de": "Versandnachrichtentext",
-          "en": "Shipping Message Text",
-          "es": "Texto de mensaje de envío",
-          "fr": "Texte du message d'expédition"
-        }
+        "content": "Test"
       }
     ]
   }
