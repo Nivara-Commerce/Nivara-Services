@@ -194,13 +194,13 @@
     "settings": [
       {
         "type": "richtext",
-        "id": "html",
+        "id": "backinstock_msg",
         "label": "<p>back in stock<\/p>"
       },
       {
         "type": "text",
-        "id": "shivani",
-        "label": "Button lable"
+        "id": "btn_id",
+        "label": "Button label"
       },
       {
         "type": "richtext",
