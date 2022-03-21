@@ -998,6 +998,7 @@ $(document).ready(function(){
 
 $('.js-contents').on('DOMSubtreeModified', function(){
   setTimeout(function(){
+    var coupon = $('#cartcoupon').attr('value');
     var get_cart = $('.totals .totals__subtotal-value').text();  
     var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
     $('#setgoal').attr('value',cart_total);
@@ -1008,7 +1009,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
     var subtract = goal_reach - goal_set;
     if(goal_set >= goal_reach){
       console.log('counpon'); 
-      $('#discount_code').attr('value','holi');
+      $('#discount_code').attr('value',coupon);
       $('.goal_sec').html('Congratulation! you get 10% discount on this order');
     }else{
       console.log('no coupon');
@@ -1020,6 +1021,7 @@ $('.js-contents').on('DOMSubtreeModified', function(){
 
 $(document).ready(function(){
   setTimeout(function(){
+    var coupon = $('#cartcoupon').attr('value');
     var get_cart = $('.totals .totals__subtotal-value').text();  
     var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
     $('#setgoal').attr('value',cart_total);
@@ -1030,7 +1032,7 @@ $(document).ready(function(){
     var subtract = goal_reach - goal_set;
     if(goal_set >= goal_reach){
       console.log('counpon'); 
-      $('#discount_code').attr('value','holi');
+      $('#discount_code').attr('value',coupon);
       $('.goal_sec').html('Congratulation! you get 10% discount on this order');
     }else{
       console.log('no coupon');
