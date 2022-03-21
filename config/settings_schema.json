@@ -190,6 +190,26 @@
     ]
   },
   {
+    "name": "Back In Stock",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "html",
+        "label": "<p>back in stock<\/p>"
+      },
+      {
+        "type": "text",
+        "id": "shivani",
+        "label": "Button lable"
+      },
+      {
+        "type": "richtext",
+        "id": "success_msg",
+        "label": "<p>Success message<\/p>"
+      }
+    ]
+  },
+  {
     "name": "Add to Cart Animation",
     "settings": [
       {
