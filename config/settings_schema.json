@@ -1186,6 +1186,12 @@
         ],
         "default": "text",
         "label": "t:settings_schema.styles.settings.accent_icons.label"
+      },
+      {
+        "type": "text",
+        "id": "delivery_suffix",
+        "label": "Suffix",
+        "info": "Add Suffix"
       }
     ]
   }
