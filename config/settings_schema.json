@@ -1155,5 +1155,17 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "Delivery Time",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "infinite_scroll_enableddd",
+        "label": "Show Infinite Scroll",
+        "info": "Replace paginations by automatically loading items as you scroll down the page.",
+        "default": false
+      }
+    ]
   }
 ]
