@@ -195,7 +195,7 @@
       {
         "type": "richtext",
         "id": "backinstock_msg",
-        "label": "<p>back in stock<\/p>"
+        "label": "back in stock"
       },
       {
         "type": "text",
@@ -205,7 +205,7 @@
       {
         "type": "richtext",
         "id": "success_msg",
-        "label": "<p>Success message<\/p>"
+        "label": "Success message"
       }
     ]
   },
