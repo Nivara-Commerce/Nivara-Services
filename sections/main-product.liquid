@@ -406,6 +406,7 @@
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   
                   <div class="product-form__buttons">    
+                    {{product.quantity}}
                     <button
                             type="submit"
                             name="add"
@@ -417,7 +418,7 @@
                         {{ 'products.product.add_to_cart' | t }}
                         {%- else -%}
                         {{ 'products.product.sold_out' | t }}
-                        <button type="submit" name="add" class="product-form__submit button button--full-width button--secondary btn-animation-swing">
+                        <button type="submit" name="add" class="product-form__submit button button--full-width button--secondary">
                           <span>Notify me</span>
                         </button>
                         {%- endif -%}
