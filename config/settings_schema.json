@@ -1190,8 +1190,12 @@
       {
         "type": "text",
         "id": "delivery_suffix",
-        "label": "Suffix",
-        "info": "Add Suffix"
+        "label": "Suffix"
+      },
+      {
+        "type": "text",
+        "id": "delivery_seperator",
+        "label": "Seperator"
       }
     ]
   }
