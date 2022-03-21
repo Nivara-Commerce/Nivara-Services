@@ -22,9 +22,7 @@
     }
   }
 {%- endstyle -%}
-<script>
-  var variantStock = {};
-</script>
+
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
@@ -407,12 +405,7 @@
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   
-                  <div class="product-form__buttons"> 
-                    <div class="inventoryWrapper">
-  {% if current_variant.inventory_quantity > 0 and current_variant.inventory_management == 'shopify' %}
-    <p>Stock: {{ current_variant.inventory_quantity }}</p>
-  {% endif %}
-</div>
+                  <div class="product-form__buttons">    
                     <button
                             type="submit"
                             name="add"
