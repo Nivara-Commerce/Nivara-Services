@@ -381,9 +381,9 @@
                       >
                         {{ variant.title }}
                         {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}
-                        <button type="submit" name="add" class="product-form__submit button button--full-width button--secondary btn btn-animation-swing">
-                      <span>Notify me</span>
-                    </button>
+                       
+                          <span>Notify me</span>
+                        
                         {% endif %}
                         - {{ variant.price | money | strip_html }}
                       </option>
