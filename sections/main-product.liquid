@@ -430,7 +430,10 @@
                     {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-                  {% unless product.available %}
+                  
+                {%- endform -%}
+              </product-form>
+{% unless product.available %}
 <div id="sold-out">
   {% form 'contact' %}
     {% if form.posted_successfully? %}
@@ -457,9 +460,6 @@
   {% endform %}
 </div>
 {% endunless %}
-                {%- endform -%}
-              </product-form>
-
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
               {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
