@@ -894,17 +894,13 @@ customElements.define('variant-radios', VariantRadios);
 
 
 
+    $(window).load(function() {
+	
+})
  
      document.onreadystatechange = function() {
             if (document.readyState !== "complete") {
-                document.querySelector(
-                  "body").style.visibility = "hidden";
-                document.querySelector(
-                  "#loader").style.visibility = "visible";
-            } else {
-                document.querySelector(
-                  "#loader").style.display = "none";
-                document.querySelector(
-                  "body").style.visibility = "visible";
-            }
+                $(".loader").delay(2000).fadeOut("slow");
+ $("#overlayer").delay(2000).fadeOut("slow");
+            } 
         };
