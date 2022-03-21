@@ -1190,6 +1190,7 @@
       {
         "type": "text",
         "id": "delivery_suffix",
+        "default": "Test",
         "label": "Suffix"
       },
       {
