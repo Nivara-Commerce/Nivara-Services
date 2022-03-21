@@ -417,7 +417,6 @@
                         {{ 'products.product.add_to_cart' | t }}
                         {%- else -%}
                         {{ 'products.product.sold_out' | t }}
-                        dfasfafsd
                         {%- endif -%}
                       </span>
                       <div class="loading-overlay__spinner hidden">
@@ -426,6 +425,7 @@
                         </svg>
                       </div>
                     </button>
+                    {% include 'test' %}
                     {%- if block.settings.show_dynamic_checkout -%}
                     {{ form | payment_button }}
                     {%- endif -%}
