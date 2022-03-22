@@ -896,13 +896,8 @@ customElements.define('variant-radios', VariantRadios);
 
  window.addEventListener('load', function(){
   // alert('hello');
-//   $("#status").fadeOut();
-// // will fade out the whole DIV that covers the website.
-// $("#preloader").delay(1000).slideUp("slow");
-//    $("body.gradient").show();
-    $("#preloader").fadeOut(2000, function() {
-       $(".preload").fadeOut(1000); 
-        $("body").fadeIn(1000);        
-    });
+  $("#status").fadeOut();
+// will fade out the whole DIV that covers the website.
+$("#preloader").delay(1000).slideUp("slow");
     
   });

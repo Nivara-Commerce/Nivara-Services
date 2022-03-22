@@ -1,14 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
      {%- if settings.show_preloaderimage -%}
-<!--   <div id="preloader">
-  <div id="status">&nbsp;</div>
-  </div> -->
   <div id="preloader">
-  <div class="preload">
-<img src="https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518">
-</div>
-    </div>
+  <div id="status">&nbsp;</div>
+  </div>
    {%- endif -%}
   <head>
    
@@ -287,12 +282,7 @@
      {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
     {%- endif -%}
   <style>
-    
-    body{
-      display:none;
-    }
-   
- #preloader {
+#preloader {
 position: absolute;
 top: 0;
 left: 0;
@@ -302,7 +292,7 @@ background-color: #fefefe;
 z-index: 99;
 height: 100%;
 }
-/*     
+    
 #status {
 width: 200px;
 height: 200px;
@@ -313,14 +303,6 @@ top: 50%;
 background-repeat: no-repeat;
 background-position: center;
 margin: -100px 0 0 -100px;
-} */
-    .preload { 
-
-  width: 200px;
-height: 200px;
-position: absolute;
-left: 50%;
-top: 50%;
 }
 </style>
    {%- endif -%}
