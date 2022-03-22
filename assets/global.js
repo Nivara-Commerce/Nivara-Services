@@ -895,8 +895,9 @@ customElements.define('variant-radios', VariantRadios);
 
 
  window.addEventListener('load', function(){
-   alert('hello');
-   $(".loader").delay(2000).fadeOut("slow");
- $("#overlayer").delay(2000).fadeOut("slow");
+  // alert('hello');
+  $("#status").fadeOut();
+// will fade out the whole DIV that covers the website.
+$("#preloader").delay(1000).fadeOut("slow");
     
   });
