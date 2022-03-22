@@ -1,7 +1,7 @@
 {
   "current": {
     "infinite_scroll_enabled": true,
-    "show_preloaderimage": false,
+    "show_preloaderimage": true,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
