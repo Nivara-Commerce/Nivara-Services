@@ -898,6 +898,6 @@ customElements.define('variant-radios', VariantRadios);
   // alert('hello');
   $("#status").fadeOut();
 // will fade out the whole DIV that covers the website.
-$("#preloader").delay(1000).fadeOut("slow");
+$("#preloader").delay(1000).slideup("slow");
     
   });
