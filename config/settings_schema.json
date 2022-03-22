@@ -1148,6 +1148,10 @@
     "name": "Theme Addons",
     "settings": [
       {
+        "type": "header",
+        "content": "Infinite Scroll"
+      },
+      {
         "type": "checkbox",
         "id": "infinite_scroll_enabled",
         "label": "Show Infinite Scroll",
