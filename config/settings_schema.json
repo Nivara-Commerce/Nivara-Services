@@ -1162,7 +1162,7 @@
         "type": "checkbox",
         "id": "show_preloaderimage",
         "label": "Show Custom Preloader",
-        "default": true
+        "default": false
       },
       {
         "type": "image_picker",
