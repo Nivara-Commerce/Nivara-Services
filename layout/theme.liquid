@@ -215,9 +215,11 @@
     </script>
   </head>
   
- <div id="preloader">
-<div id="status">&nbsp;</div>
-</div>
+  <div id="overlayer"></div>
+<span class="loader">
+  <span class="loader-inner"></span>
+</span>
+                                                                                                                                            
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
@@ -234,30 +236,6 @@
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
-    
-    <style>
-      #preloader {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #fefefe;
-z-index: 99;
-height: 100%;
-}
-#status {
-width: 200px;
-height: 200px;
-position: absolute;
-left: 50%;
-top: 50%;
-background-image: url(https://cdn.shopify.com/s/files/1/0627/7044/6594/files/service.png?v=1647865488);
-background-repeat: no-repeat;
-background-position: center;
-margin: -100px 0 0 -100px;
-}
-    </style>
 
     <script>
       window.shopUrl = '{{ shop.url }}';
@@ -292,6 +270,82 @@ margin: -100px 0 0 -100px;
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
- 
+  <style>
+    
+    
+    img.testw {
+  margin: 0 auto;
+  display:block;
+}
+    #overlayer {
+  width:100%;
+  height:100%;  
+  position:absolute;
+  z-index:1;
+  background:#4a4a4a;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index:3;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+  </style>
  
 </html>
