@@ -1167,7 +1167,7 @@
       {
         "type": "image_picker",
         "id": "preloader_icon",
-        "label": "Choose Custom Icon"
+        "label": "Upload Icon"
       }
     ]
   },
