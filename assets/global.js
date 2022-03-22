@@ -893,10 +893,11 @@ class VariantRadios extends VariantSelects {
 customElements.define('variant-radios', VariantRadios);
 
 
+
  window.addEventListener('load', function(){
   // alert('hello');
-  $(".loader-inner").fadeOut();
+  $("#status").fadeOut();
 // will fade out the whole DIV that covers the website.
-$(".loader").delay(1000).fadeOut("slow");
+$("#preloader").delay(1000).fadeOut("slow");
     
   });
