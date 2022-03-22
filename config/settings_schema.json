@@ -1161,8 +1161,13 @@
       {
         "type": "checkbox",
         "id": "show_preloaderimage",
-        "label": "Show Custom Preloader Image",
+        "label": "Show Custom Preloader",
         "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_icon",
+        "label": "Choose Custom Icon"
       }
     ]
   },
