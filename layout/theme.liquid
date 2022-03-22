@@ -271,6 +271,10 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+      {%- if settings.preloader_icon -%}
+    testwp
+    {{settings.preloader_icon}}
+    {%- endif -%}
   </body>
   <style>
 #preloader {
@@ -295,6 +299,6 @@ background-repeat: no-repeat;
 background-position: center;
 margin: -100px 0 0 -100px;
 }
-  </style>
+</style>
  
 </html>
