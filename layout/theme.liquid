@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
-     
+     {%- if settings.show_preloaderimage =='true' -%}
   <div id="preloader">
 <div id="status">&nbsp;</div>
 </div>
+   {%- endif -%}
   <head>
    
     <meta charset="utf-8">
@@ -283,7 +284,7 @@ z-index: 99;
 height: 100%;
 }
     
-    #status {
+#status {
 width: 200px;
 height: 200px;
 position: absolute;
