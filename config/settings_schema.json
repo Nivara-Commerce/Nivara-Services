@@ -1155,6 +1155,10 @@
         "default": false
       },
       {
+        "type": "header",
+        "content": "Pre-Loader"
+      },
+      {
         "type": "checkbox",
         "id": "show_preloaderimage",
         "label": "Show Custom Preloader Image",
