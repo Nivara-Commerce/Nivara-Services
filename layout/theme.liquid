@@ -273,7 +273,8 @@
     {%- endif -%}
       {%- if settings.preloader_icon -%}
     testwp
-    {{settings.preloader_icon}}
+   
+    {{ settings.preloader_icon | img_url: '32x32' }}
     {%- endif -%}
   </body>
   <style>
