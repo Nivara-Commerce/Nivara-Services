@@ -2,7 +2,6 @@
   "current": {
     "infinite_scroll_enabled": true,
     "show_preloaderimage": true,
-    "preloader_icon": "shopify:\/\/shop_images\/service.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
