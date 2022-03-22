@@ -894,6 +894,6 @@ customElements.define('variant-radios', VariantRadios);
 
 
 
-  jQuery(window).load(function() {
+  
 alert('hello');
-})
+
