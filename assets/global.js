@@ -894,11 +894,6 @@ customElements.define('variant-radios', VariantRadios);
 
 
 
-  
- 
-     document.onreadystatechange = function() {
-            if (document.readyState !== "complete") {
-                $(".loader").delay(2000).fadeOut("slow");
- $("#overlayer").delay(2000).fadeOut("slow");
-            } 
-        };
+  jQuery(window).load(function() {
+alert('hello');
+})
