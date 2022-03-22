@@ -900,8 +900,9 @@ customElements.define('variant-radios', VariantRadios);
 // // will fade out the whole DIV that covers the website.
 // $("#preloader").delay(1000).slideUp("slow");
 //    $("body.gradient").show();
-   // $(".preload").fadeOut(2000, function() {
-     //   $("body").fadeIn(1000);        
-   // });
+    $("#preloader").fadeOut(2000, function() {
+       $(".preload").fadeOut(1000); 
+        $("body").fadeIn(1000);        
+    });
     
   });
