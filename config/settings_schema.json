@@ -1153,6 +1153,12 @@
         "label": "Show Infinite Scroll",
         "info": "Replace paginations by automatically loading items as you scroll down the page.",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_preloaderimage",
+        "label": "Show Custom Preloader Image",
+        "default": true
       }
     ]
   },
