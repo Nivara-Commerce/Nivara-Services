@@ -2,8 +2,8 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
      {%- if settings.show_preloaderimage -%}
   <div id="preloader">
-<div id="status">&nbsp;</div>
-</div>
+  <div id="status">&nbsp;</div>
+  </div>
    {%- endif -%}
   <head>
    
@@ -34,7 +34,6 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
