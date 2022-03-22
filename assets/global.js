@@ -893,8 +893,10 @@ class VariantRadios extends VariantSelects {
 customElements.define('variant-radios', VariantRadios);
 
 
+
  window.addEventListener('load', function(){
    alert('hello');
+   $(".loader").delay(2000).fadeOut("slow");
+ $("#overlayer").delay(2000).fadeOut("slow");
     
   });
-  
