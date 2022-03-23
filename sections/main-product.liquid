@@ -234,7 +234,7 @@
           {%- endif -%}
           <div class="delivery_info"> 
             {% assign seconds = 86400 | times: 7 %}
-            {{ 'now' | date: "%s" | plus: seconds | date: "%Y-%m-%d" }}
+            {{ 'now' | date: "%s" | plus: seconds | date: "%b %d" }}
             {%- if block.settings.delivery_prefix -%}<span class="del_prefix">{{ block.settings.delivery_prefix }}</span>{%- endif -%}
            
               <p><i class="fa fa-clock-o" aria-hidden="true"></i> Estimated Delivery Between
