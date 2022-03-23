@@ -901,3 +901,11 @@ customElements.define('variant-radios', VariantRadios);
 $("#preloader").delay(1000).slideUp("slow");
     
   });
+
+
+ document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate({
+      container: '#Huratips-Loop',
+      pagination: '#Huratips-Pagination'
+    });
+  });
