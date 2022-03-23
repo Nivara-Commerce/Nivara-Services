@@ -44,8 +44,8 @@
             "show_dynamic_checkout": true
           }
         },
-        "ed2060bb-d8fd-4e0b-aaed-55030ff0cf03": {
-          "type": "section",
+        "bc12ad80-e504-4e6a-a6da-e7ad24f95019": {
+          "type": "section_delivery",
           "settings": {
             "delivery_heading": "Delivery Time",
             "show_heading": true,
@@ -114,7 +114,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "ed2060bb-d8fd-4e0b-aaed-55030ff0cf03",
+        "bc12ad80-e504-4e6a-a6da-e7ad24f95019",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
