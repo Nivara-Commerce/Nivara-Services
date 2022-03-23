@@ -46,7 +46,7 @@
       {%- else -%}
         <div class="collection page-width">
           <div class="loading-overlay gradient"></div>
-  
+  <div id="Huratips-Loop" >
           <ul id="product-grid" data-id="{{ section.id }}" class="
             grid grid--2-col product-grid
             {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
@@ -58,7 +58,7 @@
             {%- if forloop.index > 2 -%}
                 {%- assign lazy_load = true -%}
               {%- endif -%}
-<div id="Huratips-Loop" >
+
               <li class="grid__item">
                 {% render 'card-product',
                   card_product: product,
@@ -69,10 +69,13 @@
                   lazy_load: lazy_load
                 %}
               </li>
-            </div>
+           
             {%- endfor -%}
                
-<div id="Huratips-Pagination">  
+
+          </ul>
+     </div>
+          <div id="Huratips-Pagination">  
    {%- if paginate.next -%}
         <li>
           <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
@@ -81,7 +84,6 @@
         </li>
       {%- endif -%}
 </div>
-          </ul>
   
          
         </div>
