@@ -50,7 +50,7 @@
             "delivery_heading": "Delivery Time",
             "show_heading": false,
             "delivery_prefix": "Buy now to receive in",
-            "delivery_seperator": "-",
+            "delivery_seperator": "--",
             "delivery_suffix": "days",
             "show_asdate": true,
             "delivery_dateformat": "%b %d",
