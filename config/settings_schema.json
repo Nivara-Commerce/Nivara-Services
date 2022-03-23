@@ -1184,9 +1184,9 @@
       },
       {
         "type": "text",
-        "id": "delivery_suffix",
+        "id": "delivery_prefix",
         "default": "Buy now to receive in",
-        "label": "Suffix"
+        "label": "Prefix"
       },
       {
         "type": "text",
@@ -1195,8 +1195,20 @@
         "label": "Seperator"
       },
       {
+        "type": "text",
+        "id": "delivery_suffix",
+        "default": "days",
+        "label": "Suffix"
+      },
+      {
         "type": "header",
         "content": "Format Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_asdate",
+        "label": "Show as date",
+        "default": false
       }
     ]
   }
