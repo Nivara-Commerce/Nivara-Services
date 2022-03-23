@@ -52,9 +52,10 @@
             {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
               {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
             {% endif %}">
+            <div id="Huratips-Loop">
             {%- for product in collection.products -%}
-              {% assign lazy_load = false %}
-              {%- if forloop.index > 2 -%}
+            {% assign lazy_load = false %}
+            {%- if forloop.index > 2 -%}
                 {%- assign lazy_load = true -%}
               {%- endif -%}
 
@@ -69,6 +70,12 @@
                 %}
               </li>
             {%- endfor -%}
+            </div>           
+<div id="Huratips-Pagination">
+    {% if paginate.next %}
+    <a href="{{ paginate.next.url }}">Loading More</a>
+    {% endif %}  
+</div>
           </ul>
   
           {%- if paginate.pages > 1 -%}
@@ -81,6 +88,14 @@
 </div>
 
 {% include 'infinite-scroll-collection' %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate({
+      container: '#Huratips-Loop',
+      pagination: '#Huratips-Pagination'
+    });
+  });
+</script>
 
 {% schema %}
 {
