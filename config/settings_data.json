@@ -1,6 +1,6 @@
 {
   "current": {
-    "infinite_scroll_enabled": true,
+    "infinite_scroll_enabled": false,
     "show_preloaderimage": true,
     "sections": {
       "announcement-bar": {
