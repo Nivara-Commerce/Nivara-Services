@@ -58,7 +58,7 @@
             {%- if forloop.index > 2 -%}
                 {%- assign lazy_load = true -%}
               {%- endif -%}
-
+<div id="Huratips-Loop" >
               <li class="grid__item">
                 {% render 'card-product',
                   card_product: product,
@@ -69,6 +69,7 @@
                   lazy_load: lazy_load
                 %}
               </li>
+            </div>
             {%- endfor -%}
                
 <div id="Huratips-Pagination">  
