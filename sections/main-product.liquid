@@ -227,12 +227,19 @@
               </div>
             {%- endif -%}
          {%- when 'section_delivery' -%}       
-        <div class="delivery_info">
+             <div class="delivery_box">
           
            {%- if block.settings.show_heading -%}
-          <span class="delivery_title"> {{ block.settings.delivery_heading }}</span>
+          <div class="delivery_title"> {{ block.settings.delivery_heading }}</div>
           {%- endif -%}
-           {%- if block.settings.delivery_prefix -%}{{ block.settings.delivery_prefix }} {%- endif -%}
+          <div class="delivery_info"> 
+            {%- if block.settings.delivery_prefix -%}<span class="del_prefix">{{ block.settings.delivery_prefix }}</span>{%- endif -%}
+            {%- if block.settings.general_mintime -%}<span class="del_mintime">{{ block.settings.general_mintime }}</span>{%- endif -%}
+            {%- if block.settings.delivery_seperator -%}<span class="del_seperator">{{ block.settings.delivery_seperator }}</span>{%- endif -%}
+            {%- if block.settings.general_maxtime -%}<span class="del_maxtime">{{ block.settings.general_maxtime }}</span>{%- endif -%}
+            {%- if block.settings.delivery_suffix -%}<span class="del_suffix">{{ block.settings.delivery_suffix }}</span>{%- endif -%}
+
+         </div>
         </div>
        
           {%- when 'custom_liquid' -%}
