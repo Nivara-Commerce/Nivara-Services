@@ -227,10 +227,10 @@
               </div>
             {%- endif -%}
          {%- when 'section_delivery' -%}
-        <div class="delivery_time">
+        <div class="delivery_info">
           
             {%- if block.settings.show_heading -%}
-          test
+          <span class="delivery_title"> {{ block.settings.delivery_heading }}</span>
           {%- endif -%}
         </div>
        
