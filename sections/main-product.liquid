@@ -234,7 +234,7 @@
           {%- endif -%}
           <div class="delivery_info"> 
             {%- if block.settings.delivery_prefix -%}<span class="del_prefix">{{ block.settings.delivery_prefix }}</span>{%- endif -%}
-            {%- if block.settings.general_mintime -%}<span class="del_mintime">{{ block.settings.general_mintime | prepend:'%20' }}</span>{%- endif -%}
+            {%- if block.settings.general_mintime -%}<span class="del_mintime">{{ block.settings.general_mintime | prepend:' ' }}</span>{%- endif -%}
             {%- if block.settings.delivery_seperator -%}<span class="del_seperator">{{ block.settings.delivery_seperator }}</span>{%- endif -%}
             {%- if block.settings.general_maxtime -%}<span class="del_maxtime">{{ block.settings.general_maxtime }}</span>{%- endif -%}
             {%- if block.settings.delivery_suffix -%}<span class="del_suffix">{{ block.settings.delivery_suffix }}</span>{%- endif -%}
