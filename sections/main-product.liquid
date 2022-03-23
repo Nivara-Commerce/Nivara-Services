@@ -227,7 +227,13 @@
               </div>
             {%- endif -%}
          {%- when 'section_delivery' -%}
-        test
+        <div class="delivery_time">
+          
+            {%- if block.settings.show_heading -%}
+          test
+          {%- endif -%}
+        </div>
+       
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
