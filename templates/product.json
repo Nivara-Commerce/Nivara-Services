@@ -52,7 +52,7 @@
             "delivery_prefix": "Buy now to receive in",
             "delivery_seperator": "-",
             "delivery_suffix": "days",
-            "show_asdate": false,
+            "show_asdate": true,
             "delivery_dateformat": "%b %d",
             "general_mintime": 7,
             "general_maxtime": 14
