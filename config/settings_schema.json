@@ -1211,6 +1211,13 @@
         "default": false
       },
       {
+        "type": "text",
+        "id": "delivery_dateformat",
+        "default": "%b %d",
+        "info": "%a, %b %d, %y",
+        "label": "Date Format"
+      },
+      {
         "type": "header",
         "content": "General Delivery",
         "info": "Applies to all products"
