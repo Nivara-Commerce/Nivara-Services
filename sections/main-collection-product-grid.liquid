@@ -45,18 +45,16 @@
         </div>
       {%- else -%}
         <div class="collection page-width">
-        
           <div class="loading-overlay gradient"></div>
-    <div id="Huratips-Loop" >
+  
           <ul id="product-grid" data-id="{{ section.id }}" class="
             grid grid--2-col product-grid
             {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
               {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
             {% endif %}">
-           
             {%- for product in collection.products -%}
-            {% assign lazy_load = false %}
-            {%- if forloop.index > 2 -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
                 {%- assign lazy_load = true -%}
               {%- endif -%}
 
@@ -70,26 +68,27 @@
                   lazy_load: lazy_load
                 %}
               </li>
-           
             {%- endfor -%}
-               
-
           </ul>
-     </div>
-          <div id="Huratips-Pagination">  
+           {%- if settings.infinite_scroll_enabled -%}
+           <div id="Huratips-Pagination">  
    {%- if paginate.next -%}
-             <a href="{{ paginate.next.url }}">Loading More</a>
-       
-      {%- endif -%}
-</div>
+   <a href="{{ paginate.next.url }}">Loading More</a>       
+   {%- endif -%}
+    </div>
+          {%- else -%}
   
-         
+          {%- if paginate.pages > 1 -%}
+            {% render 'pagination', paginate: paginate, anchor: '' %}
+          {%- endif -%}
+          {%- endif -%}
         </div>
       {%- endif -%}
     {%- endpaginate -%}
   </div>
 </div>
 
+{% include 'infinite-scroll-collection' %}
 
 {% schema %}
 {
