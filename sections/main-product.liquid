@@ -227,7 +227,7 @@
               </div>
             {%- endif -%}
          {%- when 'section_delivery' -%}
-         {% render 'delivery-time' %}    
+         {% render 'delivery-time', block.settings.show_heading %}    
        
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
