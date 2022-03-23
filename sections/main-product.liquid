@@ -233,8 +233,10 @@
           <div class="delivery_title"> {{ block.settings.delivery_heading }}</div>
           {%- endif -%}
           <div class="delivery_info"> 
+            {% assign seconds = 86400 | times: 7 %}
+            {{ 'now' | date: "%s" | plus: seconds | date: "%Y-%m-%d" }}
             {%- if block.settings.delivery_prefix -%}<span class="del_prefix">{{ block.settings.delivery_prefix }}</span>{%- endif -%}
-            <div class="order-pro">
+           
               <p><i class="fa fa-clock-o" aria-hidden="true"></i> Estimated Delivery Between
               <b><script>
 			   var n=5; //number of days to add. 
@@ -264,7 +266,7 @@
               document.write(todayn);
                   </script></b>
               </p>
-            </div> 
+            
             {%- if block.settings.general_mintime -%}<span class="del_mintime">{{ block.settings.general_mintime | prepend:' ' }}</span>{%- endif -%}
             {%- if block.settings.delivery_seperator -%}<span class="del_seperator">{{ block.settings.delivery_seperator }}</span>{%- endif -%}
             {%- if block.settings.general_maxtime -%}<span class="del_maxtime">{{ block.settings.general_maxtime | append:' ' }}</span>{%- endif -%}
