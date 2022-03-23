@@ -234,6 +234,37 @@
           {%- endif -%}
           <div class="delivery_info"> 
             {%- if block.settings.delivery_prefix -%}<span class="del_prefix">{{ block.settings.delivery_prefix }}</span>{%- endif -%}
+            <div class="order-pro">
+              <p><i class="fa fa-clock-o" aria-hidden="true"></i> Estimated Delivery Between
+              <b><script>
+			   var n=5; //number of days to add. 
+               var today=new Date(); //Today's Date
+               var requiredDate=new Date(today.getFullYear(),today.getMonth(),today.getDate()+n)
+		       var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+               var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];			  
+			  var dyn = requiredDate.getDay();
+              var dd = String(requiredDate.getDate()).padStart(2, '0');
+              var mm = requiredDate.getMonth(); //January is 0!
+              var yyyy = today.getFullYear();             
+			   today = days[dyn]+' '+dd+' '+months[mm];
+              document.write(today);
+                </script></b> To
+                <b><script>
+             
+				var ne=7; 
+               var today=new Date(); //Today's Date
+               var requiredDate=new Date(today.getFullYear(),today.getMonth(),today.getDate()+ne)
+		       var daysn = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+               var monthsn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];			  
+			  var dyn = requiredDate.getDay();
+              var dd = String(requiredDate.getDate()).padStart(2, '0');
+              var mm = requiredDate.getMonth(); //January is 0!
+              var yyyy = today.getFullYear();           
+			  todayn = daysn[dyn]+' '+dd+' '+monthsn[mm];
+              document.write(todayn);
+                  </script></b>
+              </p>
+            </div> 
             {%- if block.settings.general_mintime -%}<span class="del_mintime">{{ block.settings.general_mintime | prepend:' ' }}</span>{%- endif -%}
             {%- if block.settings.delivery_seperator -%}<span class="del_seperator">{{ block.settings.delivery_seperator }}</span>{%- endif -%}
             {%- if block.settings.general_maxtime -%}<span class="del_maxtime">{{ block.settings.general_maxtime | append:' ' }}</span>{%- endif -%}
