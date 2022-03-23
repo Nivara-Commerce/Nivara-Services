@@ -71,10 +71,14 @@
               </li>
             {%- endfor -%}
             </div>           
-<div id="Huratips-Pagination">
-    {% if paginate.next %}
-    <a href="{{ paginate.next.url }}">Loading More</a>
-    {% endif %}  
+<div id="Huratips-Pagination">  
+   {%- if paginate.next -%}
+        <li>
+          <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
+            Loading More
+          </a>
+        </li>
+      {%- endif -%}
 </div>
           </ul>
   
