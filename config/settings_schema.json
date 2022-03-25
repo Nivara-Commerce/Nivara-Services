@@ -1180,7 +1180,7 @@
       {
         "type": "checkbox",
         "id": "show_invquantity",
-        "label": "Show Custom Preloader",
+        "label": "Show Inventory Quantity",
         "info": "Display the stock level for each product variants",
         "default": false
       }
