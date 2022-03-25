@@ -1172,6 +1172,17 @@
         "type": "image_picker",
         "id": "preloader_icon",
         "label": "Upload Icon"
+      },
+      {
+        "type": "header",
+        "content": "Inventory Quantity"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_invquantity",
+        "label": "Show Custom Preloader",
+        "info": "Display the stock level for each product variants",
+        "default": false
       }
     ]
   }
