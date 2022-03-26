@@ -22,6 +22,21 @@
             "text_style": "subtitle"
           }
         },
+        "93a279cf-13e9-4dc0-9568-e615eba4cf60": {
+          "type": "section_countdown",
+          "settings": {
+            "countdown_heading": "Sales Countdown",
+            "show_timerheading": true,
+            "timer_prefix": "Sale ends in",
+            "timer_suffix": "Get it now!",
+            "timer_select": "timer_date",
+            "timer_date": "",
+            "timer_action": "timer_message",
+            "timer_text": "",
+            "timer_visibility": "timer_all",
+            "timer_products": "nivara"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -104,25 +119,13 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "93a279cf-13e9-4dc0-9568-e615eba4cf60": {
-          "type": "section_countdown",
-          "settings": {
-            "countdown_heading": "Sales Countdown",
-            "show_timerheading": true,
-            "timer_prefix": "Sale ends in",
-            "timer_suffix": "Get it now!",
-            "timer_select": "timer_date",
-            "timer_action": "timer_message",
-            "timer_text": "",
-            "timer_products": "nivara"
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "caption",
+        "93a279cf-13e9-4dc0-9568-e615eba4cf60",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -133,8 +136,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "93a279cf-13e9-4dc0-9568-e615eba4cf60"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
