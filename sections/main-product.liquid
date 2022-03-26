@@ -379,7 +379,6 @@
                     {{ product.variants | json }}
                   </script>
                 </variant-radios>
-        test
               {%- else -%}
                 <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
@@ -402,7 +401,6 @@
                         {% render 'icon-caret' %}
                       </div>
                     </div>
-                  test2
                   {%- endfor -%}
 
                   <script type="application/json">
@@ -431,7 +429,6 @@
                   </select>
                   {% render 'icon-caret' %}
                 </div>
-                test 3
               </div>
             </noscript>
           {%- when 'buy_buttons' -%}
