@@ -1102,6 +1102,63 @@
       }
       ]
     },
+  {
+      "type": "section_countdown",
+      "name": "Sales Countdown",
+      "settings": [
+        {
+          "type": "text",
+          "id": "countdown_heading",
+          "default": "Sales Countdown",         
+          "label": "Heading"
+        },
+   {
+        "type": "checkbox",
+        "id": "show_timerheading",
+        "label": "Show Heading",
+        "default": true
+      },
+        {
+        "type": "header",
+        "content": "Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "timer_prefix",
+        "default": "Sale ends in",
+        "label": "Prefix"
+      },
+      {
+        "type": "text",
+        "id": "timer_suffix",
+        "default": "Get it now!",
+        "label": "Suffix"
+      },
+      {
+        "type": "header",
+        "content": "Timer Settings"
+      },
+      {
+      "type": "select",
+      "id": "timer_select",
+      "options": [
+        {
+          "value": "timer_date",
+          "label": "Show as Date"
+        },
+        {
+          "value": "timer_time",
+          "label": "Show as Time"
+        }
+        
+    ],
+    "default": "timer_time",
+    "label": "Show as Time"
+    }
+   
+     
+      ]
+    },
     {
       "type": "popup",
       "name": "t:sections.main-product.blocks.popup.name",
