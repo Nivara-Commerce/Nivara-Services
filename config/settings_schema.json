@@ -1183,6 +1183,17 @@
         "label": "Show Inventory Quantity",
         "info": "Display the stock level for each product variants",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Sales Countdown"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_salescountdown",
+        "label": "Show Sales Countdown",
+        "info": "Add a countdown timer for your on-sale products.",
+        "default": false
       }
     ]
   }
