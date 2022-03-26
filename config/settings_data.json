@@ -57,12 +57,20 @@
               "heading": "Our mission",
               "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
             }
+          },
+          "0a75c93c-9519-45a7-ba83-b19110422f31": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
           }
         },
         "block_order": [
           "footer-0",
           "footer-1",
-          "footer-2"
+          "footer-2",
+          "0a75c93c-9519-45a7-ba83-b19110422f31"
         ],
         "settings": {
           "color_scheme": "background-1",
