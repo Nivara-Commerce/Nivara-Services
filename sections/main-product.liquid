@@ -379,7 +379,25 @@
                     {{ product.variants | json }}
                   </script>
                 </variant-radios>
-        test
+       <!-- Code added for variant Inventory -->
+          <script>       
+            var inv_qty = {};
+            {% for var in product.variants %}
+              inv_qty[{{- var.id -}}] = {{ var.inventory_quantity | default: 0 }};
+            {% endfor %}
+          </script>            
+          {% if current_variant.inventory_management == "shopify" %}
+            <p class="variant-inventory">
+              {%- if current_variant.inventory_quantity == 0 -%}
+                {{ 'products.product.out_of_stock' | t }}
+              {%- elsif current_variant.inventory_quantity > 10 -%}
+                {{ 'products.product.in_stock' | t }}
+              {%- else -%}
+                {{ current_variant.inventory_quantity }} {{ 'products.product.left_in_stock' | t }}
+              {%- endif -%}
+            </p> 
+          {% endif %}
+          <!-- end variant inventory -->
               {%- else -%}
                 <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
