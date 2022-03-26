@@ -112,7 +112,7 @@
             "show_timerheading": true,
             "timer_prefix": "Sale ends in",
             "timer_suffix": "Get it now!",
-            "timer_select": "timer_time",
+            "timer_select": "timer_date",
             "timer_action": "timer_message"
           }
         }
