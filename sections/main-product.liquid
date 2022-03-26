@@ -1183,9 +1183,27 @@
           "label": "Message"
         },
     {
+      "type": "select",
+      "id": "timer_visibility",
+      "options": [
+        {
+          "value": "timer_all",
+          "label": "On all sale products"
+        },
+        {
+          "value": "timer_specific",
+          "label": "To specific product"
+        }
+        
+        
+    ],
+    "default": "timer_all",
+    "label": "Timer visibility"
+    },
+    {
           "type": "product",
           "id": "timer_products",         
-          "label": "Select Products"
+          "label": "Select Product"
         }
    
      
