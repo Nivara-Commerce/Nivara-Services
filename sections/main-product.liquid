@@ -283,7 +283,7 @@
           {%- endif -%}
            {%- if block.settings.timer_date !='' -%}
           {% assign timerdate = block.settings.timer_date%}
-          {{block.settings.timer_date | date: "%b %d, %y"}}
+          {{block.settings.timer_date | date: "%b %d, %Y"}}
           {{block.settings.timer_hours}}
           {{block.settings.timer_minutes}}
           
