@@ -300,8 +300,9 @@
            {%- endif -%}
         </div>
         <script>
+          var mydate = {{timerinfo | json}}
 // Set the date we're counting down to
-var countDownDate = new Date(timerinfo).getTime();
+var countDownDate = new Date(mydate).getTime();
 //"Jan 5, 2024 15:37:25"
 //Jan 06, 2022 13:20:00
 // Update the count down every 1 second
