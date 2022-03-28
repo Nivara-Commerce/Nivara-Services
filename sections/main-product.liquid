@@ -283,7 +283,7 @@
           {%- endif -%}
            {%- if block.settings.timer_date !='' -%}
           {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y"%}
-          {{block.settings.timer_date | date: "%b %d, %Y"}}
+          {{block.settings.timer_date | date: "%b %D, %Y"}}
           {{block.settings.timer_hours}}
           {{block.settings.timer_minutes}}
           
@@ -303,6 +303,7 @@
 var newDatec = datecheck.toString('dd-MM-yy');
           var countDownDate = new Date(timerdate+" "+"13:20:00").getTime();
 //"Jan 5, 2024 15:37:25"
+//Jan 06, 2022 13:20:00
 // Update the count down every 1 second
 var x = setInterval(function() {
 
