@@ -274,9 +274,34 @@
         
 
 
-<script>
+
+        
+        <div class="timerbox">
+          
+          {%- if block.settings.show_timerheading -%}
+          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
+          {%- endif -%}
+           {%- if block.settings.timer_date !='' -%}
+          {% assign timerdate = block.settings.timer_date%}
+          {{block.settings.timer_date | date: "%b %d, %y"}}
+          {{block.settings.timer_hours}}
+          {{block.settings.timer_minutes}}
+          
+          
+          {%- if block.settings.timer_prefix -%}
+          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
+          {%- endif -%}          
+          <span class="countdown_timer">  <span id="demo"></span></span>          
+          {%- if block.settings.timer_suffix -%}
+          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
+          {%- endif -%}
+           {%- endif -%}
+        </div>
+        <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+  var date = new Date(timerdate);
+var newDate = date.toString('dd-MM-yy');
+var countDownDate = new Date(newDate).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -315,27 +340,6 @@ var x = setInterval(function() {
 // }
 // document.getElementById("slct").appendChild(select);
 </script>
-        
-        <div class="timerbox">
-          
-          {%- if block.settings.show_timerheading -%}
-          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
-          {%- endif -%}
-           {%- if block.settings.timer_date !='' -%}
-          {{block.settings.timer_date | date: "%b %d, %y"}}
-          {{block.settings.timer_hours}}
-          {{block.settings.timer_minutes}}
-          
-          
-          {%- if block.settings.timer_prefix -%}
-          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
-          {%- endif -%}          
-          <span class="countdown_timer">  <span id="demo"></span></span>          
-          {%- if block.settings.timer_suffix -%}
-          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
-          {%- endif -%}
-           {%- endif -%}
-        </div>
 
         
        
