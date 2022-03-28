@@ -270,7 +270,7 @@
          {%- when 'section_countdown' -%}
         
        
-        <p id="demo"></p>
+       
         
 
 
@@ -318,8 +318,18 @@ var x = setInterval(function() {
         
         <div class="timerbox">
           
-           {%- if block.settings.countdown_heading -%}
+          {%- if block.settings.show_timerheading -%}
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
+          {%- endif -%}
+          {%- if block.settings.timer_prefix -%}
+          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
+          {%- endif -%}
+           {%- if block.settings.timer_date -%}
+          <span class="countdown_timer">  <p id="demo"></p></span>
+          {%- endif -%}
+          
+          {%- if block.settings.timer_suffix -%}
+          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
           {%- endif -%}
         </div>
 
