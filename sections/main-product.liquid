@@ -298,6 +298,10 @@
            {%- endif -%}
           </div>
         </div>
+         {% assign timerback = block.settings.timer_background %}
+         {% assign timerfont = block.settings.timer_font %}
+        {{timerback}}
+        
         <script>
           var mydate = {{timerinfo | json}}
 // Set the date we're counting down to
@@ -341,6 +345,8 @@ var x = setInterval(function() {
 // }
 // document.getElementById("slct").appendChild(select);
 </script>
+        <style>
+        </style>
         
 
         
