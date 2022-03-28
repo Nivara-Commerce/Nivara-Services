@@ -271,7 +271,7 @@
         
         Sales Countdown
         <p id="demo"></p>
-        <div id="slct"></div>
+        
 
 
 <script>
@@ -315,6 +315,13 @@ var x = setInterval(function() {
 // }
 // document.getElementById("slct").appendChild(select);
 </script>
+        
+        <div class="timerbox">
+          
+           {%- if block.settings.countdown_heading -%}
+          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
+          {%- endif -%}
+        </div>
 
         
        
