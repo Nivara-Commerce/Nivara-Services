@@ -30,7 +30,7 @@
             "timer_prefix": "Sale ends in",
             "timer_suffix": "Get it now!!",
             "timer_select": "timer_date",
-            "timer_date": "2022-01-06",
+            "timer_date": "2022-04-24",
             "timer_hours": 2,
             "timer_minutes": 20,
             "timer_action": "timer_message",
