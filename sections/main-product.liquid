@@ -301,7 +301,7 @@
 // Set the date we're counting down to
   var datecheck = new Date(timerdate);
 var newDatec = datecheck.toString('dd-MM-yy');
-var countDownDate = new Date(timerdate);
+          var countDownDate = new Date(timerdate+" "+"13:20:00").getTime();
 //"Jan 5, 2024 15:37:25"
 // Update the count down every 1 second
 var x = setInterval(function() {
