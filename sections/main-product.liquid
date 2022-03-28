@@ -282,8 +282,13 @@
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
           {%- endif -%}
            {%- if block.settings.timer_date !='' -%}
-          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y"%}
-          
+          {{timerdate |append:" 13:20:00"}}
+          {% assign timerdate = block.settings.timer_date | date: "%b %d, %y" %}
+          {% assign timerhour = block.settings.timer_hours %}
+          {% assign timerminutes = block.settings.timer_minutes %}
+          {{timerdate}}
+          {{timerhour}}
+          {{timerminutes}}
           
           
           {%- if block.settings.timer_prefix -%}
@@ -337,7 +342,7 @@ var x = setInterval(function() {
 // }
 // document.getElementById("slct").appendChild(select);
 </script>
-        {{timerdate |append:" 13:20:00"}}
+        
 
         
        
