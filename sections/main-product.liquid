@@ -300,9 +300,9 @@
         </div>
          {% assign timerback = block.settings.timer_background %}
          {% assign timerfont = block.settings.timer_font %}
-        
-        
-        <script>
+         {% assign timerclr = block.settings.timer_time %}      
+       
+      <script>
           var mydate = {{timerinfo | json}}
 // Set the date we're counting down to
 var countDownDate = new Date(mydate).getTime();
@@ -352,6 +352,9 @@ var x = setInterval(function() {
     border-radius: 5px;
     color: {{timerfont}};
     font-weight: 600;
+}
+          span.countdown_timer {
+    color: {{timerclr}};
 }
         </style>
         
@@ -1339,6 +1342,12 @@ var x = setInterval(function() {
     "id": "timer_font",
   "label": "Choose Background color",
   "default": "#000"
+  },
+    {
+   "type": "color",
+    "id": "timer_time",
+  "label": "Choose timer color",
+  "default": "#E22120"
   }
    
      
