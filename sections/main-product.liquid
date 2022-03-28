@@ -322,7 +322,7 @@ var x = setInterval(function() {
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
           {%- endif -%}
            {%- if block.settings.timer_date !='' -%}
-          {{block.settings.timer_date}}
+          {{block.settings.timer_date | date: "%b %d, %y"}}
           {{block.settings.timer_hours}}
           {{block.settings.timer_minutes}}
           
