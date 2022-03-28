@@ -283,9 +283,7 @@
           {%- endif -%}
            {%- if block.settings.timer_date !='' -%}
           {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y"%}
-          {{block.settings.timer_date | date: "%b %D, %Y"}}
-          {{block.settings.timer_hours}}
-          {{block.settings.timer_minutes}}
+          
           
           
           {%- if block.settings.timer_prefix -%}
@@ -299,7 +297,7 @@
         </div>
         <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+var countDownDate = new Date("Jan 05, 2024 15:37:25").getTime();
 //"Jan 5, 2024 15:37:25"
 //Jan 06, 2022 13:20:00
 // Update the count down every 1 second
