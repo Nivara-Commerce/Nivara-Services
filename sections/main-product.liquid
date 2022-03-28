@@ -289,7 +289,8 @@
           {{timerdate}}
           {{timerhour}}
           {{timerminutes}}
-          
+           {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %}
+          {{timerinfo}}
           
           {%- if block.settings.timer_prefix -%}
           <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
