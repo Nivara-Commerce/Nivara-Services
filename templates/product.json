@@ -38,7 +38,8 @@
             "timer_visibility": "timer_all",
             "timer_products": "nivara",
             "timer_background": "#e22120",
-            "timer_font": "#000"
+            "timer_font": "#000000",
+            "timer_time": "#FFFFFF"
           }
         },
         "price": {
