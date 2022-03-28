@@ -271,9 +271,7 @@
         
         Sales Countdown
         <p id="demo"></p>
-        <select>
-    <option value=""></option>
-</select>
+        <div id="slct"></div>
 
 
 <script>
@@ -315,7 +313,7 @@ for (var i = year - 4; i <= year + 3; i++) {
   if (i === year) option.selected = true;
   select.appendChild(option);
 }
-document.body.appendChild(select);
+document.getElementById("slct").appendChild(select);
 </script>
 
         
