@@ -283,12 +283,10 @@
           {%- endif -%}
            {%- if block.settings.timer_date !='' -%}
           
-          {% assign timerdate = block.settings.timer_date | date: "%b %d, %y" %}
+          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
           {% assign timerhour = block.settings.timer_hours %}
           {% assign timerminutes = block.settings.timer_minutes %}
-          {{timerdate}}
-          {{timerhour}}
-          {{timerminutes}}
+          
            {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %}
           {{timerinfo}}
           
