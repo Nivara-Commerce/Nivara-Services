@@ -31,7 +31,7 @@
             "timer_suffix": "Get it now!!",
             "timer_select": "timer_date",
             "timer_date": "2022-04-24",
-            "timer_hours": 12,
+            "timer_hours": 11,
             "timer_minutes": 35,
             "timer_action": "timer_message",
             "timer_text": "",
