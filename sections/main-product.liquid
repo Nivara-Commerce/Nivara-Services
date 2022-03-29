@@ -268,6 +268,7 @@
          </div>
         </div>
          {%- when 'section_countdown' -%} 
+        {%- if compare_at_price > price %} price--on-sale {% endif -%}
         <div class="timerbox">
           
           {%- if block.settings.show_timerheading -%}
