@@ -292,7 +292,8 @@
         </div>
          {% assign timerback = block.settings.timer_background %}
          {% assign timerfont = block.settings.timer_font %}
-         {% assign timerclr = block.settings.timer_time %}      
+         {% assign timerclr = block.settings.timer_time %}  
+        {{product.compare_at_price}}
        
       <script>
           var mydate = {{timerinfo | json}}
