@@ -270,9 +270,12 @@
         
          {%- when 'section_countdown' -%}
          {%- if settings.show_salescountdown -%}
-         {% assign timervisibility = block.settings.timer_visibility %}
-       {{timervisibility}}
-        {%- if product.compare_at_price > product.price %} price--on-sale {% endif -%}
+         {% assign timervisibility = block.settings.timer_visibility %}        
+        {%- if product.compare_at_price > product.price %} 
+        {% assign timeronsale = 'yes' %}        
+        {% endif -%}
+        
+        {{timervisibility}}
         <div class="timerbox">
           
           {%- if block.settings.show_timerheading -%}
