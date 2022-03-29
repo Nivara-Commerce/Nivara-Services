@@ -36,7 +36,7 @@
 
     {% render 'meta-tags' %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ 'ajaxinate.min.js' | asset_url | script_tag }}" defer="defer"></script>
+    <script src="{{ 'ajaxinate.min.js' | asset_url}}"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
