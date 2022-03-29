@@ -270,7 +270,8 @@
         
          {%- when 'section_countdown' -%}
          {%- if settings.show_salescountdown -%}
-        {{block.settings.timer_visibility}}timer_allsale
+         {% assign timervisibility = block.settings.timer_visibility %}
+       {{timervisibility}}
         {%- if product.compare_at_price > product.price %} price--on-sale {% endif -%}
         <div class="timerbox">
           
