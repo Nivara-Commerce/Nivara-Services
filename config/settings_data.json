@@ -3,6 +3,7 @@
     "infinite_scroll_enabled": true,
     "show_preloaderimage": false,
     "show_invquantity": true,
+    "show_salescountdown": true,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
