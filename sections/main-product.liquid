@@ -272,7 +272,7 @@
          {%- if settings.show_salescountdown -%}
          {% assign timervisibility = block.settings.timer_visibility %}        
         {%- if product.compare_at_price > product.price %} 
-        {% assign timeronsale = 'timesaleproduct' %} 
+        {% assign timeronsale = 'timersaleproduct' %} 
         {% else -%} 
         {% assign timeronsale = 'timerproduct' %}
         {% endif -%}         
