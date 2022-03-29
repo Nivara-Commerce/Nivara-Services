@@ -267,7 +267,8 @@
 
          </div>
         </div>
-         {%- when 'section_countdown' -%} 
+         {%- when 'section_countdown' -%}
+        {{timer_visibility}}
         {%- if product.compare_at_price > product.price %} price--on-sale {% endif -%}
         <div class="timerbox">
           
