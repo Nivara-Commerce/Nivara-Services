@@ -1192,7 +1192,7 @@
         "type": "checkbox",
         "id": "show_salescountdown",
         "label": "Show Sales Countdown",
-        "info": "Add a countdown timer for your on-sale products.",
+        "info": "Add a countdown timer for your products.",
         "default": false
       }
     ]
