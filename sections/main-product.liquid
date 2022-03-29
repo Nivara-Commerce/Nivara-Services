@@ -276,6 +276,10 @@
         {% endif -%}
         
         {{timervisibility}}
+        
+         {%- if timervisibility =='timer_allsale' %}
+          {% assign visibilitycls = block.settings.timer_visibility %}
+          {% endif -%}
         <div class="timerbox">
           
           {%- if block.settings.show_timerheading -%}
@@ -1309,10 +1313,7 @@ var x = setInterval(function() {
       "type": "select",
       "id": "timer_visibility",
       "options": [
-       {
-          "value": "timer_all",
-          "label": "On all products"
-        },
+    
         {
           "value": "timer_allsale",
           "label": "Only on sale products"
