@@ -40,7 +40,7 @@
             "timer_minutes": 20,
             "timer_action": "timer_hide",
             "timer_text": "",
-            "timer_visibility": "timer_specific",
+            "timer_visibility": "timer_allsale",
             "timer_products": "copy-of-copy-of-nivara",
             "timer_background": "#eeeeee",
             "timer_font": "#000000",
