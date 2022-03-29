@@ -283,7 +283,8 @@
          {%- elsif timervisibility =='timer_specific' %}
          {% assign visibilitycls = 'onspecificvisibility'%}
          {% endif -%}
-        {{timerproduct.title}}
+        {{timerproduct.id}}
+        {{product.id}}
          <div class="timerbox {{timeronsale}} {{visibilitycls}}">          
           {%- if block.settings.show_timerheading -%}
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
