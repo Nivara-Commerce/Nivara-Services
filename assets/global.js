@@ -902,12 +902,12 @@ $("#preloader").delay(1000).slideUp("slow");
     
   });
 
- var template = {{ template | json }};
+
  document.addEventListener("DOMContentLoaded", function() {
     var endlessScroll = new Ajaxinate({
       container: '#Huratips-Loop',
       pagination: '#Huratips-Pagination',
-      loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/files/loading.gif?v=1648015793"></center>'+template,
+      loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/files/loading.gif?v=1648015793"></center>',
     });
   });
 
