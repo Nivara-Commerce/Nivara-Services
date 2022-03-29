@@ -272,9 +272,9 @@
          {%- if settings.show_salescountdown -%}
          {% assign timervisibility = block.settings.timer_visibility %}        
         {%- if product.compare_at_price > product.price %} 
-        {% assign timeronsale = 'saleyes' %} 
+        {% assign timeronsale = 'timesaleproduct' %} 
         {% else -%} 
-        {% assign timeronsale = 'saleno' %}
+        {% assign timeronsale = 'timerproduct' %}
         {% endif -%}         
         
          {%- if timervisibility =='timer_allsale' %}
