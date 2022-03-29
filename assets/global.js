@@ -903,7 +903,7 @@ $("#preloader").delay(1000).slideUp("slow");
   });
 
 
- window.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("DOMContentLoaded", function() {
     var endlessScroll = new Ajaxinate({
       container: '#Huratips-Loop',
       pagination: '#Huratips-Pagination',
