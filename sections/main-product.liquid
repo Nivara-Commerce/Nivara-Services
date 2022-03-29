@@ -271,7 +271,11 @@
          {%- when 'section_countdown' -%}
          {%- if settings.show_salescountdown -%}
         {%- assign timerproduct = all_products[block.settings.timer_products] -%}
-         {% assign timervisibility = block.settings.timer_visibility %}        
+         {% assign timervisibility = block.settings.timer_visibility %}
+        
+       
+        
+        
         {%- if product.compare_at_price > product.price %} 
         {% assign timeronsale = 'timersaleproduct' %} 
         {% else -%} 
@@ -280,12 +284,14 @@
         
          {%- if timervisibility =='timer_allsale' %}
          {% assign visibilitycls = 'onsalevisibility'%}
-         {%- elsif timervisibility =='timer_specific' %}
+         {%- elsif timervisibility =='timer_specific' and timerproduct.id == product.id  %}
          {% assign visibilitycls = 'onspecificvisibility'%}
          {% endif -%}
+        
         {{timervisibility}}
         {{timerproduct.id}}
         {{product.id}}
+        
          <div class="timerbox {{timeronsale}} {{visibilitycls}}">          
           {%- if block.settings.show_timerheading -%}
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
