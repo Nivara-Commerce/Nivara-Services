@@ -902,36 +902,15 @@ $("#preloader").delay(1000).slideUp("slow");
     
   });
 
- var mydate = {{timerinfo | json}}
-// Set the date we're counting down to
-var countDownDate = new Date(mydate).getTime();
-//"Jan 5, 2024 15:37:25"
-//Jan 06, 2022 13:20:00
-// Update the count down every 1 second
-var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
+ document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate({
+      container: '#Huratips-Loop',
+      pagination: '#Huratips-Pagination',
+      loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/files/loading.gif?v=1648015793"></center>',
+    });
+  });
+
 
 
 
