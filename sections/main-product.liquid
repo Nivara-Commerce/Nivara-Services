@@ -283,6 +283,7 @@
          {%- elsif timervisibility =='timer_specific' %}
          {% assign visibilitycls = 'onspecificvisibility'%}
          {% endif -%}
+        {{timervisibility}}
         {{timerproduct.id}}
         {{product.id}}
          <div class="timerbox {{timeronsale}} {{visibilitycls}}">          
