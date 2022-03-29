@@ -272,16 +272,18 @@
          {%- if settings.show_salescountdown -%}
          {% assign timervisibility = block.settings.timer_visibility %}        
         {%- if product.compare_at_price > product.price %} 
-        {% assign timeronsale = 'yes' %}        
-        {% endif -%}
-        
-        {{timervisibility}}
+        {% assign timeronsale = 'saleyes' %} 
+        {% else -%} 
+        {% assign timeronsale = 'saleno' %}
+        {% endif -%}         
         
          {%- if timervisibility =='timer_allsale' %}
-          {% assign visibilitycls = block.settings.timer_visibility %}
-          {% endif -%}
-        <div class="timerbox">
-          
+         {% assign visibilitycls = 'onsalevisibility'%}
+         {%- elsif timervisibility =='timer_specific' %}
+         {% assign visibilitycls = 'onspecificvisibility'%}
+         {% endif -%}
+        
+         <div class="timerbox {{timeronsale}}{{visibilitycls}}">          
           {%- if block.settings.show_timerheading -%}
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
           {%- endif -%}
