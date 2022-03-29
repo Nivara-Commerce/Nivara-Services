@@ -22,29 +22,29 @@
             "text_style": "subtitle"
           }
         },
-        "93a279cf-13e9-4dc0-9568-e615eba4cf60": {
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "8921a2e7-41ba-4811-98ff-394ea2d79183": {
           "type": "section_countdown",
           "settings": {
             "countdown_heading": "Sales Countdown",
             "show_timerheading": true,
             "timer_prefix": "Sale ends in",
-            "timer_suffix": "Get it now!!",
-            "timer_select": "timer_date",
-            "timer_date": "2022-04-25",
-            "timer_hours": 24,
-            "timer_minutes": 35,
-            "timer_action": "timer_message",
+            "timer_suffix": "Get it now!",
+            "timer_select": "timer_time",
+            "timer_date": "2022-04-30",
+            "timer_hours": 5,
+            "timer_minutes": 20,
+            "timer_action": "timer_hide",
             "timer_text": "",
             "timer_visibility": "timer_all",
-            "timer_products": "nivara",
-            "timer_background": "#e22120",
-            "timer_font": "#000000",
-            "timer_time": "#ffffff"
-          }
-        },
-        "price": {
-          "type": "price",
-          "settings": {
+            "timer_products": "",
+            "timer_background": "#eee",
+            "timer_font": "#000",
+            "timer_time": "#E22120"
           }
         },
         "variant_picker": {
@@ -130,8 +130,8 @@
         "vendor",
         "title",
         "caption",
-        "93a279cf-13e9-4dc0-9568-e615eba4cf60",
         "price",
+        "8921a2e7-41ba-4811-98ff-394ea2d79183",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
