@@ -267,8 +267,10 @@
 
          </div>
         </div>
+        
          {%- when 'section_countdown' -%}
-        {{block.settings.timer_visibility}}
+         {%- if settings.show_salescountdown -%}
+        {{block.settings.timer_visibility}}timer_allsale
         {%- if product.compare_at_price > product.price %} price--on-sale {% endif -%}
         <div class="timerbox">
           
@@ -354,7 +356,7 @@ var x = setInterval(function() {
         </style>
         
 
-        
+       {% endif -%} 
        
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
