@@ -1202,7 +1202,7 @@
       {
         "type": "checkbox",
         "id": "estimated_delivery",
-        "label": "Delivery Time",
+        "label": "Show Delivery Time",
         "info": "Display Estimated Delivery Time for your products.",
         "default": false
       }
