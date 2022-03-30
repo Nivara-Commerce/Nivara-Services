@@ -1194,6 +1194,17 @@
         "label": "Show Sales Countdown",
         "info": "Add a countdown timer for your products.",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Estimated Delivery Date"
+      },
+      {
+        "type": "checkbox",
+        "id": "estimated_delivery",
+        "label": "Delivery Time",
+        "info": "Display Estimated Delivery Date for your products.",
+        "default": false
       }
     ]
   }
