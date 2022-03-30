@@ -1197,13 +1197,13 @@
       },
       {
         "type": "header",
-        "content": "Estimated Delivery Date"
+        "content": "Delivery Time"
       },
       {
         "type": "checkbox",
         "id": "estimated_delivery",
         "label": "Delivery Time",
-        "info": "Display Estimated Delivery Date for your products.",
+        "info": "Display Estimated Delivery Time for your products.",
         "default": false
       }
     ]
