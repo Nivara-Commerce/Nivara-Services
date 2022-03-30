@@ -226,7 +226,8 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
-         {%- when 'section_delivery' -%}       
+         {%- when 'section_delivery' -%} 
+         {%- if settings.estimated_delivery -%}
              <div class="delivery_box">
           
            {%- if block.settings.show_heading -%}
@@ -267,6 +268,7 @@
 
          </div>
         </div>
+         {%- endif -%}
         
          {%- when 'section_countdown' -%}
          {%- if settings.show_salescountdown -%}
