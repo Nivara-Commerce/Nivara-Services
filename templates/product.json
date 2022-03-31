@@ -75,7 +75,11 @@
             "show_asdate": true,
             "delivery_dateformat": "%a, %b %d, %y",
             "general_mintime": 7,
-            "general_maxtime": 14
+            "general_maxtime": 14,
+            "deliverytime_heading": "#eee",
+            "delivery_background": "#eee",
+            "delivery_font": "#000",
+            "delivery_time": "#E22120"
           }
         },
         "description": {
@@ -124,6 +128,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "b6eb4eda-e53d-446c-a411-025481f54d86": {
+          "type": "section_inventory",
+          "settings": {
+            "inventory_heading": ""
+          }
         }
       },
       "block_order": [
@@ -141,7 +151,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "b6eb4eda-e53d-446c-a411-025481f54d86"
       ],
       "settings": {
         "enable_sticky_info": true,
