@@ -478,7 +478,6 @@ var x = setInterval(function() {
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
-                                data-qty="{{option.inventory_quantity}}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
                           <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
@@ -520,25 +519,6 @@ var x = setInterval(function() {
                   </script>
                 </variant-selects>
               {%- endif -%}
-        
-        <div id="stockstatus">
-        {% if product.variants.size < 2 %}
-          {% assign current_variant= product.variants.first %}
-        {% endif %}
-        {% if current_variant.inventory_quantity < 1 %}
-            <p class="zero">Sold Out!<span class="variant-inventory">{{ current_variant.inventory_quantity }}</span></p>
-        {% elsif current_variant.inventory_quantity < 6 %}
-            <p class="few">Hurry! Only <span class="variant-inventory">{{ current_variant.inventory_quantity }}</span> left in stock.</p>
-        {% else %}
-            <p class="plenty"><span class="variant-inventory">{{ current_variant.inventory_quantity }}</span> available in stock.</p>
-        {% endif %}
- </div>
-<script>
-     var inv_qty = {};
-     {% for var in product.variants %}
-           inv_qty[{{- var.id -}}] = {{ var.inventory_quantity | default: 0 }};
-     {% endfor %}
-</script>
             {%- endunless -%}
 
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
