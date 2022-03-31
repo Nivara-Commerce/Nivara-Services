@@ -1207,5 +1207,36 @@
         "default": false
       }
     ]
+  },
+  {
+    "name": "Inventory Quantity",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Help Center",
+        "info": "To enable\/disable this add-on, go to Theme Settings > Nivara Theme Addons"
+      },
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "text",
+        "id": "inventory_icon",
+        "label": "Icon"
+      },
+      {
+        "type": "text",
+        "id": "inventory_prefix",
+        "label": "Prefix",
+        "default": "Only"
+      },
+      {
+        "type": "text",
+        "id": "inventory_suffix",
+        "label": "Suffix",
+        "default": "left in stock"
+      }
+    ]
   }
 ]
