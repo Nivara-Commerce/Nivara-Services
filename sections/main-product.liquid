@@ -276,7 +276,12 @@
          {% assign timervisibility = block.settings.timer_visibility %} 
          {% assign timerback = block.settings.timer_background %}
          {% assign timerfont = block.settings.timer_font %}
-         {% assign timerclr = block.settings.timer_time %} 
+         {% assign timerclr = block.settings.timer_time %}        
+         {% assign timer_action = block.settings.timer_action %}
+         {% assign timer_message = block.settings.timer_text %}  
+        {{timer_action}}
+        {{timer_message}}
+        
          {%- if block.settings.timer_date !='' -%}          
           {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
           {% assign timerhour = block.settings.timer_hours %}
