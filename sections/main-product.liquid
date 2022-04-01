@@ -309,16 +309,21 @@
   var action = {{timer_action | json}};
   var display_message = {{timer_message | json}};
   
-  if (days > 0) 
-  {   
-    var sd = days;
-    
+  if (days == 0) 
+  {      
+     // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s ";   
   
   } 
+    else 
+  {
     
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = sd + "d " + hours + "h "
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
+  }
+    
+ 
     
   // If the count down is over, write some text 
   if (distance < 0) {    
