@@ -308,9 +308,16 @@
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   var action = {{timer_action | json}};
   var display_message = {{timer_message | json}};
+  
+  if (days > 0) 
+  {   
+    var sd = days;
+    
+  
+  } 
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML =  if (days > 0) {   days } + "d " + hours + "h "
+  document.getElementById("demo").innerHTML = sd + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
