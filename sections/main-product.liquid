@@ -353,7 +353,7 @@
               
           <div class="timerinfo">
           {%- if block.settings.timer_icon -%}
-          <span class="countdown_icon">{% render 'icon-3d-model' %}</span>
+          <span class="countdown_icon"> {% render 'icon-accordion', icon: stopwatch %}</span>
           {%- endif -%} 
           {%- if block.settings.timer_prefix -%}
           <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
