@@ -276,7 +276,8 @@
          {% assign timervisibility = block.settings.timer_visibility %} 
          {% assign timerback = block.settings.timer_background %}
          {% assign timerfont = block.settings.timer_font %}
-         {% assign timerclr = block.settings.timer_time %}        
+         {% assign timerclr = block.settings.timer_time %}
+         {% assign message_clr = block.settings.hide_message %}        
          {% assign timer_action = block.settings.timer_action %}
          {% assign timer_message = block.settings.timer_text %}
        
@@ -335,6 +336,11 @@
  span.countdown_timer {
     color: {{timerclr}};
 }
+  
+ span.sale_message {
+   color: {{message_clr}};
+}
+  
 </style>
        
          {%- if product.compare_at_price > product.price %} 
@@ -1371,6 +1377,12 @@
    "type": "color",
     "id": "timer_time",
   "label": "Choose timer color",
+  "default": "#E22120"
+  },
+    {
+   "type": "color",
+    "id": "hide_message",
+  "label": "Choose message color",
   "default": "#E22120"
   }
    
