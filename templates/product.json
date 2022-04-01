@@ -35,7 +35,7 @@
             "timer_prefix": "Sale ends in",
             "timer_suffix": "Get it now!",
             "timer_select": "timer_time",
-            "timer_date": "2022-03-31",
+            "timer_date": "2022-04-01",
             "timer_hours": 5,
             "timer_minutes": 20,
             "timer_action": "timer_hide",
@@ -76,10 +76,10 @@
             "delivery_dateformat": "%a, %b %d, %y",
             "general_mintime": 7,
             "general_maxtime": 14,
-            "deliverytime_heading": "#eee",
-            "delivery_background": "#eee",
-            "delivery_font": "#000",
-            "delivery_time": "#E22120"
+            "deliverytime_heading": "#eeeeee",
+            "delivery_background": "#eeeeee",
+            "delivery_font": "#000000",
+            "delivery_time": "#e22120"
           }
         },
         "description": {
@@ -128,12 +128,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "b6eb4eda-e53d-446c-a411-025481f54d86": {
-          "type": "section_inventory",
-          "settings": {
-            "inventory_heading": ""
-          }
         }
       },
       "block_order": [
@@ -151,8 +145,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "b6eb4eda-e53d-446c-a411-025481f54d86"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
