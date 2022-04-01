@@ -333,11 +333,11 @@ var x = setInterval(function() {
     color: {{timerclr}};
 }
 </style>
-        
+        {{timervisibility}}
       
          {%- if product.compare_at_price > product.price %} 
           {%- if timervisibility == 'timer_allsale' %} 
-         <div class="timerbox {{timeronsale}} {{visibilitycls}}">          
+         <div class="timerbox">          
           {%- if block.settings.show_timerheading -%}
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
           {%- endif -%}
