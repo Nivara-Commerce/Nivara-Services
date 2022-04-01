@@ -33,7 +33,7 @@
             "timer_icon": true,
             "timer_prefix": "Sale ends in",
             "timer_suffix": "Get it now!!",
-            "timer_date": "2022-04-02",
+            "timer_date": "2022-04-01",
             "timer_hours": 5,
             "timer_minutes": 20,
             "timer_action": "timer_message",
@@ -44,7 +44,7 @@
             "timer_font": "#000000",
             "timer_time": "#e22120",
             "hide_message": "#792929",
-            "timer_fontsize": 17
+            "timer_fontsize": 16
           }
         },
         "variant_picker": {
