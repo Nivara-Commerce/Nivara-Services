@@ -273,38 +273,12 @@
          {%- when 'section_countdown' -%}
          {%- if settings.show_salescountdown -%}
          {%- assign timerproduct = all_products[block.settings.timer_products] -%}
-         {% assign timervisibility = block.settings.timer_visibility %}      
-        
-      
-         {%- if timervisibility == 'timer_allsale' and product.compare_at_price > product.price %} 
-         <div class="timerbox {{timeronsale}} {{visibilitycls}}">          
-          {%- if block.settings.show_timerheading -%}
-          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
-          {%- endif -%}
-           {%- if block.settings.timer_date !='' -%}
-          
-          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
-          {% assign timerhour = block.settings.timer_hours %}
-          {% assign timerminutes = block.settings.timer_minutes %}          
-          {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %}        
-          <div class="timerinfo">
-          {%- if block.settings.timer_prefix -%}
-          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
-          {%- endif -%}          
-          <span class="countdown_timer">  <span id="demo"></span></span>          
-          {%- if block.settings.timer_suffix -%}
-          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
-          {%- endif -%}
-           {%- endif -%}
-          </div>
-        </div>
-        
+         {% assign timervisibility = block.settings.timer_visibility %} 
          {% assign timerback = block.settings.timer_background %}
          {% assign timerfont = block.settings.timer_font %}
-         {% assign timerclr = block.settings.timer_time %}  
-        {{product.compare_at_price}}
-       
-      <script>
+         {% assign timerclr = block.settings.timer_time %} 
+        
+         <script>
           var mydate = {{timerinfo | json}}
 // Set the date we're counting down to
 var countDownDate = new Date(mydate).getTime();
@@ -347,19 +321,45 @@ var x = setInterval(function() {
 // }
 // document.getElementById("slct").appendChild(select);
 </script>
-        <style>
-          .timerinfo {
+<style>
+.timerinfo {
     background: {{timerback}};
     padding: 5px;
     border-radius: 5px;
     color: {{timerfont}};
     font-weight: 600;
 }
-          span.countdown_timer {
+ span.countdown_timer {
     color: {{timerclr}};
 }
-        </style>
+</style>
         
+      
+         {%- if product.compare_at_price > product.price %} 
+          {%- if timervisibility == 'timer_allsale' %} 
+         <div class="timerbox {{timeronsale}} {{visibilitycls}}">          
+          {%- if block.settings.show_timerheading -%}
+          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
+          {%- endif -%}
+           {%- if block.settings.timer_date !='' -%}
+          
+          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
+          {% assign timerhour = block.settings.timer_hours %}
+          {% assign timerminutes = block.settings.timer_minutes %}          
+          {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %}        
+          <div class="timerinfo">
+          {%- if block.settings.timer_prefix -%}
+          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
+          {%- endif -%}          
+          <span class="countdown_timer">  <span id="demo"></span></span>          
+          {%- if block.settings.timer_suffix -%}
+          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
+          {%- endif -%}
+           {%- endif -%}
+          </div>
+        </div>
+         {% elsif timervisibility == 'timer_allsale' -%} 
+         {% endif -%} 
 
        {% endif -%} 
         {%- endif -%}
