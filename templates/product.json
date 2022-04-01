@@ -43,7 +43,8 @@
             "timer_products": "copy-of-nivara",
             "timer_background": "#eeeeee",
             "timer_font": "#000000",
-            "timer_time": "#e22120"
+            "timer_time": "#e22120",
+            "hide_message": "#792929"
           }
         },
         "variant_picker": {
