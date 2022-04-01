@@ -319,10 +319,11 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {    
     if(action == 'timer_hide'){
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+      clearInterval(x);   
       document.getElementById("timer_box").style.display = "none";
-    }else if(action == 'timer_hide '){
+     }else if(action == 'timer_message'){
+       clearInterval(x);
+       document.getElementById("timer_box").innerHTML =+ display_message;
     }
   }
 }, 1000);
