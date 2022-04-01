@@ -34,7 +34,7 @@
             "show_timerheading": true,
             "timer_prefix": "Sale ends in",
             "timer_suffix": "Get it now!",
-            "timer_date": "2022-04-01",
+            "timer_date": "2022-04-02",
             "timer_hours": 20,
             "timer_minutes": 20,
             "timer_action": "timer_hide",
