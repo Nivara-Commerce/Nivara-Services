@@ -348,10 +348,8 @@
        
          {%- if product.compare_at_price > product.price %} 
          {%- if timervisibility == 'timer_allsale' %} 
-         <div class="timerbox" id="timer_box">          
-          {%- if block.settings.show_timerheading -%}
-          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
-          {%- endif -%}
+         <div class="timerbox" id="timer_box">         
+          
           {%- if block.settings.timer_date !='' -%}          
               
           <div class="timerinfo">
@@ -366,10 +364,8 @@
           </div>
         </div>
          {% elsif timervisibility == 'timer_specific' and timerproduct.id == product.id  -%} 
-          <div class="timerbox" id="timer_box">          
-          {%- if block.settings.show_timerheading -%}
-          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
-          {%- endif -%}
+          <div class="timerbox" id="timer_box">         
+         
           {%- if block.settings.timer_date !='' -%}    
                
           <div class="timerinfo">
@@ -1255,18 +1251,7 @@
       "type": "section_countdown",
       "name": "Sales Countdown",
       "settings": [
-        {
-          "type": "text",
-          "id": "countdown_heading",
-          "default": "Sales Countdown",         
-          "label": "Heading"
-        },
-       {
-        "type": "checkbox",
-        "id": "show_timerheading",
-        "label": "Show Heading",
-        "default": true
-      },
+        
       {
         "type": "header",
         "content": "Text Settings"
