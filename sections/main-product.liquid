@@ -333,10 +333,7 @@ var x = setInterval(function() {
     color: {{timerclr}};
 }
 </style>
-        {{timervisibility}}
-        {{timerproduct.id}}
-        {{product.id}}
-      
+       
          {%- if product.compare_at_price > product.price %} 
           {%- if timervisibility == 'timer_allsale' %} 
          <div class="timerbox">          
@@ -361,7 +358,27 @@ var x = setInterval(function() {
           </div>
         </div>
          {% elsif timervisibility == 'timer_specific' and timerproduct.id == product.id  -%} 
-        test
+       <div class="timerbox">          
+          {%- if block.settings.show_timerheading -%}
+          <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
+          {%- endif -%}
+           {%- if block.settings.timer_date !='' -%}
+          
+          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
+          {% assign timerhour = block.settings.timer_hours %}
+          {% assign timerminutes = block.settings.timer_minutes %}          
+          {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %}        
+          <div class="timerinfo">
+          {%- if block.settings.timer_prefix -%}
+          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
+          {%- endif -%}          
+          <span class="countdown_timer">  <span id="demo"></span></span>          
+          {%- if block.settings.timer_suffix -%}
+          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
+          {%- endif -%}
+           {%- endif -%}
+          </div>
+        </div>
          {% endif -%} 
 
        {% endif -%} 
