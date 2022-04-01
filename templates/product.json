@@ -44,7 +44,8 @@
             "timer_background": "#eeeeee",
             "timer_font": "#000000",
             "timer_time": "#e22120",
-            "hide_message": "#792929"
+            "hide_message": "#792929",
+            "timer_fontsize": 31
           }
         },
         "variant_picker": {
