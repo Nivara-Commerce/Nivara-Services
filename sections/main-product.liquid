@@ -348,11 +348,13 @@
        
          {%- if product.compare_at_price > product.price %} 
          {%- if timervisibility == 'timer_allsale' %} 
-         <div class="timerbox" id="timer_box">         
-          
-          {%- if block.settings.timer_date !='' -%}          
+         <div class="timerbox" id="timer_box">
+          {%- if block.settings.timer_date !='' -%}         
               
           <div class="timerinfo">
+          {%- if block.settings.timer_icon -%}
+          <span class="countdown_icon">{% render 'icon-3d-model' %}</span>
+          {%- endif -%} 
           {%- if block.settings.timer_prefix -%}
           <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
           {%- endif -%}          
@@ -1257,9 +1259,9 @@
         "content": "Text Settings"
       },
       {
-        "type": "image_picker",
+        "type": "checkbox",
         "id": "timer_icon",        
-        "label": "Icon"
+        "label": "Show Icon"
       },
       {
         "type": "text",
