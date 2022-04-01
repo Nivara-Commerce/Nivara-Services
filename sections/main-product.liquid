@@ -278,6 +278,13 @@
          {% assign timerfont = block.settings.timer_font %}
          {% assign timerclr = block.settings.timer_time %} 
         
+         {%- if block.settings.timer_date !='' -%}
+          
+          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
+          {% assign timerhour = block.settings.timer_hours %}
+          {% assign timerminutes = block.settings.timer_minutes %}          
+          {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %} 
+        
          <script>
           var mydate = {{timerinfo | json}}
 // Set the date we're counting down to
@@ -340,12 +347,7 @@ var x = setInterval(function() {
           {%- if block.settings.show_timerheading -%}
           <div class="countdown_title"> {{ block.settings.countdown_heading }}</div>
           {%- endif -%}
-           {%- if block.settings.timer_date !='' -%}
-          
-          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
-          {% assign timerhour = block.settings.timer_hours %}
-          {% assign timerminutes = block.settings.timer_minutes %}          
-          {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %}        
+                 
           <div class="timerinfo">
           {%- if block.settings.timer_prefix -%}
           <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
