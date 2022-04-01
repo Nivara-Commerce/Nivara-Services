@@ -277,9 +277,10 @@
          {% assign timerback = block.settings.timer_background %}
          {% assign timerfont = block.settings.timer_font %}
          {% assign timerclr = block.settings.timer_time %}
+         {% assign timer_fontsize = block.settings.timer_fontsize %}
          {% assign message_clr = block.settings.hide_message %}        
          {% assign timer_action = block.settings.timer_action %}
-         {% assign timer_message = block.settings.timer_text %}
+         {% assign timer_message = block.settings.timer_text %} 
        
         
           {%- if block.settings.timer_date !='' -%}          
@@ -332,6 +333,7 @@
     border-radius: 5px;
     color: {{timerfont}};
     font-weight: 600;
+    font-size:{{timer_fontsize}};
 }
  span.countdown_timer {
     color: {{timerclr}};
@@ -339,6 +341,7 @@
   
  span.sale_message {
    color: {{message_clr}};
+   font-size:{{timer_fontsize}};
 }
   
 </style>
