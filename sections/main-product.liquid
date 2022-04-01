@@ -318,7 +318,7 @@
       document.getElementById("timer_box").style.display = "none";
      }else if(action == 'timer_message'){
        clearInterval(x);
-       document.getElementById("timer_box").innerHTML = display_message;
+       document.getElementById("timer_box").innerHTML = "<span class='sale_message'>"+display_message+"</span>";
     }
   }
 }, 1000);
