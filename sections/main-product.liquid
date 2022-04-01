@@ -358,7 +358,8 @@ var x = setInterval(function() {
            {%- endif -%}
           </div>
         </div>
-         {% elsif timervisibility == 'timer_allsale' -%} 
+         {% elsif timervisibility == 'timer_specific' and timervisibility.id == product.id  -%} 
+        test
          {% endif -%} 
 
        {% endif -%} 
