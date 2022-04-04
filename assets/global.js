@@ -1049,7 +1049,12 @@ $(document).ready(function(){
    
   $('.product-form__submit').on('DOMSubtreeModified', function(){
     setTimeout(function(){
-alert();
+      if ($('.product-form__submit').css('disabled', 'disabled')){
+        alert('show');
+      }
+      else{
+        alert('hide');
+      }
     }, 1000);
 
   });
