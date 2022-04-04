@@ -1283,5 +1283,111 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Nivara Theme Addons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Infinite Scroll"
+      },
+      {
+        "type": "checkbox",
+        "id": "infinite_scroll_enabled",
+        "label": "Show Infinite Scroll",
+        "info": "Replace paginations by automatically loading items as you scroll down the page.",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Pre-Loader"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_preloaderimage",
+        "label": "Show Custom Preloader",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "preloader_icon",
+        "label": "Upload Icon"
+      },
+      {
+        "type": "header",
+        "content": "Inventory Quantity"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_invquantity",
+        "label": "Show Inventory Quantity",
+        "info": "Display the stock level for each product variants",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Sales Countdown"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_salescountdown",
+        "label": "Show Sales Countdown",
+        "info": "Add a countdown timer for your products.",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Delivery Time"
+      },
+      {
+        "type": "checkbox",
+        "id": "estimated_delivery",
+        "label": "Show Delivery Time",
+        "info": "Display Estimated Delivery Time for your products.",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Smart Search"
+      },
+      {
+        "type": "checkbox",
+        "id": "smart_search",
+        "label": "Show Smart Search",
+        "info": "Show search results immediately as you type into the search field.",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Inventory Quantity",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Help Center",
+        "info": "To enable\/disable this add-on, go to Theme Settings > Nivara Theme Addons"
+      },
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "text",
+        "id": "inventory_icon",
+        "label": "Icon"
+      },
+      {
+        "type": "text",
+        "id": "inventory_prefix",
+        "label": "Prefix",
+        "default": "Only"
+      },
+      {
+        "type": "text",
+        "id": "inventory_suffix",
+        "label": "Suffix",
+        "default": "left in stock"
+      }
+    ]
   }
 ]

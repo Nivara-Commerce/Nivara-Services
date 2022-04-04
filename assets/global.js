@@ -890,6 +890,7 @@ class VariantRadios extends VariantSelects {
   }
 }
 
+
 customElements.define('variant-radios', VariantRadios);
 
 // cart countdown timer
@@ -1042,3 +1043,4 @@ $(document).ready(function(){
   }, 500);
 
 });
+

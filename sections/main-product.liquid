@@ -226,6 +226,192 @@
                 {{ product.description }}
               </div>
             {%- endif -%}
+         {%- when 'section_delivery' -%} 
+         {%- if settings.estimated_delivery -%}
+             <div class="delivery_box">
+          
+           {%- if block.settings.show_heading -%}
+          <div class="delivery_title"> {{ block.settings.delivery_heading }}</div>
+          {%- endif -%}
+          <div class="delivery_info"> 
+           
+            {%- if block.settings.delivery_prefix -%}<span class="del_prefix">{{ block.settings.delivery_prefix }}</span>{%- endif -%}
+              {%- if block.settings.show_asdate -%}  
+              {%- if block.settings.delivery_dateformat -%}
+             {% assign dateformat = block.settings.delivery_dateformat%}
+                {%- else -%}
+              {% assign dateformat = '%b %d'%}
+
+            {%- endif -%}
+           
+            {%- if block.settings.general_mintime -%}
+            {% assign mindate = block.settings.general_mintime%}
+             {% assign minseconds = 86400 | times: mindate %}
+            
+             <span class="del_mintime"> {{ 'now' | date: "%s" | plus: minseconds | date: dateformat | append:' ' | prepend:' ' }}</span>{%- endif -%}
+            
+            
+            {%- if block.settings.delivery_seperator -%}<span class="del_seperator">{{ block.settings.delivery_seperator }}</span>{%- endif -%}
+            
+            {%- if block.settings.general_maxtime -%}
+            {% assign maxdate = block.settings.general_maxtime%}
+             {% assign maxseconds = 86400 | times: maxdate %}
+             <span class="del_maxtime"> {{ 'now' | date: "%s" | plus: maxseconds | date: dateformat | append:' ' | prepend:' ' }}</span>{%- endif -%}          
+             {%- else -%}
+             
+            
+            {%- if block.settings.general_mintime -%}<span class="del_mintime">{{ block.settings.general_mintime | prepend:' ' }}</span>{%- endif -%}
+            {%- if block.settings.delivery_seperator -%}<span class="del_seperator">{{ block.settings.delivery_seperator }}</span>{%- endif -%}
+            {%- if block.settings.general_maxtime -%}<span class="del_maxtime">{{ block.settings.general_maxtime | append:' ' }}</span>{%- endif -%}
+             {%- endif -%}
+            {%- if block.settings.delivery_suffix -%}<span class="del_suffix">{{ block.settings.delivery_suffix }}</span>{%- endif -%}
+
+         </div>
+        </div>
+         {%- endif -%}
+        
+         {%- when 'section_countdown' -%}
+         {%- if settings.show_salescountdown -%}
+         {%- assign timerproduct = all_products[block.settings.timer_products] -%}
+         {% assign timervisibility = block.settings.timer_visibility %} 
+         {% assign timerback = block.settings.timer_background %}
+         {% assign timerfont = block.settings.timer_font %}
+         {% assign timerclr = block.settings.timer_time %}
+         {% assign timer_fontsize = block.settings.timer_fontsize %}
+         {% assign message_clr = block.settings.hide_message %}        
+         {% assign timer_action = block.settings.timer_action %}
+         {% assign timer_message = block.settings.timer_text %} 
+       
+        
+          {%- if block.settings.timer_date !='' -%}          
+          {% assign timerdate = block.settings.timer_date | date: "%b %d, %Y" %}
+          {% assign timerhour = block.settings.timer_hours %}
+          {% assign timerminutes = block.settings.timer_minutes %}          
+          {% assign timerinfo = timerdate | append: " "| append: timerhour| append: ":"| append:timerminutes| append: ":00"   %} 
+          {%- endif -%}
+        
+         <script>
+          var mydate = {{timerinfo | json}}
+          var countDownDate = new Date(mydate).getTime();
+          var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  var action = {{timer_action | json}};
+  var display_message = {{timer_message | json}};
+  
+  if (days == 0) 
+  {      
+     // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s ";   
+  
+  } 
+    else 
+  {    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }
+    
+ 
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {    
+    if(action == 'timer_hide'){
+      clearInterval(x);   
+      document.getElementById("timer_box").style.display = "none";
+     }else if(action == 'timer_message'){
+       clearInterval(x);
+       document.getElementById("timer_box").innerHTML = "<span class='sale_message'>"+display_message+"</span>";
+    }
+  }
+}, 1000);
+
+</script>
+<style>
+.timerinfo {
+    background: {{timerback}};
+    padding: 5px;
+    border-radius: 5px;
+    color: {{timerfont}};
+    font-weight: 600;
+    font-size:{{timer_fontsize | append: "px"}};
+}
+ span.countdown_timer {
+    color: {{timerclr}};
+}
+  
+ span.sale_message {
+   color: {{message_clr}};
+   font-size:{{timer_fontsize | append: "px"}};
+}
+  
+</style>
+       
+         {%- if product.compare_at_price > product.price %} 
+         {%- if timervisibility == 'timer_allsale' %} 
+         <div class="timerbox" id="timer_box">
+          {%- if block.settings.timer_date !='' -%}         
+              
+          <div class="timerinfo">
+          {%- if block.settings.timer_icon -%}
+          <span class="countdown_icon"><svg class="icon icon-accordion color-foreground-text" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"> <path d="M18.7014 11.3962C18.7014 16.075 14.9085 19.8679 10.2297 19.8679C5.55095 19.8679 1.75806 16.075 1.75806 11.3962C1.75806 6.71746 5.55095 2.92457 10.2297 2.92457C14.9085 2.92457 18.7014 6.71746 18.7014 11.3962ZM10.2297 18.8679C14.3562 18.8679 17.7014 15.5227 17.7014 11.3962C17.7014 7.26974 14.3562 3.92457 10.2297 3.92457C6.10323 3.92457 2.75806 7.26974 2.75806 11.3962C2.75806 15.5227 6.10323 18.8679 10.2297 18.8679Z" />
+      <path d="M10.7203 1.7782H9.7392C9.18691 1.7782 8.7392 2.22591 8.7392 2.7782V2.92456H11.7203V2.7782C11.7203 2.22591 11.2726 1.7782 10.7203 1.7782ZM9.7392 0.778198C8.63463 0.778198 7.7392 1.67363 7.7392 2.7782V3.92456H12.7203V2.7782C12.7203 1.67363 11.8249 0.778198 10.7203 0.778198H9.7392Z" fill-rule="evenodd"/>
+      <path d="M8.98448 11.3963C8.98448 10.7086 9.54201 10.1511 10.2298 10.1511C10.9175 10.1511 11.475 10.7086 11.475 11.3963C11.475 12.0841 10.9175 12.6416 10.2298 12.6416C9.54201 12.6416 8.98448 12.0841 8.98448 11.3963Z" />
+      <path d="M9.72974 11.3962C9.72974 11.1201 9.95359 10.8962 10.2297 10.8962H15.2108C15.487 10.8962 15.7108 11.1201 15.7108 11.3962C15.7108 11.6724 15.487 11.8962 15.2108 11.8962H10.2297C9.95359 11.8962 9.72974 11.6724 9.72974 11.3962Z" />
+      <path d="M10.2297 5.91517C10.5059 5.91517 10.7297 6.13902 10.7297 6.41517V8.90572C10.7297 9.18186 10.5059 9.40572 10.2297 9.40572C9.95359 9.40572 9.72974 9.18186 9.72974 8.90572V6.41517C9.72974 6.13902 9.95359 5.91517 10.2297 5.91517Z" />
+      <path d="M13.9544 7.30685C14.1497 7.50211 14.1497 7.8187 13.9544 8.01396L12.1934 9.77505C11.9981 9.97031 11.6815 9.97031 11.4862 9.77505C11.291 9.57978 11.291 9.2632 11.4862 9.06794L13.2473 7.30685C13.4426 7.11159 13.7592 7.11159 13.9544 7.30685Z" />
+    </svg></span>
+          {%- endif -%} 
+          {%- if block.settings.timer_prefix -%}
+          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
+          {%- endif -%}          
+          <span class="countdown_timer">  <span id="demo"></span></span>          
+          {%- if block.settings.timer_suffix -%}
+          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
+          {%- endif -%}
+           {%- endif -%}
+          </div>
+        </div>
+         {% elsif timervisibility == 'timer_specific' and timerproduct.id == product.id  -%} 
+          <div class="timerbox" id="timer_box">         
+         
+          {%- if block.settings.timer_date !='' -%}    
+               
+          <div class="timerinfo">
+          {%- if block.settings.timer_icon -%}
+        <span class="countdown_icon"><svg class="icon icon-accordion color-foreground-text" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"> <path d="M18.7014 11.3962C18.7014 16.075 14.9085 19.8679 10.2297 19.8679C5.55095 19.8679 1.75806 16.075 1.75806 11.3962C1.75806 6.71746 5.55095 2.92457 10.2297 2.92457C14.9085 2.92457 18.7014 6.71746 18.7014 11.3962ZM10.2297 18.8679C14.3562 18.8679 17.7014 15.5227 17.7014 11.3962C17.7014 7.26974 14.3562 3.92457 10.2297 3.92457C6.10323 3.92457 2.75806 7.26974 2.75806 11.3962C2.75806 15.5227 6.10323 18.8679 10.2297 18.8679Z" />
+        <path d="M10.7203 1.7782H9.7392C9.18691 1.7782 8.7392 2.22591 8.7392 2.7782V2.92456H11.7203V2.7782C11.7203 2.22591 11.2726 1.7782 10.7203 1.7782ZM9.7392 0.778198C8.63463 0.778198 7.7392 1.67363 7.7392 2.7782V3.92456H12.7203V2.7782C12.7203 1.67363 11.8249 0.778198 10.7203 0.778198H9.7392Z" fill-rule="evenodd"/>
+        <path d="M8.98448 11.3963C8.98448 10.7086 9.54201 10.1511 10.2298 10.1511C10.9175 10.1511 11.475 10.7086 11.475 11.3963C11.475 12.0841 10.9175 12.6416 10.2298 12.6416C9.54201 12.6416 8.98448 12.0841 8.98448 11.3963Z" />
+        <path d="M9.72974 11.3962C9.72974 11.1201 9.95359 10.8962 10.2297 10.8962H15.2108C15.487 10.8962 15.7108 11.1201 15.7108 11.3962C15.7108 11.6724 15.487 11.8962 15.2108 11.8962H10.2297C9.95359 11.8962 9.72974 11.6724 9.72974 11.3962Z" />
+        <path d="M10.2297 5.91517C10.5059 5.91517 10.7297 6.13902 10.7297 6.41517V8.90572C10.7297 9.18186 10.5059 9.40572 10.2297 9.40572C9.95359 9.40572 9.72974 9.18186 9.72974 8.90572V6.41517C9.72974 6.13902 9.95359 5.91517 10.2297 5.91517Z" />
+        <path d="M13.9544 7.30685C14.1497 7.50211 14.1497 7.8187 13.9544 8.01396L12.1934 9.77505C11.9981 9.97031 11.6815 9.97031 11.4862 9.77505C11.291 9.57978 11.291 9.2632 11.4862 9.06794L13.2473 7.30685C13.4426 7.11159 13.7592 7.11159 13.9544 7.30685Z" />
+        </svg></span>
+          {%- endif -%} 
+          {%- if block.settings.timer_prefix -%}
+          <span class="countdown_prefix"> {{ block.settings.timer_prefix }}</span>
+          {%- endif -%}          
+          <span class="countdown_timer">  <span id="demo"></span></span>          
+          {%- if block.settings.timer_suffix -%}
+          <span class="countdown_suffix"> {{ block.settings.timer_suffix }}</span>
+          {%- endif -%}
+           {%- endif -%}
+          </div>
+        </div>
+         {% endif -%} 
+
+       {% endif -%} 
+        {%- endif -%}
+       
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
           {%- when 'collapsible_tab' -%}
@@ -1040,6 +1226,261 @@
         }
       ]
     },
+  {
+      "type": "section_delivery",
+      "name": "Delivery Time",
+      "settings": [
+        {
+          "type": "text",
+          "id": "delivery_heading",
+          "default": "Delivery Time",         
+          "label": "Heading"
+        },
+     {
+        "type": "checkbox",
+        "id": "show_heading",
+        "label": "Show Heading",
+        "default": true
+      },
+        {
+        "type": "header",
+        "content": "Text Settings"
+      },
+      {
+        "type": "text",
+        "id": "delivery_prefix",
+        "default": "Buy now to receive in",
+        "label": "Prefix"
+      },
+      {
+        "type": "text",
+        "id": "delivery_seperator",
+        "default": "-",
+        "label": "Seperator"
+      },
+      {
+        "type": "text",
+        "id": "delivery_suffix",
+        "default": "days",
+        "label": "Suffix"
+      },
+      {
+        "type": "header",
+        "content": "Format Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_asdate",
+        "label": "Show as date",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "delivery_dateformat",
+        "default": "%b %d",
+        "info": "%a, %b %d, %y",
+        "label": "Date Format"
+      },
+      {
+        "type": "header",
+        "content": "General Delivery",
+        "info": "Applies to all products"
+      },
+      {
+        "type": "range",
+        "id": "general_mintime",
+        "min": 0,
+        "max": 45,
+        "step": 1,
+        "label": "Min delivery time (days)",
+        "default": 7
+      },
+      {
+        "type": "range",
+        "id": "general_maxtime",
+        "min": 1,
+        "max": 45,
+        "step": 1,
+        "label": "Max delivery time (days)",
+        "default": 14
+      },
+      {
+        "type": "header",
+        "content": "Style Settings"       
+      },
+      {
+     "type": "color",
+    "id": "deliverytime_heading",
+    "label": "Choose heading color",
+    "default": "#eee"
+      },
+      {
+    "type": "color",
+    "id": "delivery_background",
+    "label": "Choose background color",
+    "default": "#eee"
+      },
+     {
+    "type": "color",
+    "id": "delivery_font",
+    "label": "Choose text color",
+    "default": "#000"
+     },
+     {
+   "type": "color",
+   "id": "delivery_time",
+    "label": "Choose Time color",
+  "default": "#E22120"
+    }
+ 
+     ]
+    },
+  {
+      "type": "section_countdown",
+      "name": "Sales Countdown",
+      "settings": [
+        
+      {
+        "type": "header",
+        "content": "Text Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "timer_icon",        
+        "label": "Show Icon"
+      },
+      {
+        "type": "text",
+        "id": "timer_prefix",
+        "default": "Sale ends in",
+        "label": "Prefix"
+      },
+      {
+        "type": "text",
+        "id": "timer_suffix",
+        "default": "Get it now!",
+        "label": "Suffix"
+      },
+      {
+        "type": "header",
+        "content": "Timer Settings"
+      },   
+    
+      {
+          "type": "text",
+          "id": "timer_date",         
+          "label": "Sale End Date",
+          "info": "Use Format: YYYY-MM-DD"
+        },
+       {
+      "type": "range",
+      "id": "timer_hours",
+      "min": 0,
+      "max": 24,
+      "step": 1,     
+      "label": "Hours",
+      "default": 2
+    },
+   {
+      "type": "range",
+      "id": "timer_minutes",
+      "min": 0,
+      "max": 60,
+      "step": 1,     
+      "label": "Minutes",
+      "default": 20
+    },
+   {
+      "type": "select",
+      "id": "timer_action",
+      "options": [
+        {
+          "value": "timer_hide",
+          "label": "Hide Timer"
+        },
+      
+        {
+          "value": "timer_message",
+          "label": "Show Message"
+        }
+        
+    ],
+    "default": "timer_hide",
+    "label": "Action after Finish"
+    },
+  {
+          "type": "textarea",
+          "id": "timer_text",         
+          "placeholder": "Add your message",
+          "label": "Message"
+        },
+    {
+      "type": "select",
+      "id": "timer_visibility",
+      "options": [
+    
+        {
+          "value": "timer_allsale",
+          "label": "On all products"
+        },
+        {
+          "value": "timer_specific",
+          "label": "To specific product"
+        }
+        
+        
+    ],
+    "default": "timer_allsale",
+    "label": "Timer visibility"
+    },
+    {
+          "type": "product",
+          "id": "timer_products",         
+          "label": "Select Product"
+        },
+    {
+        "type": "header",
+        "content": "Style Settings"
+      },
+  {
+   "type": "color",
+   "id": "timer_background",
+  "label": "Choose background color",
+  "default": "#eee"
+  },
+  {
+   "type": "color",
+    "id": "timer_font",
+  "label": "Choose text color",
+  "default": "#000"
+  },
+  {
+   "type": "color",
+    "id": "timer_time",
+  "label": "Choose timer text color",
+  "default": "#E22120"
+  },
+  {
+   "type": "color",
+    "id": "hide_message",
+  "label": "Choose message color",
+  "default": "#E22120"
+  },
+  {
+      "type": "range",
+      "id": "timer_fontsize",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",     
+      "label": "Text Font Size",
+      "default": 20
+   }
+   
+     
+      ]
+    },
+  
     {
       "type": "popup",
       "name": "t:sections.main-product.blocks.popup.name",
@@ -1076,6 +1517,7 @@
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
+  
     {
       "type": "header",
       "content": "t:sections.main-product.settings.header.content",
