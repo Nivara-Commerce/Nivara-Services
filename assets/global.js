@@ -1046,14 +1046,12 @@ $(document).ready(function(){
 // back in sock
 
 $(document).ready(function(){
+   $('.soldout').hide(); 
   $('.product-form__submit').on('DOMSubtreeModified', function(){
     setTimeout(function(){
       if ($('.product-form__submit').css('disabled', 'disabled')){
         $('.soldout').show(); 
 
-      }
-      else{
-        $('.soldout').hide(); 
       }
     }, 1000);
 
