@@ -1051,9 +1051,11 @@ $(document).ready(function(){
     setTimeout(function(){
       if ($('.product-form__submit').css('disabled', 'disabled')){
         alert('show');
+        $('.soldout').addClass('active');
       }
       else{
-        alert('hide');
+                $('.soldout').removeClass('active');
+
       }
     }, 1000);
 
