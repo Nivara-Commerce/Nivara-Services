@@ -27,26 +27,6 @@
           "settings": {
           }
         },
-        "8921a2e7-41ba-4811-98ff-394ea2d79183": {
-          "type": "section_countdown",
-          "settings": {
-            "timer_icon": true,
-            "timer_prefix": "Sale ends in",
-            "timer_suffix": "Get it now!!",
-            "timer_date": "2022-04-04",
-            "timer_hours": 17,
-            "timer_minutes": 20,
-            "timer_action": "timer_hide",
-            "timer_text": "Sales ends now. Better luck next time!!",
-            "timer_visibility": "timer_allsale",
-            "timer_products": "copy-of-nivara",
-            "timer_background": "#eeeeee",
-            "timer_font": "#000000",
-            "timer_time": "#e22120",
-            "hide_message": "#792929",
-            "timer_fontsize": 16
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -62,24 +42,6 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true
-          }
-        },
-        "bc12ad80-e504-4e6a-a6da-e7ad24f95019": {
-          "type": "section_delivery",
-          "settings": {
-            "delivery_heading": "Delivery Time",
-            "show_heading": true,
-            "delivery_prefix": "Buy now to receive in",
-            "delivery_seperator": "-",
-            "delivery_suffix": "days",
-            "show_asdate": true,
-            "delivery_dateformat": "%a, %b %d, %y",
-            "general_mintime": 7,
-            "general_maxtime": 14,
-            "deliverytime_heading": "#eeeeee",
-            "delivery_background": "#eeeeee",
-            "delivery_font": "#000000",
-            "delivery_time": "#e22120"
           }
         },
         "description": {
@@ -135,11 +97,9 @@
         "title",
         "caption",
         "price",
-        "8921a2e7-41ba-4811-98ff-394ea2d79183",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "bc12ad80-e504-4e6a-a6da-e7ad24f95019",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
