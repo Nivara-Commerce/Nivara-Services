@@ -1,33 +1,107 @@
 <div class="soldout">
-{% form 'customer' %}
+    {% form 'customer' %}
+      <div class="sold-out-contact module newsletter-form">
+        <div class="sold-out-container newsletter-form-container">
 
-      {{ form.errors | default_errors }}
-      {% if form.posted_successfully? %}
-        <p class="note form-success">Thank you for participating in our contest!</p>
-      {% else %}
+          {% if section.settings.sold_out_title != blank or section.settings.subheading != blank %}
+            <div class="">
+              {% if section.settings.sold_out_title != blank %}
+                <h3 class="module-title">
+                  {{ section.settings.sold_out_title | escape }}
+                </h3>
+              {% endif %}
+              {% if section.settings.sold_out_text != blank %}
+                <div class="sold-out-sub module-subtitle">
+                  {{ section.settings.sold_out_text }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
 
-      <label for="FirstName" class="label--hidden">{{ 'customer.register.first_name' | t }}</label>
-      <input type="text" name="contact[first_name]" id="FirstName" placeholder="{{ 'customer.register.first_name' | t }}" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+          <div class="module-body">
+            <div class="newsletter-form-container">
+              {% if form.posted_successfully? %}
+                <p class="module-subtitle" style="font-size: 35px;">
+                  Registration Complete!
+                </p>
+              {% else %}
+                {% if form.errors %}
+                  <div class="newsletter-form-message">
+                    {{ form.errors | default_errors }}
+                  </div>
+                {% endif %}
 
-      <label for="LastName" class="label--hidden">{{ 'customer.register.last_name' | t }}</label>
-      <input type="text" name="contact[last_name]" id="LastName" placeholder="{{ 'customer.register.last_name' | t }}" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+                <input type="hidden" id="contact_tags" name="contact[tags]" value="registered_product">
 
-      <label for="Email" class="label--hidden">{{ 'customer.register.email' | t }}</label>
-      <input type="email" name="contact[email]" id="Email" placeholder="{{ 'customer.register.email' | t }}" {% if form.errors contains "email" %} class="error"{% elsif form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+                <div class="newsletter-field-wrapper">
+                  
+                  <div class="input-wrapper">
+                    <label class="input-label" for="contact_first_name">First Name</label>
+                    <input
+                      class="icon-arrow-right"
+                      name="contact[first_name]"
+                      type="text"
+                      placeholder="First Name"
+                      aria-label="Order Number">
+                  </div>
+                  
+                  <div class="input-wrapper">
+                    <label class="input-label" for="contact_last_name">Last Name</label>
+                    <input
+                      class="icon-arrow-right"
+                      name="contact[last_name]"
+                      type="text"
+                      placeholder="Last Name"
+                      aria-label="Order Number">
+                  </div>
+                  
+                  <div class="input-wrapper">
+                    <label class="input-label" for="contact_note_order_number">Order Number <span class="rocky-icon-inline product-info-link info" title="The Order Number can be found on your order confirmation email"></span></label>
+                    <input
+                      class="icon-arrow-right"
+                      name="contact[note][order_number]"
+                      type="text"
+                      placeholder="Order Number"
+                      aria-label="Order Number">
+                  </div>
 
-      <label for="CreateTags" class="label--hidden">Tags</label>
-      <input type="hidden" name="contact[tags]" id="CreateTag2" value="This Contest Only">
-      
-      <div id="accept" class="clearfix inputrow">
-        <label for="accepts_marketing" class="login">Mailing List?</label>
-        <input type="hidden" name="contact[accepts_marketing]" value="false" />
-        <input type="checkbox" name="contact[accepts_marketing]" id="accepts_marketing" class="{% if form.errors contains 'email' %} error{% endif %}" value="true" checked />
-      Subscribe to stay updated with new products and offers!
-      </div>     
+                  <div class="input-wrapper">
+                    <label class="input-label" for="contact_email">Email Address</label>
+                    <input
+                      class="icon-arrow-right"
+                      name="contact[email]"
+                      type="email"
+                      placeholder="{{ 'general.general.email_placeholder' | t }}"
+                      aria-label="{{ 'general.general.email_placeholder' | t }}">
+                  </div>
+                  
+                  
+                 <div class="input-wrapper">
+                    <input type="hidden" name="contact[accepts_marketing]" value="false" />
+                    <input
+                      class="icon-arrow-right"
+                      name="contact[accepts_marketing]"
+                      type="checkbox"
+                      value="false"
+                    >
+                   <label class="input-label" for="accepts_marketing">Accept occasional emails from Rocky Talkie</label>
+                  </div>
 
-      <p>
-        <input type="submit" value="Enter Contest" class="btn" style="width:100%;text-transform:uppercase;">
-      </p>
-		{% endif %}
+                  
+                  <div class="input-wrapper cta-container">
+                    <input
+                      class="button"
+                      name="subscribe"
+                      type="submit"
+                      value="Register"
+                      aria-label="Register" />
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+        </div>
+      </div>
     {% endform %}
 </div>
