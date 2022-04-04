@@ -1,0 +1,64 @@
+   <!--   Swym Watchlist Button On product- tile   -->
+  {% for variant in product.variants %}
+     {%if  variant.available ==  false%}
+  	    <a href="#" class="swym-button swym-custom-watchlist swym-add-to-watchlist-view-product" style='font-family : "swym-icons";' data-url ="{{ shop.url }}{{ product.url }}" data-variant-id="{{CURRENT SELECTED VARIANT ID}}" data-product-id="{{product.id}}"></a>
+        {%break%}
+     {%endif%}
+  {% endfor %}
+
+<script>
+  function swymCallbackFn(swat) {
+    // your API calls go here
+    attachNotifyMeEvents();
+    function attachNotifyMeEvents() {
+      var swymNotifyMeBtn = document.querySelectorAll(".swym-custom-watchlist");
+      swymNotifyMeBtn.forEach(function(btn) {
+        btn.addEventListener("click", addToWatchlist);
+        btn.classList.add("swym-loaded");
+      });
+    }
+    function addToWatchlist(eventObj) {
+      eventObj.preventDefault();
+      var productId = +eventObj.target.getAttribute("data-product-id");
+      var variantId = +eventObj.target.getAttribute("data-variant-id");
+      var du = eventObj.target.getAttribute("data-url");
+      var params = {
+        empi: productId,
+        epi: variantId,
+        du: du
+      };
+      swat.getProductDetails(params, function(productJSON) {
+        productJSON.variants.forEach(function(v) {
+          if (v.id == variantId) {
+            params.pr = SwymUtils.formatProductPrice(v.price);
+            params.iu = productJSON.featured_image;
+            params.et = 8;
+            swat.addToWatchList(eventObj, params, function(e) {
+              console.log("Subscribed to product!", e);
+            }); // Shows Subscribe me.
+            return;
+          }
+        });
+      });
+    }
+  }
+  if (!window.SwymCallbacks) {
+    window.SwymCallbacks = [];
+ }
+  window.SwymCallbacks.push(swymCallbackFn);
+  </script>
+<style>
+.swym-button.swym-custom-watchlist:after {
+  content: '\e900';
+  color: inherit;
+  font-family: 'swym-icons';
+   z-index : 10;
+}
+
+a.swym-button.swym-custom-watchlist {
+    display: inline;
+    position: relative;
+    top: 7px;
+    z-index : 10;
+}  
+</style>
