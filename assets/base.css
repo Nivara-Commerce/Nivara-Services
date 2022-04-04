@@ -3257,3 +3257,10 @@ details-disclosure > details {
     color: #fff;
     border-radius: 10px;
 }
+/*  back in stock css  */
+    .soldout{
+    display:none; 
+  }
+  .soldout.active{
+    display:block; 
+  }
