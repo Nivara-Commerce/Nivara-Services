@@ -1046,9 +1046,8 @@ $(document).ready(function(){
 // back in sock
 
 $(document).ready(function(){
-  $('.price.price--large.price--show-badge').on('DOMSubtreeModified', function(){
-     	alert(); 
-    
-    });
+  if($('.price--show-badge').hasClass('soldoutclass')){
+   		 alert();
+  }
   
 });
