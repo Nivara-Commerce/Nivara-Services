@@ -1050,11 +1050,11 @@ $(document).ready(function(){
   $('.product-form__submit').on('DOMSubtreeModified', function(){
     setTimeout(function(){
       if ($('.product-form__submit').css('disabled', 'disabled')){
-        $('.soldout').show(); 
+        $('.soldout').css('display','block'); 
 
       }
       else{
-        $('.soldout').hide(); 
+        $('.soldout').css('display','none'); 
       }
     }, 1000);
 
