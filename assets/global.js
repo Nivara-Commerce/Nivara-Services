@@ -1047,9 +1047,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.price--show-badge').on('DOMSubtreeModified', function(){
-    if($('.price--show-badge .price__badge-sold-out').hasClass('soldoutclass')){
      	alert(); 
-    }
+    
     });
   
 });
