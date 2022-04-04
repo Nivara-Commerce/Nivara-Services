@@ -1,6 +1,4 @@
 <div class="soldout">
-<p class="fade-text">Subscribe to be notified by email when this product becomes available.</p>
-{%- assign formId = 'Contact_' | append: section.id -%}
 {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form form-single-field' %}
 {%- if form.posted_successfully? -%}
 <p class="form-message form-message--success" tabindex="-1" data-form-status>
@@ -37,5 +35,4 @@ data-form-status
 </span>
 {%- endif -%}
 {% endform %}
-<script>jQuery(".btn").click(function(){jQuery(".fade-text").fadeOut()});</script>
 </div>
