@@ -460,6 +460,14 @@
   {% endform %}
 </div>
 {% endunless %}
+                  <script>
+                    jQuery('#notify-me').click(function() {
+                      jQuery('#notify-me-wrapper').fadeIn();
+                      return false;
+                    } );
+
+                    
+                  </script>
               </product-form>
 
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
