@@ -1,5 +1,7 @@
 {
   "current": {
+    "predictive_search_show_vendor": true,
+    "predictive_search_show_price": true,
     "infinite_scroll_enabled": true,
     "show_preloaderimage": false,
     "show_invquantity": true,
