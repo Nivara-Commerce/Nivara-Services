@@ -1205,6 +1205,17 @@
         "label": "Show Delivery Time",
         "info": "Display Estimated Delivery Time for your products.",
         "default": false
+      },
+      {
+        "type": "header",
+        "content": "Smart Search"
+      },
+      {
+        "type": "checkbox",
+        "id": "smart_search",
+        "label": "Show Smart Search",
+        "info": "Show search results immediately as you type into the search field.",
+        "default": false
       }
     ]
   },
