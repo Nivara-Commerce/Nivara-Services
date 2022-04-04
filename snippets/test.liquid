@@ -1,10 +1,5 @@
    <!--   Swym Watchlist Button On product- tile   -->
-  {% for variant in product.variants %}
-     {%if  variant.available ==  false%}
-  	    <a href="#" class="swym-button swym-custom-watchlist swym-add-to-watchlist-view-product" style='font-family : "swym-icons";' data-url ="{{ shop.url }}{{ product.url }}" data-variant-id="{{CURRENT SELECTED VARIANT ID}}" data-product-id="{{product.id}}"></a>
-        {%break%}
-     {%endif%}
-  {% endfor %}
+
 
 <script>
   function swymCallbackFn(swat) {
