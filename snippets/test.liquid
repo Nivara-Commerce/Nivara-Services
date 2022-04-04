@@ -1,12 +1,33 @@
 <div class="soldout">
 {% form 'customer' %}
+
       {{ form.errors | default_errors }}
       {% if form.posted_successfully? %}
-        <p class="note form-success">{{ 'general.newsletter_form.confirmation' | t }}</p>
+        <p class="note form-success">Thank you for participating in our contest!</p>
       {% else %}
-        <input type="hidden" name="contact[tags]" value="newsletter">
-        <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_email' | t }}" name="contact[email]" id="Email" class="input-group-field" aria-label="{{ 'general.newsletter_form.newsletter_email' | t }}" autocorrect="off" autocapitalize="off">
-        <input type="submit" class="btn" name="subscribe" id="subscribe" value="{{ 'general.newsletter_form.submit' | t }}">
-      {% endif %}
+
+      <label for="FirstName" class="label--hidden">{{ 'customer.register.first_name' | t }}</label>
+      <input type="text" name="contact[first_name]" id="FirstName" placeholder="{{ 'customer.register.first_name' | t }}" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+
+      <label for="LastName" class="label--hidden">{{ 'customer.register.last_name' | t }}</label>
+      <input type="text" name="contact[last_name]" id="LastName" placeholder="{{ 'customer.register.last_name' | t }}" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+
+      <label for="Email" class="label--hidden">{{ 'customer.register.email' | t }}</label>
+      <input type="email" name="contact[email]" id="Email" placeholder="{{ 'customer.register.email' | t }}" {% if form.errors contains "email" %} class="error"{% elsif form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+
+      <label for="CreateTags" class="label--hidden">Tags</label>
+      <input type="hidden" name="contact[tags]" id="CreateTag2" value="This Contest Only">
+      
+      <div id="accept" class="clearfix inputrow">
+        <label for="accepts_marketing" class="login">Mailing List?</label>
+        <input type="hidden" name="contact[accepts_marketing]" value="false" />
+        <input type="checkbox" name="contact[accepts_marketing]" id="accepts_marketing" class="{% if form.errors contains 'email' %} error{% endif %}" value="true" checked />
+      Subscribe to stay updated with new products and offers!
+      </div>     
+
+      <p>
+        <input type="submit" value="Enter Contest" class="btn" style="width:100%;text-transform:uppercase;">
+      </p>
+		{% endif %}
     {% endform %}
 </div>
