@@ -1046,8 +1046,11 @@ $(document).ready(function(){
 // back in sock
 
 $(document).ready(function(){
+  $('.price--show-badge .soldoutclass').on('DOMSubtreeModified', function(){
+      alert();
+    });
   if($('.price--show-badge .soldoutclass').hasClass('soldoutclass')){
-   		 alert();
+   		 //alert();
   }
   
 });
