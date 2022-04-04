@@ -850,9 +850,11 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
+      $('.soldout').addClass('active');
       if (text) addButtonText.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
+      $('.soldout').removeClass('active');
       addButtonText.textContent = window.variantStrings.addToCart;
     }
 
@@ -1045,21 +1047,21 @@ $(document).ready(function(){
 
 // back in sock
 
-$(document).ready(function(){
+// $(document).ready(function(){
    
-  $('.product-form__submit').on('DOMSubtreeModified', function(){
-    setTimeout(function(){
-      if ($('.product-form__submit').css('disabled') == 'disabled'){
-        alert('show');
-        $('.soldout').addClass('active');
-      }
-      else{
-                $('.soldout').removeClass('active');
+//   $('.product-form__submit').on('DOMSubtreeModified', function(){
+//     setTimeout(function(){
+//       if ($('.product-form__submit').css('disabled', 'disabled')){
+//         alert('show');
+//         $('.soldout').addClass('active');
+//       }
+//       else{
+//                 $('.soldout').removeClass('active');
 
-      }
-    }, 1000);
+//       }
+//     }, 1000);
 
-  });
+//   });
 
   
-});
+// });
