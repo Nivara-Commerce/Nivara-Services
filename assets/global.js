@@ -1047,7 +1047,10 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.product-form__submit').on('DOMSubtreeModified', function(){
+    if ($('.product-form__submit').css('disabled') == 'disabled'){
       alert();
+      
+    }
     });
 
   
