@@ -1046,7 +1046,7 @@ $(document).ready(function(){
 // back in sock
 
 $(document).ready(function(){
-  if($('.price--show-badge').hasClass('soldoutclass')){
+  if($('.price--show-badge .soldoutclass').hasClass('soldoutclass')){
    		 alert();
   }
   
