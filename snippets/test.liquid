@@ -1,59 +1,39 @@
-   <!--   Swym Watchlist Button On product- tile   -->
-
-
-<script>
-  function swymCallbackFn(swat) {
-    // your API calls go here
-    attachNotifyMeEvents();
-    function attachNotifyMeEvents() {
-      var swymNotifyMeBtn = document.querySelectorAll(".swym-custom-watchlist");
-      swymNotifyMeBtn.forEach(function(btn) {
-        btn.addEventListener("click", addToWatchlist);
-        btn.classList.add("swym-loaded");
-      });
-    }
-    function addToWatchlist(eventObj) {
-      eventObj.preventDefault();
-      var productId = +eventObj.target.getAttribute("data-product-id");
-      var variantId = +eventObj.target.getAttribute("data-variant-id");
-      var du = eventObj.target.getAttribute("data-url");
-      var params = {
-        empi: productId,
-        epi: variantId,
-        du: du
-      };
-      swat.getProductDetails(params, function(productJSON) {
-        productJSON.variants.forEach(function(v) {
-          if (v.id == variantId) {
-            params.pr = SwymUtils.formatProductPrice(v.price);
-            params.iu = productJSON.featured_image;
-            params.et = 8;
-            swat.addToWatchList(eventObj, params, function(e) {
-              console.log("Subscribed to product!", e);
-            }); // Shows Subscribe me.
-            return;
-          }
-        });
-      });
-    }
-  }
-  if (!window.SwymCallbacks) {
-    window.SwymCallbacks = [];
- }
-  window.SwymCallbacks.push(swymCallbackFn);
-  </script>
-<style>
-.swym-button.swym-custom-watchlist:after {
-  content: '\e900';
-  color: inherit;
-  font-family: 'swym-icons';
-   z-index : 10;
-}
-
-a.swym-button.swym-custom-watchlist {
-    display: inline;
-    position: relative;
-    top: 7px;
-    z-index : 10;
-}  
-</style>
+<p class="fade-text">Subscribe to be notified by email when this product becomes available.</p>
+{%- assign formId = 'Contact_' | append: section.id -%}
+{% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form form-single-field' %}
+{%- if form.posted_successfully? -%}
+<p class="form-message form-message--success" tabindex="-1" data-form-status>
+{{ 'general.newsletter_form.confirmation' | t }}
+</p>
+{%- endif -%}
+<input type="hidden" name="contact[tags]" value="tag-here">
+<div class="input-group {% if form.errors %} input-group--error{% endif %}">
+<input type="email"
+name="contact[email]"
+id="{{ formId }}-email"
+class="input-group__field{% if form.errors %} input--error{% endif %}"
+value="{{ form.email }}"
+placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+aria-required="true"
+autocorrect="off"
+autocapitalize="off"
+{% if form.errors %}
+aria-invalid="true"
+aria-describedby="{{ formId }}-email-error"
+data-form-status
+{% endif %}
+>
+<span class="input-group__btn">
+<button type="submit" class="btn" name="commit" id="Subscribe">
+<span>Notfiy me</span>
+</button>
+</span>
+</div>
+{%- if form.errors contains 'email' -%}
+<span id="{{ formId }}-email-error" class="input-error-message">
+{% include 'icon-error' %} {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+</span>
+{%- endif -%}
+{% endform %}
+<script>jQuery(".btn").click(function(){jQuery(".fade-text").fadeOut()});</script>
