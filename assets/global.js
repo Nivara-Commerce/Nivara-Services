@@ -1046,7 +1046,7 @@ $(document).ready(function(){
 // back in sock
 
 $(document).ready(function(){
-  $('.price--show-badge').on('DOMSubtreeModified', function(){
+  $('.price.price--large.price--show-badge').on('DOMSubtreeModified', function(){
      	alert(); 
     
     });
