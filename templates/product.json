@@ -90,6 +90,26 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "ce3e68a3-ad55-4ab3-bcf2-b785f841c064": {
+          "type": "section_countdown",
+          "settings": {
+            "timer_icon": true,
+            "timer_prefix": "Sale ends in",
+            "timer_suffix": "Get it now!",
+            "timer_date": "2022-04-05",
+            "timer_hours": 2,
+            "timer_minutes": 20,
+            "timer_action": "timer_hide",
+            "timer_text": "",
+            "timer_visibility": "timer_allsale",
+            "timer_products": "",
+            "timer_background": "#eee",
+            "timer_font": "#000",
+            "timer_time": "#E22120",
+            "hide_message": "#E22120",
+            "timer_fontsize": 20
+          }
         }
       },
       "block_order": [
@@ -105,6 +125,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "share",
+        "ce3e68a3-ad55-4ab3-bcf2-b785f841c064"
       ],
       "settings": {
         "enable_sticky_info": true,
