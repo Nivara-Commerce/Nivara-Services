@@ -1,107 +1,70 @@
 <div class="soldout">
-    {% form 'customer' %}
-      <div class="sold-out-contact module newsletter-form">
-        <div class="sold-out-container newsletter-form-container">
-
-          {% if section.settings.sold_out_title != blank or section.settings.subheading != blank %}
-            <div class="">
-              {% if section.settings.sold_out_title != blank %}
-                <h3 class="module-title">
-                  {{ section.settings.sold_out_title | escape }}
-                </h3>
-              {% endif %}
-              {% if section.settings.sold_out_text != blank %}
-                <div class="sold-out-sub module-subtitle">
-                  {{ section.settings.sold_out_text }}
-                </div>
-              {% endif %}
-            </div>
-          {% endif %}
-
-          <div class="module-body">
-            <div class="newsletter-form-container">
-              {% if form.posted_successfully? %}
-                <p class="module-subtitle" style="font-size: 35px;">
-                  Registration Complete!
-                </p>
-              {% else %}
-                {% if form.errors %}
-                  <div class="newsletter-form-message">
-                    {{ form.errors | default_errors }}
-                  </div>
-                {% endif %}
-
-                <input type="hidden" id="contact_tags" name="contact[tags]" value="registered_product">
-
-                <div class="newsletter-field-wrapper">
-                  
-                  <div class="input-wrapper">
-                    <label class="input-label" for="contact_first_name">First Name</label>
-                    <input
-                      class="icon-arrow-right"
-                      name="contact[first_name]"
-                      type="text"
-                      placeholder="First Name"
-                      aria-label="Order Number">
-                  </div>
-                  
-                  <div class="input-wrapper">
-                    <label class="input-label" for="contact_last_name">Last Name</label>
-                    <input
-                      class="icon-arrow-right"
-                      name="contact[last_name]"
-                      type="text"
-                      placeholder="Last Name"
-                      aria-label="Order Number">
-                  </div>
-                  
-                  <div class="input-wrapper">
-                    <label class="input-label" for="contact_note_order_number">Order Number <span class="rocky-icon-inline product-info-link info" title="The Order Number can be found on your order confirmation email"></span></label>
-                    <input
-                      class="icon-arrow-right"
-                      name="contact[note][order_number]"
-                      type="text"
-                      placeholder="Order Number"
-                      aria-label="Order Number">
-                  </div>
-
-                  <div class="input-wrapper">
-                    <label class="input-label" for="contact_email">Email Address</label>
-                    <input
-                      class="icon-arrow-right"
-                      name="contact[email]"
-                      type="email"
-                      placeholder="{{ 'general.general.email_placeholder' | t }}"
-                      aria-label="{{ 'general.general.email_placeholder' | t }}">
-                  </div>
-                  
-                  
-                 <div class="input-wrapper">
-                    <input type="hidden" name="contact[accepts_marketing]" value="false" />
-                    <input
-                      class="icon-arrow-right"
-                      name="contact[accepts_marketing]"
-                      type="checkbox"
-                      value="false"
-                    >
-                   <label class="input-label" for="accepts_marketing">Accept occasional emails from Rocky Talkie</label>
-                  </div>
-
-                  
-                  <div class="input-wrapper cta-container">
-                    <input
-                      class="button"
-                      name="subscribe"
-                      type="submit"
-                      value="Register"
-                      aria-label="Register" />
-                  </div>
-                </div>
-              {% endif %}
-            </div>
-          </div>
-
+    {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</div>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+      <div class="contact__fields">
+        <div class="field">
+          <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+        </div>
+        <div class="field field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="ContactForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder="{{ 'templates.contact.form.email' | t }}"
+          >
+          <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+            </small>
+          {%- endif -%}
         </div>
       </div>
-    {% endform %}
+      <div class="field">
+        <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'templates.contact.form.phone' | t }}">
+        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+      </div>
+      <div class="field">
+        <textarea
+          rows="10"
+          id="ContactForm-body"
+          class="text-area field__input"
+          name="contact[{{ 'templates.contact.form.comment' | t }}]"
+          placeholder="{{ 'templates.contact.form.comment' | t }}"
+        >
+          {{- form.body -}}
+        </textarea>
+        <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+      </div>
+      <div class="contact__button">
+        <button type="submit" class="button">
+          {{ 'templates.contact.form.send' | t }}
+        </button>
+      </div>
+    {%- endform -%}
 </div>
