@@ -1048,7 +1048,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.product-form__submit').on('DOMSubtreeModified', function(){
     setTimeout(function(){
-        if ($('.product-form__submit').css('disabled') == 'disabled'){
+        if ($('.product-form__submit').css('disabled', 'disabled')){
       alert();
       
     }
