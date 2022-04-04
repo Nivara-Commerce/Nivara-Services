@@ -1,26 +1,39 @@
-{% unless product.available %}
-
-  {% form 'contact' %}
-    {% if form.posted_successfully? %}
-    <p class="accent-text">Thanks! We will notify you when this product becomes available!</p>
-    {% else %}
-    <p>Click <a id="notify-me" href="#"><strong>here</strong></a> to be notified by email when {{ product.title }} becomes available.</p>
-    {% endif %}
-    {% if form.errors %}
-    <div class="error feedback accent-text">
-      <p>Please provide a valid email address.</p>
-    </div>
-    {% endif %}
-    {% unless form.posted_successfully? %}
-    <div id="notify-me-wrapper" class="clearfix" style="display:none">
-      {% if customer %}
-      <input type="hidden" name="contact[email]" value="{{ customer.email }}" />
-      {% else %}
-      <input style="float:left; width:180px;" required="required" type="email" name="contact[email]" placeholder="your@email.com" class="styled-input{% if form.errors contains 'email' %} error{% endif %}" value="{{ contact.fields.email }}" />
-      {% endif %}
-      <input type="hidden" name="contact[body]" value="Please notify me when {{ product.title | escape }} becomes available." />
-      <input style="float:left; margin-left:5px;" class="btn styled-submit" type="submit" value="Send" />
-    </div>
-    {% endunless %}
-  {% endform %}
-{% endunless %}
+<p class="fade-text">Subscribe to be notified by email when this product becomes available.</p>
+{%- assign formId = 'Contact_' | append: section.id -%}
+{% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form form-single-field' %}
+{%- if form.posted_successfully? -%}
+<p class="form-message form-message--success" tabindex="-1" data-form-status>
+{{ 'general.newsletter_form.confirmation' | t }}
+</p>
+{%- endif -%}
+<input type="hidden" name="contact[tags]" value="tag-here">
+<div class="input-group {% if form.errors %} input-group--error{% endif %}">
+<input type="email"
+name="contact[email]"
+id="{{ formId }}-email"
+class="input-group__field{% if form.errors %} input--error{% endif %}"
+value="{{ form.email }}"
+placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+aria-required="true"
+autocorrect="off"
+autocapitalize="off"
+{% if form.errors %}
+aria-invalid="true"
+aria-describedby="{{ formId }}-email-error"
+data-form-status
+{% endif %}
+>
+<span class="input-group__btn">
+<button type="submit" class="btn" name="commit" id="Subscribe">
+<span>Notfiy me</span>
+</button>
+</span>
+</div>
+{%- if form.errors contains 'email' -%}
+<span id="{{ formId }}-email-error" class="input-error-message">
+{% include 'icon-error' %} {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+</span>
+{%- endif -%}
+{% endform %}
+<script>jQuery(".btn").click(function(){jQuery(".fade-text").fadeOut()});</script>
