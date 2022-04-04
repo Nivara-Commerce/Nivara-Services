@@ -1047,21 +1047,17 @@ $(document).ready(function(){
 
 // back in sock
 
-// $(document).ready(function(){
+$(document).ready(function(){
    
-//   $('.product-form__submit').on('DOMSubtreeModified', function(){
-//     setTimeout(function(){
-//       if ($('.product-form__submit').css('disabled', 'disabled')){
-//         alert('show');
-//         $('.soldout').addClass('active');
-//       }
-//       else{
-//                 $('.soldout').removeClass('active');
+  $('.product-form__submit').on('DOMSubtreeModified', function(){
+    setTimeout(function(){
+      if ($('.product-form__submit').css('disabled', 'disabled')){
+                $('.soldout').removeClass('active');
 
-//       }
-//     }, 1000);
+      }
+    }, 1000);
 
-//   });
+  });
 
   
-// });
+});
