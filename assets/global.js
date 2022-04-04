@@ -1046,7 +1046,7 @@ $(document).ready(function(){
 // back in sock
 
 $(document).ready(function(){
-  $('fieldset.js.product-form__input).on('DOMSubtreeModified', function(){
+  $('fieldset.js.product-form__input').on('DOMSubtreeModified', function(){
       alert();
     });
 
