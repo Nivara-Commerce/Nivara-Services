@@ -890,28 +890,157 @@ class VariantRadios extends VariantSelects {
   }
 }
 
-// customElements.define('variant-radios', VariantRadios);
+
+customElements.define('variant-radios', VariantRadios);
+
+// cart countdown timer
+$(document).ready(function(){
+if($('body').hasClass('template-cart')){
+  
+  function remove_product(){
+    $('.empty_cart_btn').click(function() {
+        this.click();
+    }).click();
+  }
+  
+  function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+            timer = duration;
+        }
+        if (timer == 0) {
+            remove_product();
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+  var timer = $('.count_down').attr('time');
+    var Minutes = 60 * timer,
+        display = document.querySelector('.count_down');
+    startTimer(Minutes, display);
+};
+
+}
+  });
+
+// sticky add to cart
+$(document).ready(function(){
+  if($('body').hasClass('template-product')){
+  $(window).scroll(function() {
+    var hT = $('#stickey-cart').offset().top,
+        hH = $('#stickey-cart').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    console.log((hT-wH) , wS);
+    if (wS > (hT+hH-wH)){
+        $(".custom-model-main").addClass('model-opens');
+    }
+    else{
+      $(".custom-model-main").removeClass('model-opens');
+    }
+  });
+  $(".close-btn, .bg-overlay").click(function(){
+  $(".custom-model-main").removeClass('model-opens');
+});
+  }
+});
+// sticky add to cart js
+ $(document).on('click','.cartjs',function(e){
+  e.preventDefault();
+   $('#cart-notification-product').remove();
+   var variant_id_custom = $(this).attr('variant-id');
+    var qtty = $(this).attr('quantity');
+//     alert(qtty);
+      var addData = {
+        id:variant_id_custom,
+        quantity:qtty,
+  };
+//     alert(variant_id_custom);
+  $.ajax({
+    type: 'POST',
+    url: '/cart/add.js',
+    dataType: 'json',
+    data: addData,
+    success: function(res){
+      console.log(res);
+      
+       $.ajax({
+    type: 'GET',
+    url: '/cart.js',
+    async: false,
+    cache: false,
+    dataType: 'json',
+    success: function(res){
+      console.log(res);
+      setTimeout(function(){
+        $('#cart-notification').addClass('active');
+        $('<div id="cart-notification-product" class="cart-notification-product"><div class="cart-notification-product__image global-media-settings"><img src="'+res.items[0].featured_image.url+'" alt="" width="70" height="47" loading="lazy"></div><div><h3 class="cart-notification-product__name h4">'+res.items[0].title+'</h3><dl></dl></div></div>').insertAfter('.cart-notification__header');
+
+      }, 1000);
+    }
+       });
+      
+     
+    }
+  });
+ });
 
 
+// cart goal js
 
-//  window.addEventListener('load', function(){
-//   // alert('hello');
-//   $("#status").fadeOut();
-// // will fade out the whole DIV that covers the website.
-// $("#preloader").delay(1000).slideUp("slow");
-    
-//   });
+$('.js-contents').on('DOMSubtreeModified', function(){
+  setTimeout(function(){
+    var coupon = $('#cartcoupon').attr('value');
+    var get_cart = $('.totals .totals__subtotal-value').text();  
+    var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
+    $('#setgoal').attr('value',cart_total);
+    var goal_set = $('#setgoal').attr('value');
+    var goal_reach = $('#goalreached').attr('value');
+    console.log(goal_set);
+    console.log(goal_reach);
+    var subtract = goal_reach - goal_set;
+    if(goal_set >= goal_reach){
+      console.log('counpon'); 
+      $('#discount_code').attr('value',coupon);
+      $('.goal_sec').html('Congratulation! you get 10% discount on this order');
+    }else{
+      console.log('no coupon');
+      $('.goal_sec').html('Spend '+subtract+'Rs more to get 10% discount');
+      $('#discount_code').attr('value','');
+    }
+  }, 1000);
+});
 
+$(document).ready(function(){
+  setTimeout(function(){
+    var coupon = $('#cartcoupon').attr('value');
+    var get_cart = $('.totals .totals__subtotal-value').text();  
+    var cart_total = Number(get_cart.replace(/[^0-9\.-]+/g,""));
+    $('#setgoal').attr('value',cart_total);
+    var goal_set = $('#setgoal').attr('value');
+    var goal_reach = $('#goalreached').attr('value');
+    console.log(goal_set);
+    console.log(goal_reach);
+    var subtract = goal_reach - goal_set;
+    if(goal_set >= goal_reach){
+      console.log('counpon'); 
+      $('#discount_code').attr('value',coupon);
+      $('.goal_sec').html('Congratulation! you get 10% discount on this order');
+    }else{
+      console.log('no coupon');
+      $('.goal_sec').html('Spend '+subtract+'Rs more to get 10% discount');
+      $('#discount_code').attr('value','');
+    }
+  }, 500);
 
-//  document.addEventListener("DOMContentLoaded", function() {
-//     var endlessScroll = new Ajaxinate({
-//       container: '#Niv-Loop',
-//       pagination: '#Niv-Pagination',
-//       loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/files/loading.gif?v=1648015793"></center>',
-//     });
-//   });
-
-
-
-
+});
 
