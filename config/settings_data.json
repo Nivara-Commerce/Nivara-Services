@@ -5,7 +5,7 @@
     "predictive_search_show_price": true,
     "infinite_scroll_enabled": false,
     "show_preloaderimage": true,
-    "preloader_color": "#e22120",
+    "preloader_color": "#fefefe",
     "show_invquantity": false,
     "show_salescountdown": false,
     "estimated_delivery": false,
