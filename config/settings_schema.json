@@ -1316,7 +1316,8 @@
       {
         "type": "color",
         "id": "preloader_color",
-        "label": "Choose Background Color"
+        "label": "Choose Background Color",
+        "default": "#fefefe"
       },
       {
         "type": "header",
