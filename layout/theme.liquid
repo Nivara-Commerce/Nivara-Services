@@ -1,4 +1,11 @@
 <!doctype html>
+{%- if settings.show_preloaderimage -%}  
+   {%- if settings.preloader_icon -%}   
+    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
+    {%- else -%}
+     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
+    {%- endif -%}
+{%- endif -%}
 <html class="no-js" lang="{{ request.locale.iso_code }}">
      {%- if settings.show_preloaderimage -%}
   <div id="preloader">
@@ -278,11 +285,7 @@
     
   </body>
    {%- if settings.show_preloaderimage -%}  
-   {%- if settings.preloader_icon -%}   
-    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
-    {%- else -%}
-     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
-    {%- endif -%}
+   
   <style>
 #preloader {
 position: fixed;
