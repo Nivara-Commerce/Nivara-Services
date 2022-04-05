@@ -277,12 +277,20 @@
      <script src="{{ 'ajaxinate.min.js' | asset_url | script_tag }}" defer="defer"></script>
     
   </body>
-   {%- if settings.show_preloaderimage -%}  
-   {%- if settings.preloader_icon -%}   
-    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
-    {%- else -%}
-     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
-    {%- endif -%}
+  <div class="name_a">
+    <div class="letter"><img width="193" height="34" src="http://www.shopifyexperts.org/seekthem/wp-content/uploads/2022/03/Group-4540.png" class="custom-logo" alt=""></div>
+  </div>
+  <script>
+   setInterval(function() {
+
+    jQuery('.letter').animate({
+            top: '+=10px'  }, 2000);
+    jQuery('.letter').animate({
+            top: '-=10px'  }, 2000); }, 
+			  
+             4000);
+ 
+  </script>
   <style>
 #preloader {
 position: fixed;
@@ -364,6 +372,6 @@ margin: -100px 0 0 -100px;
   
   
   
-   {%- endif -%}
+  
  
 </html>
