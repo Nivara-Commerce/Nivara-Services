@@ -1,3 +1,10 @@
+{%- if settings.show_preloaderimage -%}  
+   {%- if settings.preloader_icon -%}   
+    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
+    {%- else -%}
+     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
+    {%- endif -%}
+{%- endif -%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
