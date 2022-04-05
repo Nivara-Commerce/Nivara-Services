@@ -5,6 +5,7 @@
     "predictive_search_show_price": true,
     "infinite_scroll_enabled": false,
     "show_preloaderimage": true,
+    "preloader_color": "#fafafa",
     "show_invquantity": false,
     "show_salescountdown": false,
     "estimated_delivery": false,
