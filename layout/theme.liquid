@@ -8,6 +8,13 @@
    {%- endif -%}
   {% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
   <head>
+    {%- if settings.show_preloaderimage -%}  
+   {%- if settings.preloader_icon -%}   
+    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
+    {%- else -%}
+     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
+    {%- endif -%}
+{%- endif -%}
    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
