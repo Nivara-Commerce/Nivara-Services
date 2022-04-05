@@ -1314,6 +1314,11 @@
         "label": "Upload Icon"
       },
       {
+        "type": "color",
+        "id": "preloader_color",
+        "label": "Choose Background Color"
+      },
+      {
         "type": "header",
         "content": "Inventory Quantity"
       },
