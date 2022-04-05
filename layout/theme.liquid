@@ -277,23 +277,15 @@
      <script src="{{ 'ajaxinate.min.js' | asset_url | script_tag }}" defer="defer"></script>
     
   </body>
-  <div class="name_a">
-    <div class="letter"><img width="193" height="34" src="https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518" class="custom-logo" alt=""></div>
-  </div>
-  <script>
-   setInterval(function() {
-
-    jQuery('.letter').animate({
-            top: '+=10px'  }, 2000);
-    jQuery('.letter').animate({
-            top: '-=10px'  }, 2000); }, 
-			  
-             4000);
- 
-  </script>
+   {%- if settings.show_preloaderimage -%}  
+   {%- if settings.preloader_icon -%}   
+    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
+    {%- else -%}
+     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
+    {%- endif -%}
   <style>
-.name_a {
-    position: fixed;
+#preloader {
+position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -301,6 +293,54 @@
     z-index: 10000;
     display: table;
     background-color: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+#status {
+width: 200px;
+height: 200px;
+position: absolute;
+left: 50%;
+top: 50%;
+  background-image: url({{preloadurl}});
+background-repeat: no-repeat;
+background-position: center;
+margin: -100px 0 0 -100px;
+}
+/*     
+    #preloader {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #fefefe;
+z-index: 99;
+height: 100%;
+}
+    
+#status {
+width: 200px;
+height: 200px;
+position: absolute;
+left: 50%;
+top: 50%;
+  background-image: url({{preloadurl}});
+background-repeat: no-repeat;
+background-position: center;
+margin: -100px 0 0 -100px;
+}
+  .name_a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: table;
+    background-color: #F3C623;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -315,11 +355,15 @@
 }
 .load-new{
     display:none;
-}
+}  
+    
+    
+    
+    */
 </style>
   
   
   
-  
+   {%- endif -%}
  
 </html>
