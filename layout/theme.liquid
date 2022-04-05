@@ -221,9 +221,10 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-<body class="gradient template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+  
+                                                                                                                                            
+  <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -272,10 +273,40 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-
+    
+     <script src="{{ 'ajaxinate.min.js' | asset_url | script_tag }}" defer="defer"></script>
+    
   </body>
-
-  {% include 'th-product-review' %}</body>
-
+   {%- if settings.show_preloaderimage -%}  
+   {%- if settings.preloader_icon -%}   
+    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
+    {%- else -%}
+     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
+    {%- endif -%}
+  <style>
+#preloader {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #fefefe;
+z-index: 99;
+height: 100%;
+}
+    
+#status {
+width: 200px;
+height: 200px;
+position: absolute;
+left: 50%;
+top: 50%;
+  background-image: url({{preloadurl}});
+background-repeat: no-repeat;
+background-position: center;
+margin: -100px 0 0 -100px;
+}
+</style>
+   {%- endif -%}
+ 
 </html>
