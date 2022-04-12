@@ -159,6 +159,17 @@
     ]
   },
   {
+    "name": "Enable Quickview",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_quickview",
+        "default": false,
+        "label": "Enable Quickview"
+      }
+    ]
+  },
+  {
     "name": "Cart goal settings",
     "settings": [
       {
