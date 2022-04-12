@@ -138,7 +138,6 @@ function quickView() {
             });
           });
           function processCart() {
-            alert();
             jQuery.post('/cart/add.js', {
               quantity: qty,
               id: var_id
