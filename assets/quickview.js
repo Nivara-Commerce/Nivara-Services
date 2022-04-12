@@ -82,7 +82,7 @@ function quickView() {
 
         } else {
 
-          image_embed = '<div><img class="lazy2" data-src="' + image + '"></div>';
+          image_embed = '<div><img class="lazy2" src="'+ image +'" data-src="' + image + '"></div>';
 
           image_embed = image_embed.replace('.jpg', '_800x.jpg').replace('.png', '_800x.png');
 
