@@ -3,6 +3,7 @@
     "enable_sticky_addtocart": true,
     "show_star_ratings": true,
     "sticky_addtocart_animation": true,
+    "enable_quickview": true,
     "prefix_text": "You'are",
     "goal_amount": 500,
     "goal_reached": "Your are eligible for FREE shipping",
