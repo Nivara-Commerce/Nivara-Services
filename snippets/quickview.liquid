@@ -12,27 +12,7 @@
         <span>Quantity</span>
         <input type="number" class="qv-quantity" value="1" min="1">
       </div>
-                        <button
-                          type="submit"
-                          name="add"
-                          variant-id="{{ variant.id }}"
-                          quantity="1"
-                          class="product-form__submit button button--full-width cartjs {% if settings.sticky_addtocart_animation != blank %}{% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary {% else %}button--primary {% endif %}btn {% if settings.add_to_cart_animation == 'bounce'%}btn-animation-bounce {%elsif settings.add_to_cart_animation == 'shake'%}btn-animation-shake {%elsif settings.add_to_cart_animation == 'pulse'%}btn-animation-pulse {%elsif settings.add_to_cart_animation == 'jello-shake'%}btn-animation-jello-shake {%elsif settings.add_to_cart_animation == 'wobble-wobble'%}btn-animation-wobble-wobble {%elsif settings.add_to_cart_animation == 'vibrate'%}btn-animation-vibrate {%elsif settings.add_to_cart_animation == 'swing'%}btn-animation-swing {%elsif settings.add_to_cart_animation == 'tada'%}btn-animation-tada {%else%}no-animation{% endif %} {% endif %}"
-                          {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                          >
-                    <span>
-                      {%- if product.selected_or_first_available_variant.available -%}
-                      {{ 'products.product.add_to_cart' | t }}
-                      {%- else -%}
-                      {{ 'products.product.sold_out' | t }}
-                      {%- endif -%}
-                    </span>
-                    <div class="loading-overlay__spinner hidden">
-                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </button>
+      <input type="submit" class="qv-add-button" value="Add to Cart">
       <div class="qv-add-to-cart-response"></div>
     </div>
     <div class="qv-product-description"></div>
