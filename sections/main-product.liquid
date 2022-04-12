@@ -367,7 +367,7 @@
                 </variant-selects>
               {%- endif -%}
             {%- endunless -%}
-{% render 'swatches' for product.options as swatch %}
+{% render 'swatch' for product.options as swatch %}
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
               <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
                 <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
