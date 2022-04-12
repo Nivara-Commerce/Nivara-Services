@@ -54,7 +54,7 @@
         {% endif %}
         <input  id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %}  />
         {% if is_color %}
-        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="background:#{{ value | split: ' ' | last | handle }};">
+        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="background:{{ value | split: ' ' | last | handle }};">
           <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
         </label>
         {% else %}
