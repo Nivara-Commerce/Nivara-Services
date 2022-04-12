@@ -133,6 +133,7 @@ function quickView() {
             $(product.variants).each(function (i, v) {
               if (v.title == selectedOptions) {
                 var_id = v.id;
+                alert(var_id);
                 processCart();
               }
             });
@@ -142,11 +143,8 @@ function quickView() {
               quantity: qty,
               id: var_id
             },
-
                         null,
-
                         "json"
-
                        ).done(function () {
               $('.qv-add-to-cart-response').addClass('success').html('<span>' + $('.qv-product-title').text() + ' has been added to your cart. <a href="/cart">Click here to view your cart.</a>');
             })
