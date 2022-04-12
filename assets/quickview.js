@@ -110,7 +110,7 @@ function quickView() {
       maxWidth: 1040,
       maxHeight: 600,
       fitToView: true,
-      width: '100%',
+      width: '75%',
       height: '70%',
       autoSize: false,
       closeClick: false,
