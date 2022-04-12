@@ -706,40 +706,40 @@
   
   <script>
     $(function(){
- var href = location.href; // get the url
-    var split = href.split("=");
-var url_id = split['1'];
+      var href = location.href; // get the url
+      var split = href.split("=");
+      var url_id = split['1'];
       if(href.indexOf('?variant=')> 0){
-      $('.swatch-element').each(function(){
-		var swatch_id = $(this).attr('variant_id');
-      if( swatch_id == url_id){
-        $('.swatch-element').find('input').prop('checked',true );
-        $(this).find('input').prop('checked',true );
-        }
-      });
-}
- });
-  jQuery('.swatch :radio').change(function() {
-    var optionIndex = jQuery(this).closest('.swatch').attr('data-index');
-    var optionValue = jQuery(this).val();
-    //alert(optionIndex);
-    jQuery(this)
+        $('.swatch-element').each(function(){
+          var swatch_id = $(this).attr('variant_id');
+          if( swatch_id == url_id){
+            $('.swatch-element').find('input').prop('checked',true );
+            $(this).find('input').prop('checked',true );
+          }
+        });
+      }
+    });
+    $('.swatch :radio').change(function() {
+      var optionIndex = $(this).closest('.swatch').attr('data-index');
+      var optionValue = $(this).val();
+      //alert(optionIndex);
+      $(this)
       .closest('form')
       .find('.single-option-selector__radio')
       .eq(optionIndex)
       .val(optionValue)
       .trigger('change');
-   jQuery(".thumb-slide").each(function(index) {
-     //jQuery(this).find('a.product-single__thumbnail').attr('id','cuurentthumb');
-     jQuery(this).find('a.active-thumb').click();
-     });
+      $(".thumb-slide").each(function(index) {
+        //jQuery(this).find('a.product-single__thumbnail').attr('id','cuurentthumb');
+        $(this).find('a.active-thumb').click();
+      });
       setTimeout(function(){
-var test  = $('.slick-dots li').size();
+        var test  = $('.slick-dots li').size();
         if(test == 1){
-       $('.slick-dots li').css('display','none');
+          $('.slick-dots li').css('display','none');
         }
       },1000);
-  });
+    });
   </script>
 <style>
   /*
