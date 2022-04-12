@@ -208,6 +208,23 @@
     }
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{ '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' | stylesheet_tag }}
+
+{{ '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' | stylesheet_tag }}
+
+ {{ 'quickview.css' | asset_url | stylesheet_tag }} 
+
+{{ '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' | script_tag }}
+
+{{ 'quickview.js' | asset_url | script_tag }}
+
+<script>
+
+  {% capture content %}{% include 'quickview' %}{% endcapture %}
+
+  var content = {{ content | json }};
+
+</script>
   </head>
 
   <body class="gradient template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
