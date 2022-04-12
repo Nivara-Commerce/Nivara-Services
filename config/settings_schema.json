@@ -170,6 +170,17 @@
     ]
   },
   {
+    "name": "Enable Color Swatch",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_color_swatch",
+        "default": false,
+        "label": "Enable Quickview"
+      }
+    ]
+  },
+  {
     "name": "Cart goal settings",
     "settings": [
       {
