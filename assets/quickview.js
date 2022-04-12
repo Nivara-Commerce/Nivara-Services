@@ -119,7 +119,6 @@ function quickView() {
       'beforeLoad': function () {
         var product_handle = $('#quick-view').attr('class');
         $(document).on("click", ".qv-add-button", function () {
-          alert();
           var qty = $('.qv-quantity').val();
           var selectedOptions = '';
           var var_id = '';
@@ -139,13 +138,11 @@ function quickView() {
             });
           });
           function processCart() {
+            alert();
             jQuery.post('/cart/add.js', {
               quantity: qty,
               id: var_id
-            },
-                        null,
-                        "json"
-                       ).done(function () {
+            },null,"json").done(function () {
               $('.qv-add-to-cart-response').addClass('success').html('<span>' + $('.qv-product-title').text() + ' has been added to your cart. <a href="/cart">Click here to view your cart.</a>');
             })
 
