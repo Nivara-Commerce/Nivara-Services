@@ -119,6 +119,7 @@ function quickView() {
       'beforeLoad': function () {
         var product_handle = $('#quick-view').attr('class');
         $(document).on("click", ".qv-add-button", function () {
+          alert();
           var qty = $('.qv-quantity').val();
           var selectedOptions = '';
           var var_id = '';
@@ -133,7 +134,6 @@ function quickView() {
             $(product.variants).each(function (i, v) {
               if (v.title == selectedOptions) {
                 var_id = v.id;
-                alert(var_id);
                 processCart();
               }
             });
