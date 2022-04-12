@@ -143,12 +143,9 @@
             <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
           {%- endif -%}
         </div>
+              <div class="quick-view-button"><a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">Quick View</a></div>
       </div>
-      <div class="quick-view-button"><a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">Quick View</a></div>
-
-
     </div>
-    
   </div>
 {%- else -%}
   <div class="card-wrapper underline-links-hover">
