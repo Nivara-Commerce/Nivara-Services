@@ -123,6 +123,7 @@ function quickView() {
           var selectedOptions = '';
           var var_id = '';
           $('#quick-view select').each(function (i) {
+            alert();
             if (selectedOptions == '') {
               selectedOptions = $(this).val();
             } else {
