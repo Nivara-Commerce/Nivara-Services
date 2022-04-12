@@ -1058,14 +1058,3 @@ $(document).ready(function(){
 
   
 });
-
-// quick view js
-$(document).ready(function(){
-  $('.quick-view').click(function(){
-	var pro_handle = $(this).attr('data-handle');
-    var prohandle = $('.qv-add-button').attr('href');
-//     alert(pro_handle);
-//     alert(prohandle);
-
-  });
-});
