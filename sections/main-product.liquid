@@ -328,7 +328,7 @@
                                  
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if settings.enable_color_swatch != blank %}style="background:{{ value | split: ' ' | last | handle }};{% endif %}">
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if settings.enable_color_swatch != blank %}style="background:{{ value | split: ' ' | last | handle }}; fieldset.js.product-form__input.Color label{ font-size: 0px;}{% endif %}">
                             {{ value }}
                           </label>
                         {%- endfor -%}
