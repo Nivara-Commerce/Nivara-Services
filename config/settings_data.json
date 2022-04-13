@@ -4,7 +4,7 @@
     "show_star_ratings": true,
     "sticky_addtocart_animation": true,
     "enable_quickview": true,
-    "enable_color_swatch": false,
+    "enable_color_swatch": true,
     "prefix_text": "You'are",
     "goal_amount": 500,
     "goal_reached": "Your are eligible for FREE shipping",
