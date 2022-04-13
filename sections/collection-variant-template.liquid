@@ -173,7 +173,7 @@
             {% endfor %}
         
         	{% if product_option_color2 == false %}
-              <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">{% include 'product-card-grid', max_height: max_height %}
+              <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">{% include 'card-product', max_height: max_height %}
           	{% endif %}
         {% else %}
           {% comment %}
