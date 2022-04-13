@@ -3257,6 +3257,9 @@ details-disclosure > details {
     color: #fff;
     border-radius: 10px;
 }
+  fieldset.js.product-form__input.Size label {
+    font-size: 10px !important;
+}
 /*  back in stock css  */
     .soldout{
     display:none; 
