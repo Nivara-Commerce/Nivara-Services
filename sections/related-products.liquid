@@ -18,9 +18,11 @@
     {% assign product = all_products[block.settings.product] %}
         <li class="grid__item">
           <img src="{{ product.featured_image | product_img_url: 'grande' }}" >
-          {{product.title}}
-          {{ product.price | money_without_trailing_zeros }} 
-          {{product.description}}
+          <div class="content">
+            {{product.title}}
+            {{ product.price | money_without_trailing_zeros }} 
+            {{product.description}}
+          </div>
         </li>
     {% endfor %}
     
