@@ -12,11 +12,12 @@
   }
 {%- endstyle -%}
 <product-recommendations class="product-recommendations page-width section-template--15708913860866__product-recommendations-padding isolate product-recommendations--loaded" data-url="/recommendations/products?section_id=template--15708913860866__product-recommendations&amp;product_id=7600193437954&amp;limit=4">
-  <h2 class="product-recommendations__heading">You may also like</h2>
+  <h2 class="product-recommendations__heading">{{ section.settings.product_heading }}</h2>
   <ul class="grid grid--3-col product-grid grid--1-col-tablet" role="list">
-
+    {%- for block in section.blocks -%}
     <li class="grid__item">
     </li>
+    {%- endfor -%}
   </ul>
 </product-recommendations>
 
