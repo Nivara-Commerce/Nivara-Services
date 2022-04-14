@@ -24,8 +24,8 @@
             <h3 class="product_title"><a href="{{product.url}}">{{product.title}}</a></h3>
             {% if block.settings.vendor %}<p class="product_vendor">{{ product.vendor }}</p>{% endif %}
             <p class="price">
-              <span class="price-item price-item--regular">{{ product.compare_at_price | money_with_currency }}</span> 
-              {{ product.price | money_with_currency }}
+              <span class="price-item price-item--regular">{{ product.compare_at_price | money_with_currency }}</span>
+              <span class="price-item price-item--sale price-item--last">{{ product.price | money_with_currency }}</span>
             </p>
             
             {% if block.settings.des %}<p class="product_description">{{product.description}}</p>{% endif %}
