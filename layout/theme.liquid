@@ -1,6 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
+     {%- if settings.show_preloaderimage -%}
+  <div id="preloader">
+  <div id="status">&nbsp;</div>
+  </div>
+   {%- endif -%}
+  {% if template contains 'collection' %}{{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
   <head>
+   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -28,7 +35,8 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
@@ -201,6 +209,12 @@
     {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
+    
+    
+    {%- if collection.handle =='test' -%}
+    testshopify
+      <link rel="preload" as="image" href="https://cdn.shopify.com/s/files/1/0627/7044/6594/files/service.png?v=1647865488">
+    {%- endif -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
@@ -218,8 +232,7 @@
       var content = {{ content | json }};
     </script>
   </head>
-
-  <body class="gradient template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
+<body class="gradient template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
@@ -263,9 +276,49 @@
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       }
     </script>
+    
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+
+ 
+     <script src="{{ 'ajaxinate.min.js' | asset_url | script_tag }}" defer="defer"></script>
+    
+  </body>
+   {%- if settings.show_preloaderimage -%}  
+   {%- if settings.preloader_icon -%}   
+    {% assign preloadurl = settings.preloader_icon | img_url: '45x45' %}
+    {%- else -%}
+     {% assign preloadurl = 'https://cdn.shopify.com/s/files/1/0627/7044/6594/files/ajax-loader.gif?v=1647932518' %}   
+    {%- endif -%}
+  <style>
+#preloader {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #fefefe;
+z-index: 99;
+height: 100%;
+}
+    
+#status {
+width: 200px;
+height: 200px;
+position: absolute;
+left: 50%;
+top: 50%;
+  background-image: url({{preloadurl}});
+background-repeat: no-repeat;
+background-position: center;
+margin: -100px 0 0 -100px;
+}
+</style>
+   {%- endif -%}
+
   {% include 'th-product-review' %}</body>
+
 </html>

@@ -15,6 +15,8 @@
     "success_msg": "<p>We will notify you as soon as the item is in stock!<\/p>",
     "add_to_cart_animation": "swing",
     "cart_countdown": "20",
+    "show_salescountdown": true,
+    "estimated_delivery": true,
     "show_sales_countdown": true,
     "show_quantity": true,
     "sections": {

@@ -15,16 +15,6 @@
           "settings": {
           }
         },
-        "52681a49-8218-4058-af23-8d595119024a": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "flex-start",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
-        },
         "caption": {
           "type": "text",
           "settings": {
@@ -35,6 +25,26 @@
         "price": {
           "type": "price",
           "settings": {
+          }
+        },
+        "ce3e68a3-ad55-4ab3-bcf2-b785f841c064": {
+          "type": "section_countdown",
+          "settings": {
+            "timer_icon": true,
+            "timer_prefix": "Sale ends in",
+            "timer_suffix": "Get it now!",
+            "timer_date": "2022-04-05",
+            "timer_hours": 2,
+            "timer_minutes": 20,
+            "timer_action": "timer_hide",
+            "timer_text": "",
+            "timer_visibility": "timer_allsale",
+            "timer_products": "",
+            "timer_background": "#eee",
+            "timer_font": "#000",
+            "timer_time": "#E22120",
+            "hide_message": "#E22120",
+            "timer_fontsize": 20
           }
         },
         "variant_picker": {
@@ -100,19 +110,14 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "62d1a79a-5c1c-46e8-8a38-a235d91a5136": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "52681a49-8218-4058-af23-8d595119024a",
         "caption",
         "price",
+        "ce3e68a3-ad55-4ab3-bcf2-b785f841c064",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -121,8 +126,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "62d1a79a-5c1c-46e8-8a38-a235d91a5136"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
