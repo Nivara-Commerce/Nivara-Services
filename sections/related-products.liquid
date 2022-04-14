@@ -23,7 +23,9 @@
           <div class="product_content">
             <h3 class="product_title"><a href="{{product.url}}">{{product.title}}</a></h3>
             <p class="price">{{ product.price | money_without_trailing_zeros }} </p>
+            
             <p class="product_description">{{product.description}}</p>
+            
           </div>
         </li>
     {% endfor %}  
@@ -74,6 +76,12 @@
                   "type": "product",
                   "label": "Product",
                   "id": "product"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "des",
+                  "default": false,
+                  "label": "Description"
                 }
               ]
           }
