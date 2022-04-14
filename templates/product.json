@@ -226,12 +226,39 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "1649936309ba8b1072": {
+      "type": "related-products",
+      "blocks": {
+        "981b7ae3-e206-45bd-b01c-5c23ddfa7f72": {
+          "type": "text",
+          "settings": {
+            "product": "nivara11"
+          }
+        },
+        "e350cdfc-dc92-4272-9a4b-26666c6d20ad": {
+          "type": "text",
+          "settings": {
+            "product": "nivara45"
+          }
+        }
+      },
+      "block_order": [
+        "981b7ae3-e206-45bd-b01c-5c23ddfa7f72",
+        "e350cdfc-dc92-4272-9a4b-26666c6d20ad"
+      ],
+      "settings": {
+        "product_heading": "Custom Products",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image-with-text",
     "multicolumn",
-    "product-recommendations"
+    "product-recommendations",
+    "1649936309ba8b1072"
   ]
 }
