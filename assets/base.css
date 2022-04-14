@@ -3257,3 +3257,15 @@ details-disclosure > details {
     color: #fff;
     border-radius: 10px;
 }
+
+/*  back in stock css  */
+    .soldout{
+    display:none; 
+  }
+  .soldout.active{
+    display:block; 
+  }
+/*  variant css  */
+  fieldset.js.product-form__input.Size label {
+    font-size: 14px !important;
+}

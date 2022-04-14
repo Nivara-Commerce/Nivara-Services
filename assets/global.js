@@ -850,9 +850,11 @@ class VariantSelects extends HTMLElement {
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
+      $('.soldout').addClass('active');
       if (text) addButtonText.textContent = text;
     } else {
       addButton.removeAttribute('disabled');
+      $('.soldout').removeClass('active');
       addButtonText.textContent = window.variantStrings.addToCart;
     }
 
@@ -889,7 +891,6 @@ class VariantRadios extends VariantSelects {
     });
   }
 }
-
 
 customElements.define('variant-radios', VariantRadios);
 
@@ -1044,21 +1045,16 @@ $(document).ready(function(){
 
 });
 
-window.addEventListener('load', function(){
-  // alert('hello');
-  $("#status").fadeOut();
-// will fade out the whole DIV that covers the website.
-$("#preloader").delay(1000).slideUp("slow");
-    
-  });
+// back in sock
 
+$(document).ready(function(){
+   
+    setTimeout(function(){
+      if ($('.product-form__submit').css('disabled', 'disabled')){
+                $('.soldout').removeClass('active');
 
- document.addEventListener("DOMContentLoaded", function() {
-    var endlessScroll = new Ajaxinate({
-      container: '#Niv-Loop',
-      pagination: '#Niv-Pagination',
-      loadingText: '<center><img src="//cdn.shopify.com/s/files/1/0627/7044/6594/files/loading.gif?v=1648015793"></center>',
-    });
-  });
+      }
+    }, 500);
 
-
+  
+});

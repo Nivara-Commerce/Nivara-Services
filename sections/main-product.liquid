@@ -504,16 +504,17 @@
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input">
+                      <fieldset class="js product-form__input {{option.name}}">
                         <legend class="form__label">{{ option.name }}</legend>
                         {%- for value in option.values -%}
                           <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
                                 form="{{ product_form_id }}"
+                                 
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if settings.enable_color_swatch != blank %}style="background:{{ value | split: ' ' | last | handle }}; font-size: 0px;{% endif %}">
                             {{ value }}
                           </label>
                         {%- endfor -%}
@@ -553,7 +554,6 @@
                 </variant-selects>
               {%- endif -%}
             {%- endunless -%}
-
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
               <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
                 <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
@@ -611,13 +611,14 @@
                         </svg>
                       </div>
                     </button>
+                    
                     {%- if block.settings.show_dynamic_checkout -%}
                     {{ form | payment_button }}
                     {%- endif -%}
                   </div>
                 {%- endform -%}
               </product-form>
-
+{% include 'test' %}
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
               {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
@@ -1508,7 +1509,29 @@
           "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
         }
       ]
-    }
+    },
+      {
+        "type":"earrings",
+        "name":"Earings products",
+        "settings":[
+            {
+                "type":"image_picker",
+                "id":"product_img",
+                "label":"Product Image"
+            }
+        ]
+    },
+    {
+		"type":"necklaces",
+		"name":"Necklace products",
+		"settings":[
+            {
+                "type":"image_picker",
+                "id":"product_img",
+                "label":"Product Image"
+            }
+	   ]
+	}
   ],
   "settings": [
     {

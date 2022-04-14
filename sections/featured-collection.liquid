@@ -53,6 +53,9 @@
               show_vendor: section.settings.show_vendor,
               show_rating: section.settings.show_rating
             %}
+            {% if settings.enable_quickview != blank %}
+            <div class="quick-view-button"><a class="quick-view" data-handle="{{ product.handle }}" href="javascript:void(0);">Quick View</a></div>
+            {% endif %}
           </li>
         {%- else -%}
           {%- for i in (1..4) -%}
