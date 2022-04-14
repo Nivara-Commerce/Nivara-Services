@@ -3,7 +3,7 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .related-product-section{}
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -40,6 +40,11 @@
     "name": "Related Products",
     "class": "related-product-section",
     "settings": [
+        {
+          "type": "color",
+          "label": "BG Section Color",
+          "id": "bg_color"
+        },
         {
           "type": "text",
           "label": "Heading",
