@@ -21,9 +21,9 @@
             <img src="{{ product.featured_image | product_img_url: 'grande' }}" >
           </div>
           <div class="content">
-            {{product.title}}
-            {{ product.price | money_without_trailing_zeros }} 
-            {{product.description}}
+            <h3>{{product.title}}</h3>
+            <p>{{ product.price | money_without_trailing_zeros }} </p>
+            <p>{{product.description}}</p>
           </div>
         </li>
     {% endfor %}  
