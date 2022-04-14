@@ -16,7 +16,7 @@
   <ul class="grid grid--3-col product-grid grid--1-col-tablet" role="list">
     {% for block in section.blocks %}
     {% assign product = all_products[block.settings.product] %}
-      {% for image in product.image %} 
+      {% for image in product.images %} 
         <li class="grid__item">
           <img src="{{ image.src | product_img_url: 'grande' }}" >
           {{product.title}}
