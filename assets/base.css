@@ -3271,5 +3271,7 @@ details-disclosure > details {
 }
   
   /* related-products */
-
+span.price-item.price-item--regular {
+    text-decoration: line-through;
+}
   .product_image img{max-width: 100%;}
