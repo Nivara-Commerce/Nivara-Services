@@ -3270,4 +3270,6 @@ details-disclosure > details {
     font-size: 14px !important;
 }
   
-/* related-products */
+  /* related-products */
+
+  .product_image img{max-width: 100%;}
