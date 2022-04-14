@@ -40,10 +40,10 @@
             "timer_text": "",
             "timer_visibility": "timer_allsale",
             "timer_products": "",
-            "timer_background": "#eee",
-            "timer_font": "#000",
-            "timer_time": "#E22120",
-            "hide_message": "#E22120",
+            "timer_background": "#eeeeee",
+            "timer_font": "#000000",
+            "timer_time": "#e22120",
+            "hide_message": "#e22120",
             "timer_fontsize": 20
           }
         },
@@ -219,10 +219,10 @@
       "settings": {
         "heading": "You may also like",
         "color_scheme": "background-1",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
+        "show_vendor": true,
+        "show_rating": true,
         "padding_top": 36,
         "padding_bottom": 28
       }
