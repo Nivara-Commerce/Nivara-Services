@@ -21,7 +21,7 @@
             <img src="{{ product.featured_image | product_img_url: 'grande' }}" >
           </div>
           <div class="content">
-            <h3>{{product.title}}</h3>
+            <h3><a href="{{product.url}}">{{product.title}}</a></h3>
             <p>{{ product.price | money_without_trailing_zeros }} </p>
             <p>{{product.description}}</p>
           </div>
