@@ -58,13 +58,13 @@
               {%- endif -%}
             {% assign color_active = false %}
             {% for option in product.options %}
-              {% if option == 'Color' or option == 'Size' %}
+              {% if option == 'Color' %}
                  {% assign color_active = true %}
               {% endif %}
             {% endfor %}
             {% if product.variants.size > 1 and color_active == true %}
             {% for option in product.options %}
-               {% if option == 'Color' or option == 'Size' %}
+               {% if option == 'Color' %}
                {% assign index = forloop.index0 %}
                {% assign colorlist = '' %}
                {% assign color = '' %}
