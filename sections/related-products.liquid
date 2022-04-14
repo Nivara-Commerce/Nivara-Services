@@ -24,7 +24,7 @@
             <h3 class="product_title"><a href="{{product.url}}">{{product.title}}</a></h3>
             {% if block.settings.vendor %}<p class="product_vendor">{{ product.vendor }}</p>{% endif %}
             <p class="price">{{ product.price | money_without_trailing_zeros }}
-            {{ compare_at_price | money_with_currency }}</p>
+            {{ product.compare_at_price | money_with_currency }}</p>
             {% if block.settings.des %}<p class="product_description">{{product.description}}</p>{% endif %}
           </div>
         </li>
