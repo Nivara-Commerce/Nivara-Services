@@ -16,15 +16,12 @@
   <ul class="grid grid--3-col product-grid grid--1-col-tablet" role="list">
     {% for block in section.blocks %}
     {% assign product = all_products[block.settings.product] %}
-      {% for image in product.images %} 
         <li class="grid__item">
-          <img src="{{ image.src | product_img_url: 'grande' }}" >
+          <img src="{{ product.images | product_img_url: 'grande' }}" >
           {{product.title}}
           {{ product.price | money_without_trailing_zeros }} 
           {{product.description}}
         </li>
-      {% endfor %}
-
     {% endfor %}
     
     
