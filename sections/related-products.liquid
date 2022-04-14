@@ -18,7 +18,7 @@
     {% assign product = all_products[block.settings.product] %}
         <li class="grid__item">
           <div class="product_image">
-            <img src="{{ product.featured_image | product_img_url: 'grande' }}" >
+            <a href="{{product.url}}"><img src="{{ product.featured_image | product_img_url: 'grande' }}" ></a>
           </div>
           <div class="content">
             <h3><a href="{{product.url}}">{{product.title}}</a></h3>
