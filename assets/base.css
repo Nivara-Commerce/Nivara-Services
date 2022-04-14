@@ -3275,4 +3275,4 @@ span.price-item.price-item--regular {
     text-decoration: line-through;
 }
   .related-product-section .grid__item{margin-bottom: 30px;}
-  .product_image img{max-width: 100%;}
+  .product_image img{max-width: 100%; width: 100%;}
