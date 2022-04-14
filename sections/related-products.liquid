@@ -1,7 +1,28 @@
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Related Products",
+    "settings": [
+        {
+          "type": "text",
+          "label": "Heading",
+          "default": "Custom Products",
+          "id": "product_heading"
+        }
+      ],
+        "blocks": [
+          {
+            "type": "text",
+            "name": "t:sections.main-product.blocks.text.name",
+            "settings": [
+                {
+                  "type": "product",
+                  "label": "Product",
+                  "id": "custom_product"
+                }
+              ]
+          }
+
+    ]
   }
 {% endschema %}
 
