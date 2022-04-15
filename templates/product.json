@@ -233,7 +233,7 @@
         "981b7ae3-e206-45bd-b01c-5c23ddfa7f72": {
           "type": "text",
           "settings": {
-            "product": "nivara11",
+            "product": "nivara",
             "vendor": false,
             "des": false
           }
@@ -241,16 +241,16 @@
         "e350cdfc-dc92-4272-9a4b-26666c6d20ad": {
           "type": "text",
           "settings": {
-            "product": "nivara45",
-            "vendor": false,
+            "product": "copy-of-nivara",
+            "vendor": true,
             "des": false
           }
         },
         "6ba87899-2c1e-444a-97b5-fd401c28c3c3": {
           "type": "text",
           "settings": {
-            "product": "nivara12",
-            "vendor": false,
+            "product": "copy-of-copy-of-nivara",
+            "vendor": true,
             "des": false
           }
         }
