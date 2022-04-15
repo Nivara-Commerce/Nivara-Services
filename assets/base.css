@@ -3265,10 +3265,11 @@ details-disclosure > details {
 .megaHeader>a:hover, .megaDrawer:hover .drawerbtn {
     color: #000 !important;
 }  
+  .megaDrawerContent{box-shadow: 0 4px 20px #adadad!important;}  
   
   .megaDrawerContent .megaDrawerHeader {
-    padding: 10px 30px;
-    text-transform: capitalize;
+    padding: 10px 30px!important;
+    text-transform: capitalize!important;
   }
 /*  back in stock css  */
     .soldout{
