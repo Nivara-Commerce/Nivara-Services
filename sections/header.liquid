@@ -481,7 +481,7 @@
 
                       <div class="megaDrawerWrapperc grid grid--1-col product-grid grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max">
                         {% if block.settings.mega_link != blank %}
-                        <div class="megaLinkContainer grid__item">
+                        <div class="megaLinkContainer1 grid__item">
                           {% for link in block.settings.mega_link.links %}
                           <div class="megaLinkBox" style="padding: 10px">
                             <div class="megaLinkImage" data-mega-image="{{link.title | downcase | replace: ' ', '-' }}" >
@@ -501,13 +501,13 @@
                         {% if block.settings.mega_product != blank %}
                         <div class="megaproduct_box grid__item">
                           <a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
-                            <div class="megaProduct">
+                            <div class="megaProduct1">
                               {%- assign product_media = block.settings.mega_product.selected_or_first_available_variant.featured_media | default: block.settings.mega_product.featured_media -%}
-                              <div class="megaProductImage">
+                              <div class="megaProductImage1">
                                 <img src="{{product_media | img_url: master }}" alt="{{product_media.alt | escape }}">
                               </div>
 
-                              <div class="megaProductInfo">
+                              <div class="megaProductInfo1">
                                 <h4 style="margin: 0 0 5%;">{{block.settings.mega_product.title | escape}}</h4>
                                 <p style="margin: 0;">{{block.settings.mega_product.price | money}}</p>
                               </div>
@@ -522,7 +522,7 @@
                           <a href="{{block.settings.mega_image_link}}">
                             {% endif %}
                             <div class="megaproduct_box grid__item">
-                              <div class="megaImage">
+                              <div class="megaImage1">
                                 <img src="{{block.settings.mega_image | img_url: 'master'}}" alt="{{block.settings.mega_image.alt | escape }}" style="width: {{block.settings.mega_image_size}}%;">
                               </div>
                             </div>
