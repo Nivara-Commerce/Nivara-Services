@@ -521,8 +521,10 @@
                         <div class="megaproduct_box grid__item">
                           <a href="{{block.settings.mega_image_link}}">
                             {% endif %}
+                            <div class="megaproduct_box grid__item">
                             <div class="megaImage">
                               <img src="{{block.settings.mega_image | img_url: 'master'}}" alt="{{block.settings.mega_image.alt | escape }}" style="width: {{block.settings.mega_image_size}}%;">
+                            </div>
                             </div>
                             {% if block.settings.mega_image_link != blank %}</a>
                         </div>
