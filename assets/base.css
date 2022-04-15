@@ -3269,3 +3269,10 @@ details-disclosure > details {
   fieldset.js.product-form__input.Size label {
     font-size: 14px !important;
 }
+  
+  /* related-products */
+span.price-item.price-item--regular {
+    text-decoration: line-through;
+}
+  .related-product-section .grid__item{margin-bottom: 30px;}
+  .product_image img{max-width: 100%; width: 100%;}

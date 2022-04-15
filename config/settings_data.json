@@ -1,8 +1,8 @@
 {
   "current": {
-    "enable_sticky_addtocart": true,
-    "show_star_ratings": true,
-    "sticky_addtocart_animation": true,
+    "enable_sticky_addtocart": false,
+    "show_star_ratings": false,
+    "sticky_addtocart_animation": false,
     "enable_quickview": true,
     "enable_color_swatch": true,
     "prefix_text": "You'are",

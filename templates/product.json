@@ -40,10 +40,10 @@
             "timer_text": "",
             "timer_visibility": "timer_allsale",
             "timer_products": "",
-            "timer_background": "#eee",
-            "timer_font": "#000",
-            "timer_time": "#E22120",
-            "hide_message": "#E22120",
+            "timer_background": "#eeeeee",
+            "timer_font": "#000000",
+            "timer_time": "#e22120",
+            "hide_message": "#e22120",
             "timer_fontsize": 20
           }
         },
@@ -219,12 +219,48 @@
       "settings": {
         "heading": "You may also like",
         "color_scheme": "background-1",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
+        "show_vendor": true,
+        "show_rating": true,
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "1649936309ba8b1072": {
+      "type": "related-products",
+      "blocks": {
+        "981b7ae3-e206-45bd-b01c-5c23ddfa7f72": {
+          "type": "text",
+          "settings": {
+            "product": "nivara11",
+            "des": false
+          }
+        },
+        "e350cdfc-dc92-4272-9a4b-26666c6d20ad": {
+          "type": "text",
+          "settings": {
+            "product": "nivara45",
+            "des": false
+          }
+        },
+        "6ba87899-2c1e-444a-97b5-fd401c28c3c3": {
+          "type": "text",
+          "settings": {
+            "product": "nivara12",
+            "des": false
+          }
+        }
+      },
+      "block_order": [
+        "981b7ae3-e206-45bd-b01c-5c23ddfa7f72",
+        "e350cdfc-dc92-4272-9a4b-26666c6d20ad",
+        "6ba87899-2c1e-444a-97b5-fd401c28c3c3"
+      ],
+      "settings": {
+        "product_heading": "Custom Products",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -232,6 +268,7 @@
     "main",
     "image-with-text",
     "multicolumn",
-    "product-recommendations"
+    "product-recommendations",
+    "1649936309ba8b1072"
   ]
 }

@@ -1,0 +1,119 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .related-product-section{background-color:{{ section.settings.bg_color}};}
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="section-{{ section.id }}-padding page-width">
+  <h2 class="product-recommendations__heading">{{ section.settings.product_heading }}</h2>
+  <ul class="grid grid--1-col product-grid grid--2-col-tablet grid--one-third-max grid--3-col-desktop grid--quarter-max" role="list">
+    {% for block in section.blocks %}
+    {% assign product = all_products[block.settings.product] %}
+        <li class="grid__item">
+          <div class="product_image">
+            <a href="{{product.url}}"><img src="{{ product.featured_image | product_img_url: 'grande' }}" alt="{{product.title}}"></a>
+          </div>
+          <div class="product_content">
+            <h3 class="product_title"><a href="{{product.url}}">{{product.title}}</a></h3>
+            {% if block.settings.vendor %}<p class="product_vendor">{{ product.vendor }}</p>{% endif %}
+            <p class="price">
+              <span class="price-item price-item--regular">{{ product.compare_at_price | money_with_currency }}</span>
+              <span class="price-item price-item--sale price-item--last">{{ product.price | money_with_currency }}</span>
+            </p>
+            
+            {% if block.settings.des %}<p class="product_description">{{product.description}}</p>{% endif %}
+          </div>
+        </li>
+    {% endfor %}  
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Related Products",
+    "class": "related-product-section",
+    "settings": [
+        {
+          "type": "color",
+          "label": "BG Section Color",
+          "id": "bg_color"
+        },
+        {
+          "type": "text",
+          "label": "Heading",
+          "default": "Custom Products",
+          "id": "product_heading"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+        }
+      ],
+		"max_blocks": 9,
+        "blocks": [
+          {
+            "type": "text",
+            "name": "Product",
+            "settings": [
+                {
+                  "type": "product",
+                  "label": "Product",
+                  "id": "product"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "vendor",
+                  "default": false,
+                  "label": "Vendor"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "des",
+                  "default": false,
+                  "label": "Description"
+                }
+              ]
+          }
+
+    ],
+    "presets": [
+      {
+        "name": "Related Products",
+        "category": "insta feed"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
