@@ -3263,7 +3263,7 @@ details-disclosure > details {
   }
 /*  mega menu  */
 .megaHeader>a:hover, .megaDrawer:hover .drawerbtn {
-    color: #000;
+    color: #000 !important;
 }  
   
 /*  back in stock css  */
