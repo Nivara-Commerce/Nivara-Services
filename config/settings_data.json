@@ -62,9 +62,9 @@
           "266f4340-99b3-40c1-ace5-624a264e941d": {
             "type": "mega_header",
             "settings": {
-              "mega_width": false,
-              "mega_url": "",
-              "title": "",
+              "mega_width": true,
+              "mega_url": "shopify:\/\/products\/nivara10",
+              "title": "product 2",
               "header_title": "product 2",
               "header_bg": "",
               "mega_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
