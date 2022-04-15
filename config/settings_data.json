@@ -40,14 +40,33 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "c5b9f30a-5ef7-4f95-96da-462bccc52f32": {
+            "type": "mega_header",
+            "settings": {
+              "mega_width": true,
+              "mega_url": "shopify:\/\/products\/nivara",
+              "title": "test",
+              "header_title": "test",
+              "header_bg": "",
+              "mega_image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+              "mega_image_size": 15,
+              "meg_image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+              "meg_image_size": 15,
+              "mega_link": "main-menu",
+              "mega_product": "copy-of-nivara",
+              "meg_product": "nivara11",
+              "megas_product": "nivara2"
+            }
+          }
+        },
+        "block_order": [
+          "c5b9f30a-5ef7-4f95-96da-462bccc52f32"
+        ],
         "settings": {
           "color_scheme": "background-1",
           "logo_width": 90,
-          "logo_position": "middle-left",
-          "menu": "main-menu",
-          "show_line_separator": true,
-          "enable_sticky_header": true,
-          "margin_bottom": 0
+          "mega_drawer_image": "<p> first-second-third.jpg, firstname.png, Firstname.gif<\/p>"
         }
       },
       "footer": {
