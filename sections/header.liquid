@@ -520,6 +520,19 @@
                               </div>
                             </div>
                           </a>
+                          <a href="{{block.settings.meg_product.url}}" style="text-decoration: none">
+                            <div class="megaProduct1">
+                              {%- assign product_media = block.settings.meg_product.selected_or_first_available_variant.featured_media | default: block.settings.meg_product.featured_media -%}
+                              <div class="megaProductImage1">
+                                <img src="{{product_media | img_url: 'master' }}" alt="{{product_media.alt | escape }}">
+                              </div>
+
+                              <div class="megaProductInfo1">
+                                <h4 style="margin: 16px 0 1%; font-size: 18px; font-weight: 600;">{{block.settings.meg_product.title | escape}}</h4>
+                                <p style="margin: 0;">{{block.settings.meg_product.price | money}}</p>
+                              </div>
+                            </div>
+                          </a>                          
                         </div>
                         {% endif %}
                         
