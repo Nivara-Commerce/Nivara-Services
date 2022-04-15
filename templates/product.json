@@ -234,6 +234,7 @@
           "type": "text",
           "settings": {
             "product": "nivara11",
+            "vendor": false,
             "des": false
           }
         },
@@ -241,6 +242,7 @@
           "type": "text",
           "settings": {
             "product": "nivara45",
+            "vendor": false,
             "des": false
           }
         },
@@ -248,6 +250,7 @@
           "type": "text",
           "settings": {
             "product": "nivara12",
+            "vendor": false,
             "des": false
           }
         }
@@ -258,7 +261,8 @@
         "6ba87899-2c1e-444a-97b5-fd401c28c3c3"
       ],
       "settings": {
-        "product_heading": "Custom Products",
+        "bg_color": "",
+        "product_heading": "Related Products",
         "padding_top": 36,
         "padding_bottom": 36
       }
