@@ -46,22 +46,41 @@
             "settings": {
               "mega_width": true,
               "mega_url": "shopify:\/\/products\/nivara",
-              "title": "test",
-              "header_title": "test",
+              "title": "product 1",
+              "header_title": "product 1",
               "header_bg": "",
-              "mega_image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+              "mega_image": "shopify:\/\/shop_images\/retail-shopping-package.jpg",
               "mega_image_size": 15,
-              "meg_image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+              "meg_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
               "meg_image_size": 15,
               "mega_link": "main-menu",
               "mega_product": "copy-of-nivara",
               "meg_product": "nivara11",
               "megas_product": "nivara2"
             }
+          },
+          "266f4340-99b3-40c1-ace5-624a264e941d": {
+            "type": "mega_header",
+            "settings": {
+              "mega_width": false,
+              "mega_url": "",
+              "title": "",
+              "header_title": "product 2",
+              "header_bg": "",
+              "mega_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
+              "mega_image_size": 15,
+              "meg_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
+              "meg_image_size": 15,
+              "mega_link": "footer",
+              "mega_product": "nivara45",
+              "meg_product": "nivara16",
+              "megas_product": "nivara12"
+            }
           }
         },
         "block_order": [
-          "c5b9f30a-5ef7-4f95-96da-462bccc52f32"
+          "c5b9f30a-5ef7-4f95-96da-462bccc52f32",
+          "266f4340-99b3-40c1-ace5-624a264e941d"
         ],
         "settings": {
           "color_scheme": "background-1",
