@@ -492,7 +492,7 @@
 
                       <div class="megaDrawerWrapperc mega-drawer-main-menu">
                         {% if block.settings.mega_link != blank %}
-                        <div class="megaLinkContainer1 grid__item">
+                        <div class="megaLinkContainer1 flex-item-left">
                           {% for link in block.settings.mega_link.links %}
                           <div class="megaLinkBox" style="padding: 10px">
                             <div class="megaLinkImage" data-mega-image="{{link.title | downcase | replace: ' ', '-' }}" >
@@ -509,7 +509,7 @@
                         </div>
                         {% endif %}
                         
-                        <div class="megaproduct_box grid__item">
+                        <div class="megaproduct_box flex-item-right">
                         {% if block.settings.mega_product != blank %}
                         
                           <a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
