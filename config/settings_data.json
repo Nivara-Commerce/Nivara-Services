@@ -83,7 +83,7 @@
           "menu_bg_color": "#ffffff",
           "logo_width": 90,
           "mega_drawer_image": "<p> first-second-third.jpg, firstname.png, Firstname.gif<\/p>",
-          "mega_width": true
+          "mega_width": false
         }
       },
       "footer": {
