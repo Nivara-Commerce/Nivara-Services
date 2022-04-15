@@ -57,7 +57,11 @@
     padding-top: 1rem;
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
-  .mega-drawer-main-menu{padding: 15px;}
+  .mega-drawer-main-menu{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
   .megaDrawerContent.absolutePosition{background-color: {{ section.settings.menu_bg_color }};}
   .megaproduct_box img {
     width: 100%;
