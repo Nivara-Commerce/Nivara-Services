@@ -3257,7 +3257,10 @@ details-disclosure > details {
     color: #fff;
     border-radius: 10px;
 }
-
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
 /*  back in stock css  */
     .soldout{
     display:none; 
