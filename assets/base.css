@@ -3261,6 +3261,11 @@ details-disclosure > details {
     max-width: 100%;
     vertical-align: middle;
   }
+/*  mega menu  */
+.megaHeader>a:hover, .megaDrawer:hover .drawerbtn {
+    color: #000;
+}  
+  
 /*  back in stock css  */
     .soldout{
     display:none; 
