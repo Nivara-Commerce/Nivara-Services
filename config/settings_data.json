@@ -50,8 +50,6 @@
               "header_bg": "",
               "mega_image": "shopify:\/\/shop_images\/retail-shopping-package.jpg",
               "mega_image_size": 100,
-              "meg_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
-              "meg_image_size": 100,
               "mega_link": "main-menu",
               "mega_product": "copy-of-nivara",
               "meg_product": "nivara11"
@@ -66,8 +64,6 @@
               "header_bg": "",
               "mega_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
               "mega_image_size": 100,
-              "meg_image": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
-              "meg_image_size": 100,
               "mega_link": "footer",
               "mega_product": "nivara45",
               "meg_product": "nivara16"
@@ -83,7 +79,7 @@
           "menu_bg_color": "#ffffff",
           "logo_width": 90,
           "mega_drawer_image": "<p> first-second-third.jpg, firstname.png, Firstname.gif<\/p>",
-          "mega_width": false
+          "mega_width": true
         }
       },
       "footer": {
