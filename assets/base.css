@@ -3266,6 +3266,10 @@ details-disclosure > details {
     color: #000 !important;
 }  
   
+  .megaDrawerContent .megaDrawerHeader {
+    padding: 10px 30px;
+    text-transform: capitalize;
+  }
 /*  back in stock css  */
     .soldout{
     display:none; 
