@@ -497,21 +497,25 @@
                           {% endfor %}
                         </div>
                         {% endif %}
+                        
                         {% if block.settings.mega_product != blank %}
-                        <a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
-                          <div class="megaProduct">
-                            {%- assign product_media = block.settings.mega_product.selected_or_first_available_variant.featured_media | default: block.settings.mega_product.featured_media -%}
-                            <div class="megaProductImage">
-                              <img src="{{product_media | img_url: master }}" alt="{{product_media.alt | escape }}">
-                            </div>
+                        <div class="megaproduct_box">
+                          <a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
+                            <div class="megaProduct">
+                              {%- assign product_media = block.settings.mega_product.selected_or_first_available_variant.featured_media | default: block.settings.mega_product.featured_media -%}
+                              <div class="megaProductImage">
+                                <img src="{{product_media | img_url: master }}" alt="{{product_media.alt | escape }}">
+                              </div>
 
-                            <div class="megaProductInfo">
-                              <h4 style="margin: 0 0 5%;">{{block.settings.mega_product.title | escape}}</h4>
-                              <p style="margin: 0;">{{block.settings.mega_product.price | money}}</p>
+                              <div class="megaProductInfo">
+                                <h4 style="margin: 0 0 5%;">{{block.settings.mega_product.title | escape}}</h4>
+                                <p style="margin: 0;">{{block.settings.mega_product.price | money}}</p>
+                              </div>
                             </div>
-                          </div>
-                        </a>
+                          </a>
+                        </div>
                         {% endif %}
+                        
                         {% if block.settings.mega_image != blank %}
                         {% if block.settings.mega_image_link != blank %}
                         <a href="{{block.settings.mega_image_link}}">
