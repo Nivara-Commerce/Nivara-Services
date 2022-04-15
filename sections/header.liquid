@@ -552,6 +552,14 @@
                               <div class="megaProductInfo1">
                                 <h4 style="margin: 16px 0 1%; font-size: 18px; font-weight: 600;">{{block.settings.meg_product.title | escape}}</h4>
                                 <p style="margin: 0;">{{block.settings.meg_product.price | money}}</p>
+                                <button type="submit" name="add" class="product-form__submit button--secondary btn">
+                                  <span>Add to cart</span>
+                                  <div class="loading-overlay__spinner hidden">
+                                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                    </svg>
+                                  </div>
+                                </button>                                
                               </div>
                             </div>
                           </a>                          
