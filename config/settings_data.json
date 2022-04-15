@@ -40,6 +40,22 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "fa7f0b00-483c-4a3c-8381-32ecf665c7a1": {
+            "type": "logo_image",
+            "settings": {
+              "menu_enable": true,
+              "image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+              "mega_link": "1",
+              "link": "shopify:\/\/products\/copy-of-nivara",
+              "title": "adsad",
+              "subtitle": "sadasdsadsa"
+            }
+          }
+        },
+        "block_order": [
+          "fa7f0b00-483c-4a3c-8381-32ecf665c7a1"
+        ],
         "settings": {
           "color_scheme": "background-1",
           "logo_width": 90,
