@@ -234,7 +234,7 @@
           "type": "text",
           "settings": {
             "product": "nivara",
-            "vendor": false,
+            "vendor": true,
             "des": false
           }
         },
