@@ -79,6 +79,16 @@
     height: 350px;
     object-fit: cover;
   }
+  
+  @media screen and (max-width: 1200px) {
+    .flex-item-left{width: 40%;}
+    .flex-item-right {
+      width: 60%;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+  
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
