@@ -55,14 +55,13 @@
               "meg_image_size": 100,
               "mega_link": "main-menu",
               "mega_product": "copy-of-nivara",
-              "meg_product": "nivara11",
-              "megas_product": "nivara2"
+              "meg_product": "nivara11"
             }
           },
           "266f4340-99b3-40c1-ace5-624a264e941d": {
             "type": "mega_header",
             "settings": {
-              "mega_width": true,
+              "mega_width": false,
               "mega_url": "shopify:\/\/products\/nivara10",
               "title": "product 2",
               "header_title": "product 2",
@@ -73,8 +72,7 @@
               "meg_image_size": 100,
               "mega_link": "footer",
               "mega_product": "nivara45",
-              "meg_product": "nivara16",
-              "megas_product": "nivara12"
+              "meg_product": "nivara16"
             }
           }
         },
