@@ -44,7 +44,7 @@
           "c5b9f30a-5ef7-4f95-96da-462bccc52f32": {
             "type": "mega_header",
             "settings": {
-              "mega_width": true,
+              "mega_width": false,
               "mega_url": "shopify:\/\/products\/nivara",
               "title": "product 1",
               "header_title": "product 1",
