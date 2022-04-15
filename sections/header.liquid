@@ -513,7 +513,7 @@
                         
                         <div class="megaproduct_box flex-item-right">
                         {% if block.settings.mega_product != blank %}
-                        
+                        <div class="megaproduct_items">
                           <a href="{{block.settings.mega_product.url}}" style="text-decoration: none">
                             <div class="megaProduct1">
                               {%- assign product_media = block.settings.mega_product.selected_or_first_available_variant.featured_media | default: block.settings.mega_product.featured_media -%}
@@ -540,7 +540,7 @@
                               </div>
                             </div>
                           </a>                          
-                        
+                        </div>
                         {% endif %}
                         
                         {% if block.settings.mega_image != blank %}
