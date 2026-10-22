@@ -76,15 +76,7 @@
                  {% unless colorlist contains color %}
                     <!-- VARIANT LOOP -->
                       <li class="grid__item">
-                        {% render 'card-product-variant',
-                          card_product: product,
-                          variant: variant,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: section.settings.show_vendor,
-                          show_rating: section.settings.show_rating, variant
-                          lazy_load: lazy_load
-                        %}
+                        {% render 'card-product-variant', card_product: product, variant: variant, media_aspect_ratio: section.settings.image_ratio, show_secondary_image: section.settings.show_secondary_image, show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating, lazy_load: lazy_load %}
                       </li>
                     {% capture tempList %}
                   {{colorlist | append: color | append: " " }}
@@ -226,4 +218,25 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'card-product-variant',
+                              card_product: product,
+                              variant: variant,
+                              media_aspect_ratio: section.settings.image_ratio,
+                              show_secondary_image: section.settings.show_secondary_image,
+                              show_vendor: section.settings.show_vendor,
+                              show_rating: section.settings.show_rating, variant
+                              lazy_load: lazy_load
+                            %}
+  to: "{% render 'card-product-variant', card_product: product, variant: variant,
+    media_aspect_ratio: section.settings.image_ratio, show_secondary_image: section.settings.show_secondary_image,
+    show_vendor: section.settings.show_vendor, show_rating: section.settings.show_rating,
+    lazy_load: lazy_load %}"
+  position: 3581..3876
+{%- endcomment -%}
